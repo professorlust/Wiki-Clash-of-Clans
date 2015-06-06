@@ -7,11 +7,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 
 public class HomeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
+    RelativeLayout troupes;
+    RelativeLayout batiments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,12 @@ public class HomeActivity extends ActionBarActivity {
         //        Initialisation et définition du Drawer
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer); // Initialisation du Drawer
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar); // Définit les actions, paramètres, méthodes... du Drawer
+
+        troupes = (RelativeLayout) findViewById(R.id.troupes_bouton);
+        batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
+
+        troupes.setOnClickListener(troupesListener);
+        batiments.setOnClickListener(batimentsListener);
     }
 
     @Override
@@ -48,4 +60,18 @@ public class HomeActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private View.OnClickListener troupesListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(HomeActivity.this, "item 1", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener batimentsListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(HomeActivity.this, "item 2", Toast.LENGTH_SHORT).show();
+        }
+    };
 }
