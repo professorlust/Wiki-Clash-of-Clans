@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--Le Root Element doit être une ToolBar,
+ici on doit utiliser la librairie android.support.v7 (changer manuellement si besoin)-->
+<!--Définir la hauteur sur wrap_content sans quoi cet élément prendra tout le layout l'incluant-->
+<!--On définit un thème personnalisé venant de @style/ avec la propriété app:theme="xxx"-->
+<!--Thème perso de la liste du Menu venant de @style/ avec la propriété app:popupTheme="xxx"-->
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:theme="@style/MyCustomActionBar"
+    app:popupTheme="@style/MyCustomPopUp">
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Thème général (pré-Lollipop), fils de Theme.AppCompat.xxx, sert de modèle mais n'est pas appliqué-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Ne pas mettre "android:" au début, ce n'est pas supporté avant Lollipop-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Thème effectivement appliqué car on utilisera le thème AppTheme-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- non utile-->
+    </style>
+
+    <!-- Thème personnalisé de la Action Bar-->
+    <style name="MyCustomActionBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+    </style>
+
+    <!-- Thème personnalisé pour les Popup de la Action Bar (Menu)-->
+    <style name="MyCustomPopUp" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+</resources>

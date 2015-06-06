@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Wiki Clash of Clans</string>
+
+    <string name="hello_world">Hello wrold!</string>
+    <string name="about">À propos</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- String de l'activité AboutActivity-->
+    <string name="about_description">Cette application a été conçue par QuAlity Labs™, une association de deux développeurs du dimanche. Vous retrouverez le code source sur GitHub!</string>
+    <string name="about_footer">Conçu par QuAlity Labs™</string>
+    <string name="about_title">Wiki Clash of Clans</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ce Drawer ser agrémenté d\'items...</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="home_test">Cette activité sera agrémentée de views...</string>
+</resources>

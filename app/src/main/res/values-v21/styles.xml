@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Thème spécifique à Lollipop (v21), fils de AppTheme.Base et de ses propriétés-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- On redéfinit certaines propriétés même si on les hérite du prent car elles n'étaient pas précédées de "adnroid:"-->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+    </style>
+</resources>
