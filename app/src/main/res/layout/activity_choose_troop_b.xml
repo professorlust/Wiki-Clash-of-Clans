@@ -2,27 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_light"
-    tools:context="fr.qualitylabs.wikiclashofclans.NavigationDrawerFragment">
+    tools:context="fr.qualitylabs.wikiclashofclans.ChooseTroopBActivity">
 
-    <ImageView
-        android:id="@+id/drawer_header"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="@drawable/drawer_header" />
+    <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/drawer_header">
+        android:layout_below="@id/app_bar">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:id="@+id/troupes_b_bouton"
+                android:id="@+id/barbare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
@@ -33,21 +31,21 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/troupes" />
+                    android:background="@drawable/barbare" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Troupes Blanches" />
+                    android:text="Barbare" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/troupes_n_bouton"
+                android:id="@+id/archer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/troupes_b_bouton"
+                android:layout_below="@id/barbare"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:paddingLeft="16dp"
@@ -56,21 +54,21 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/troupes" />
+                    android:background="@drawable/archer" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Troupes Noires" />
+                    android:text="Archer" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/batiments_bouton"
+                android:id="@+id/goblin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/troupes_n_bouton"
+                android:layout_below="@id/archer"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:paddingLeft="16dp"
@@ -79,21 +77,21 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/batiments" />
+                    android:background="@drawable/geant" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Bâtiments" />
+                    android:text="Goblin" />
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/autres_bouton"
+                android:id="@+id/geant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/batiments_bouton"
+                android:layout_below="@id/goblin"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:paddingLeft="16dp"
@@ -102,14 +100,14 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/batiments" />
+                    android:background="@drawable/geant" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Autres" />
+                    android:text="Géant" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

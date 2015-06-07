@@ -16,7 +16,8 @@ import android.widget.Toast;
 public class HomeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
-    RelativeLayout troupes;
+    RelativeLayout troupesB;
+    RelativeLayout troupesN;
     RelativeLayout batiments;
 
     @Override
@@ -32,10 +33,12 @@ public class HomeActivity extends ActionBarActivity {
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer); // Initialisation du Drawer
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar); // Définit les actions, paramètres, méthodes... du Drawer
 
-        troupes = (RelativeLayout) findViewById(R.id.troupes_bouton);
+        troupesB = (RelativeLayout) findViewById(R.id.troupes_b_bouton);
+        troupesN = (RelativeLayout) findViewById(R.id.troupes_n_bouton);
         batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
 
-        troupes.setOnClickListener(troupesListener);
+        troupesB.setOnClickListener(troupesBListener);
+        troupesN.setOnClickListener(troupesNListener);
         batiments.setOnClickListener(batimentsListener);
     }
 
@@ -61,17 +64,25 @@ public class HomeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private View.OnClickListener troupesListener = new View.OnClickListener() {
+    private View.OnClickListener troupesBListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "item 1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this, "Choisir une troupe banche", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), ChooseTroopBActivity.class));
+        }
+    };
+
+    private View.OnClickListener troupesNListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(HomeActivity.this, "Choisir une troupe noire", Toast.LENGTH_SHORT).show();
         }
     };
 
     private View.OnClickListener batimentsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "item 2", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this, "Choisir un bâtiment", Toast.LENGTH_SHORT).show();
         }
     };
 }
