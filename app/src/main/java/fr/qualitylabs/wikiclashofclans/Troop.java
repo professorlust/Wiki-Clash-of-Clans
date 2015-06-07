@@ -1,9 +1,6 @@
 package fr.qualitylabs.wikiclashofclans;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.List;
 
 /**
  * Created by Quentin on 07/06/2015.
