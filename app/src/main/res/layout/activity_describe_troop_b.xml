@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.qualitylabs.wikiclashofclans.DescribeTroopBActivity">
+
+    <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+
+    <TextView
+        android:id="@+id/describe_troop_b_nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:text="NOM"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/describe_troop_b_niveau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/describe_troop_b_nom"
+        android:layout_centerHorizontal="true"
+        android:text="niveau" />
+
+    <TextView
+        android:id="@+id/describe_troop_b_degats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/describe_troop_b_niveau"
+        android:layout_centerHorizontal="true"
+        android:text="dps" />
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/describe_troop_b_seek_bar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:progressBackgroundTint="@color/grey_light"
+        android:progressTint="@color/colorPrimary"
+        android:thumbTint="@color/colorPrimaryDark"
+        android:max="7" />
+</RelativeLayout>

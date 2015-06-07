@@ -19,6 +19,7 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
+
             <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -27,10 +28,21 @@
         <activity
             android:name=".ChooseTroopBActivity"
             android:label="@string/title_activity_choose_troop_b" >
+
             <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeTroopBActivity"
+            android:label="@string/title_activity_describe_troop_b"
+            android:parentActivityName=".ChooseTroopBActivity" >
+
+            <!-- On indique à cette activité qu'elle a un parent qui est .ChooseTroopBActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopBActivity" />
         </activity>
     </application>
 

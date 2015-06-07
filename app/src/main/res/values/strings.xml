@@ -3,7 +3,7 @@
 
     <string name="hello_world">Hello wrold!</string>
     <string name="about">À propos</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_about">À propos</string>
     <string name="action_settings">Paramètres</string>
 
     <!-- String de l'activité AboutActivity-->
@@ -17,4 +17,5 @@
     <string name="drawer_close">Close</string>
     <string name="home_test">Cette activité sera agrémentée de views...</string>
     <string name="title_activity_choose_troop_b">Troupes blanches</string>
+    <string name="title_activity_describe_troop_b">DescribeTroopBActivity</string>
 </resources>

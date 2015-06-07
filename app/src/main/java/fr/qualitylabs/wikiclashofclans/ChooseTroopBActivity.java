@@ -1,5 +1,6 @@
 package fr.qualitylabs.wikiclashofclans;
 
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_troop_b);
 
-        //        On redéfinit la Tool Bar avec la nôtre
+//        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
@@ -73,6 +74,7 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         public void onClick(View v) {
             String test = troop.calculerStatistiques("barbare", 1)[9];
             Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), DescribeTroopBActivity.class));
         }
     };
 
