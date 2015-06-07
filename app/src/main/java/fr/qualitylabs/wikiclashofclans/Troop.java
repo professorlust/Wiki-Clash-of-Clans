@@ -18,6 +18,50 @@ public class Troop {
     String[] barbare6 = {"Barbare", "6", "Toutes", "Terrestres", "Cible unique", "1", "20s", "24", "26", "110", "150", "4 500 000", "7", "10j"};
     String[] barbare7 = {"Barbare", "7", "Toutes", "Terrestres", "Cible unique", "1", "20s", "24", "30", "125", "200", "6 000 000", "8", "14j"};
 
+    String[] archer1 = {"Archer", "1", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "7", "20", "50", "N/A", "N/A", "N/A"};
+    String[] archer2 = {"Archer", "2", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "9", "23", "80", "50 000", "1", "12h"};
+    String[] archer3 = {"Archer", "3", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "12", "28", "120", "250 000", "3", "2j"};
+    String[] archer4 = {"Archer", "4", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "16", "33", "160", "750 000", "5", "3j"};
+    String[] archer5 = {"Archer", "5", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "20", "40", "200", "2 250 000", "6", "5j"};
+    String[] archer6 = {"Archer", "6", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "22", "44", "300", "6 000 000", "7", "10j"};
+    String[] archer7 = {"Archer", "7", "Aucune", "Toutes", "Cible unique", "1", "25s", "24", "25", "48", "400", "7 500 000", "8", "14j"};
+
+    String[] gobelin1 = {"Gobelin", "1", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "11", "25", "25", "N/A", "N/A", "N/A"};
+    String[] gobelin2 = {"Gobelin", "2", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "14", "30", "40", "50 000", "1", "12h"};
+    String[] gobelin3 = {"Gobelin", "3", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "19", "36", "60", "250 000", "3", "2j"};
+    String[] gobelin4 = {"Gobelin", "4", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "24", "43", "80", "750 000", "5", "3j"};
+    String[] gobelin5 = {"Gobelin", "5", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "32", "52", "100", "2 250 000", "6", "5j"};
+    String[] gobelin6 = {"Gobelin", "6", "Ressources (x2)", "Terrestres", "Mélée", "1", "30s", "32", "42", "68", "150", "4 500 000", "8", "10j"};
+
+    String[] geant1 = {"Géant", "1", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "11", "300", "500", "N/A", "N/A", "N/A"};
+    String[] geant2 = {"Géant", "2", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "14", "360", "750", "100 000", "2", "1j"};
+    String[] geant3 = {"Géant", "3", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "19", "430", "1 250", "250 000", "4", "2j"};
+    String[] geant4 = {"Géant", "4", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "24", "520", "1 750", "750 000", "5", "3j"};
+    String[] geant5 = {"Géant", "5", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "31", "670", "2 250", "2 250 000", "6", "5j"};
+    String[] geant6 = {"Géant", "6", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "43", "940", "3 000", "6 000 000", "7", "10j"};
+    String[] geant7 = {"Géant", "7", "Défenses", "Terrestres", "Cible unique", "5", "2m", "12", "50", "1 100", "3 500", "7 000 000", "8", "14j"};
+
+    String[] sapeur1 = {"Sapeur", "1", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "12", "20", "1 000", "N/A", "N/A", "N/A"};
+    String[] sapeur2 = {"Sapeur", "2", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "16", "24", "1 500", "100 000", "2", "1j"};
+    String[] sapeur3 = {"Sapeur", "3", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "24", "29", "2 000", "250 000", "4", "2j"};
+    String[] sapeur4 = {"Sapeur", "4", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "32", "35", "2 500", "750 000", "5", "3j"};
+    String[] sapeur5 = {"Sapeur", "5", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "46", "42", "3 000", "2 250 000", "6", "5j"};
+    String[] sapeur6 = {"Sapeur", "6", "Rempart (x40)", "Terrestres", "Zone étendue (2 cases)", "2", "2m", "24", "60", "54", "3 500", "6 750 000", "8", "10j"};
+
+    String[] ballon1 = {"Ballon", "1", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "25", "150", "2 000", "N/A", "N/A", "N/A"};
+    String[] ballon2 = {"Ballon", "2", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "32", "180", "2 500", "150 000", "2", "1j"};
+    String[] ballon3 = {"Ballon", "3", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "48", "216", "3 000", "450 000", "4", "2j"};
+    String[] ballon4 = {"Ballon", "4", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "72", "280", "3 500", "1 350 000", "5", "3j"};
+    String[] ballon5 = {"Ballon", "5", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "108", "390", "4 000", "2 500 000", "6", "5j"};
+    String[] ballon6 = {"Ballon", "6", "Défenses", "Terrestres", "Zone étendue (1,2 case)", "5", "8m", "10", "162", "545", "4 500", "6 000 000", "7", "10j"};
+
+    String[] sorcier1 = {"Sorcier", "1", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "50", "75", "1 500", "N/A", "N/A", "N/A"};
+    String[] sorcier2 = {"Sorcier", "2", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "70", "90", "2 000", "150 000", "3", "1j"};
+    String[] sorcier3 = {"Sorcier", "3", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "90", "108", "2 500", "450 000", "4", "2j"};
+    String[] sorcier4 = {"Sorcier", "4", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "125", "130", "3 000", "1 350 000", "5", "3j"};
+    String[] sorcier5 = {"Sorcier", "5", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "170", "156", "3 500", "2 500 000", "6", "5j"};
+    String[] sorcier6 = {"Sorcier", "6", "Toutes", "Terrestres et Aériennes", "Zone étendue (0,2 case)", "4", "8m", "16", "180", "164", "4 000", "7 500 000", "8", "14j"};
+
     public Troop(){
 //        Stockage des statistiques de chaque troupe
         hashStatistiques.put("barbare1", barbare1);
@@ -27,6 +71,51 @@ public class Troop {
         hashStatistiques.put("barbare5", barbare5);
         hashStatistiques.put("barbare6", barbare6);
         hashStatistiques.put("barbare7", barbare7);
+
+        hashStatistiques.put("archer1", archer1);
+        hashStatistiques.put("archer2", archer2);
+        hashStatistiques.put("archer3", archer3);
+        hashStatistiques.put("archer4", archer4);
+        hashStatistiques.put("archer5", archer5);
+        hashStatistiques.put("archer6", archer6);
+        hashStatistiques.put("archer7", archer7);
+
+        hashStatistiques.put("gobelin1", gobelin1);
+        hashStatistiques.put("gobelin2", gobelin2);
+        hashStatistiques.put("gobelin3", gobelin3);
+        hashStatistiques.put("gobelin4", gobelin4);
+        hashStatistiques.put("gobelin5", gobelin5);
+        hashStatistiques.put("gobelin6", gobelin6);
+
+        hashStatistiques.put("geant1", geant1);
+        hashStatistiques.put("geant2", geant2);
+        hashStatistiques.put("geant3", geant3);
+        hashStatistiques.put("geant4", geant4);
+        hashStatistiques.put("geant5", geant5);
+        hashStatistiques.put("geant6", geant6);
+        hashStatistiques.put("geant7", geant7);
+
+        hashStatistiques.put("sapeur1", sapeur1);
+        hashStatistiques.put("sapeur2", sapeur2);
+        hashStatistiques.put("sapeur3", sapeur3);
+        hashStatistiques.put("sapeur4", sapeur4);
+        hashStatistiques.put("sapeur5", sapeur5);
+        hashStatistiques.put("sapeur6", sapeur6);
+
+        hashStatistiques.put("ballon1", ballon1);
+        hashStatistiques.put("ballon2", ballon2);
+        hashStatistiques.put("ballon3", ballon3);
+        hashStatistiques.put("ballon4", ballon4);
+        hashStatistiques.put("ballon5", ballon5);
+        hashStatistiques.put("ballon6", ballon6);
+
+        hashStatistiques.put("soricer1", sorcier1);
+        hashStatistiques.put("soricer2", sorcier2);
+        hashStatistiques.put("soricer3", sorcier3);
+        hashStatistiques.put("soricer4", sorcier4);
+        hashStatistiques.put("soricer5", sorcier5);
+        hashStatistiques.put("soricer6", sorcier6);
+
     }
 
     public String[] calculerStatistiques(String nom, int niveau) {
@@ -40,6 +129,51 @@ public class Troop {
             case "barbare5": return (String[]) hashStatistiques.get("barbare5");
             case "barbare6": return (String[]) hashStatistiques.get("barbare6");
             case "barbare7": return (String[]) hashStatistiques.get("barbare7");
+
+            case "archer1": return (String[]) hashStatistiques.get("archer1");
+            case "archer2": return (String[]) hashStatistiques.get("archer2");
+            case "archer3": return (String[]) hashStatistiques.get("archer3");
+            case "archer4": return (String[]) hashStatistiques.get("archer4");
+            case "archer5": return (String[]) hashStatistiques.get("archer5");
+            case "archer6": return (String[]) hashStatistiques.get("archer6");
+            case "archer7": return (String[]) hashStatistiques.get("archer7");
+
+            case "gobelin1": return (String[]) hashStatistiques.get("gobelin1");
+            case "gobelin2": return (String[]) hashStatistiques.get("gobelin2");
+            case "gobelin3": return (String[]) hashStatistiques.get("gobelin3");
+            case "gobelin4": return (String[]) hashStatistiques.get("gobelin4");
+            case "gobelin5": return (String[]) hashStatistiques.get("gobelin5");
+            case "gobelin6": return (String[]) hashStatistiques.get("gobelin6");
+
+            case "geant1": return (String[]) hashStatistiques.get("geant1");
+            case "geant2": return (String[]) hashStatistiques.get("geant2");
+            case "geant3": return (String[]) hashStatistiques.get("geant3");
+            case "geant4": return (String[]) hashStatistiques.get("geant4");
+            case "geant5": return (String[]) hashStatistiques.get("geant5");
+            case "geant6": return (String[]) hashStatistiques.get("geant6");
+            case "geant7": return (String[]) hashStatistiques.get("geant7");
+
+            case "sapeur1": return (String[]) hashStatistiques.get("sapeur1");
+            case "sapeur2": return (String[]) hashStatistiques.get("sapeur2");
+            case "sapeur3": return (String[]) hashStatistiques.get("sapeur3");
+            case "sapeur4": return (String[]) hashStatistiques.get("sapeur4");
+            case "sapeur5": return (String[]) hashStatistiques.get("sapeur5");
+            case "sapeur6": return (String[]) hashStatistiques.get("sapeur6");
+
+            case "ballon1": return (String[]) hashStatistiques.get("ballon1");
+            case "ballon2": return (String[]) hashStatistiques.get("ballon2");
+            case "ballon3": return (String[]) hashStatistiques.get("ballon3");
+            case "ballon4": return (String[]) hashStatistiques.get("ballon4");
+            case "ballon5": return (String[]) hashStatistiques.get("ballon5");
+            case "ballon6": return (String[]) hashStatistiques.get("ballon6");
+
+            case "sorcier1": return (String[]) hashStatistiques.get("sorcier1");
+            case "sorcier2": return (String[]) hashStatistiques.get("sorcier2");
+            case "sorcier3": return (String[]) hashStatistiques.get("sorcier3");
+            case "sorcier4": return (String[]) hashStatistiques.get("sorcier4");
+            case "sorcier5": return (String[]) hashStatistiques.get("sorcier5");
+            case "sorcier6": return (String[]) hashStatistiques.get("sorcier6");
+
             default: return nullStat;
         }
     }
