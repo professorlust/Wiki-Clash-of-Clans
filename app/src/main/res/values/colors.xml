@@ -7,4 +7,5 @@
     <color name="grey_light">#E0E0E0</color>
     <color name="grey_dark">#616161</color>
     <color name="black">#000000</color>
+    <color name="colorControlHighlight">#fffee900</color>
 </resources>
