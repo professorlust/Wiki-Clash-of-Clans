@@ -20,8 +20,11 @@ public class ChooseTroopNActivity extends ActionBarActivity {
     RelativeLayout gargouille;
     RelativeLayout chevaucheur;
     RelativeLayout valkyrie;
+    RelativeLayout golem;
+    RelativeLayout sorciere;
+    RelativeLayout molosse;
 
-    TroopN troopN = new TroopN();
+    Troop troop = new Troop();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +42,16 @@ public class ChooseTroopNActivity extends ActionBarActivity {
         gargouille = (RelativeLayout) findViewById(R.id.gargouille);
         chevaucheur = (RelativeLayout) findViewById(R.id.chevaucheur);
         valkyrie = (RelativeLayout) findViewById(R.id.valkyrie);
+        golem = (RelativeLayout) findViewById(R.id.golem);
+        sorciere = (RelativeLayout) findViewById(R.id.sorciere);
+        molosse = (RelativeLayout) findViewById(R.id.molosse);
 
         gargouille.setOnClickListener(gargouilleListener);
         chevaucheur.setOnClickListener(chevaucheurListener);
         valkyrie.setOnClickListener(valkyrieListener);
+        golem.setOnClickListener(golemListener);
+        sorciere.setOnClickListener(sorciereListener);
+        molosse.setOnClickListener(molosseListener);
     }
 
     @Override
@@ -69,25 +78,54 @@ public class ChooseTroopNActivity extends ActionBarActivity {
     private View.OnClickListener gargouilleListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troopN.calculerStatistiques("gargouille", 1)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), DescribeTroopNActivity.class));
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "gargouille");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener chevaucheurListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troopN.calculerStatistiques("gargouille", 2)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "chevaucheur");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener valkyrieListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troopN.calculerStatistiques("gargouille", 3)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "valkyrie");
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener golemListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "golem");
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener sorciereListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "sorciere");
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener molosseListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
+            intent.putExtra("key", "molosse");
+            startActivity(intent);
         }
     };
 }

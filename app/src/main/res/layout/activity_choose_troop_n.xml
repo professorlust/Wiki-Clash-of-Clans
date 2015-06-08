@@ -86,6 +86,75 @@
                     android:gravity="center"
                     android:text="Valkyrie" />
             </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/golem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/valkyrie"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/golem" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Golem" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sorciere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/golem"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/sorciere" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Sorcière" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/molosse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sorciere"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/molosse" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Molosse de lave" />
+            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
 

@@ -1,9 +1,6 @@
 <resources>
+    <!-- Générique-->
     <string name="app_name">Wiki Clash of Clans</string>
-
-    <string name="hello_world">Hello wrold!</string>
-    <string name="about">À propos</string>
-    <string name="title_activity_about">À propos</string>
     <string name="action_settings">Paramètres</string>
 
     <!-- String de l'activité AboutActivity-->
@@ -11,13 +8,17 @@
     <string name="about_footer">Conçu par QuAlity Labs™</string>
     <string name="about_title">Wiki Clash of Clans</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Ce Drawer ser agrémenté d\'items...</string>
+    <!-- TEMPORAIRE-->
+    <string name="home_test">Cette activité sera agrémentée de views...</string>
+
+    <!-- Balises du Drawer NE PAS TOUCHER-->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="home_test">Cette activité sera agrémentée de views...</string>
+
+    <!-- Nom du titre des activités-->
+    <string name="title_activity_about">À propos</string>
     <string name="title_activity_choose_troop_b">Troupes blanches</string>
-    <string name="title_activity_describe_troop_b">DescribeTroopBActivity</string>
+    <string name="title_activity_describe_troop_b">Description</string>
     <string name="title_activity_choose_troop_n">Troupes Noires</string>
-    <string name="title_activity_describe_troop_n">DescribeTroopNActivity</string>
+    <string name="title_activity_describe_troop_n">Description</string>
 </resources>

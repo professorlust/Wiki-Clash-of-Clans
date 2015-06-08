@@ -1,13 +1,12 @@
 package fr.qualitylabs.wikiclashofclans;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class DescribeTroopBActivity extends ActionBarActivity {
@@ -15,6 +14,7 @@ public class DescribeTroopBActivity extends ActionBarActivity {
     Toolbar toolbar;
     SeekBar seekBar;
     Troop troop = new Troop();
+
     String data;
     String[] troopinit;
 
@@ -70,19 +70,19 @@ public class DescribeTroopBActivity extends ActionBarActivity {
 //        Initialisation des vues avec les données récupérées
         troopinit = troop.calculerStatistiques(data, 1);
         nom.setText(troopinit[0]);
-        niveau.setText("Niveau: " + troopinit[1]);
-        ciblesPref.setText("Cibles préférées: " + troopinit[2]);
-        typeCible.setText("Type de cible: " + troopinit[3]);
-        typeDeg.setText("Type de dégats: " + troopinit[4]);
-        espaceOccupe.setText("Espace occupé: " + troopinit[5]);
-        dureeForm.setText("Durée de formation: " + troopinit[6]);
-        vitesse.setText("Vitesse: " + troopinit[7]);
-        degats.setText("Dégats par seconde: " + troopinit[8]);
-        vie.setText("Vie: " + troopinit[9]);
-        coutForm.setText("Coût de formation: " + troopinit[10]);
-        coutRech.setText("Coût de recherche: " + troopinit[11]);
-        niveauReq.setText("Niveau requis: " + troopinit[12]);
-        tempsRech.setText("Temps de recherche: " + troopinit[13]);
+        niveau.setText(troopinit[1]);
+        ciblesPref.setText(troopinit[2]);
+        typeCible.setText(troopinit[3]);
+        typeDeg.setText(troopinit[4]);
+        espaceOccupe.setText(troopinit[5]);
+        dureeForm.setText(troopinit[6]);
+        vitesse.setText(troopinit[7]);
+        degats.setText(troopinit[8]);
+        vie.setText(troopinit[9]);
+        coutForm.setText(troopinit[10]);
+        coutRech.setText(troopinit[11]);
+        niveauReq.setText(troopinit[12]);
+        tempsRech.setText(troopinit[13]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         String[] current = troop.calculerStatistiques(data, 1);
@@ -120,19 +120,19 @@ public class DescribeTroopBActivity extends ActionBarActivity {
 //    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
             String[] current = troop.calculerStatistiques(data, progress + 1);
             nom.setText(current[0]);
-            niveau.setText("Niveau: " + current[1]);
-            ciblesPref.setText("Cibles préférées: " + current[2]);
-            typeCible.setText("Type de cible: " + current[3]);
-            typeDeg.setText("Type de dégats: " + current[4]);
-            espaceOccupe.setText("Espace occupé: " + current[5]);
-            dureeForm.setText("Durée de formation: " + current[6]);
-            vitesse.setText("Vitesse: " + current[7]);
-            degats.setText("Dégats par seconde: " + current[8]);
-            vie.setText("Vie: " + current[9]);
-            coutForm.setText("Coût de formation: " + current[10]);
-            coutRech.setText("Coût de recherche: " + current[11]);
-            niveauReq.setText("Niveau requis: " + current[12]);
-            tempsRech.setText("Temps de recherche: " + current[13]);
+            niveau.setText(current[1]);
+            ciblesPref.setText(current[2]);
+            typeCible.setText(current[3]);
+            typeDeg.setText(current[4]);
+            espaceOccupe.setText(current[5]);
+            dureeForm.setText(current[6]);
+            vitesse.setText(current[7]);
+            degats.setText(current[8]);
+            vie.setText(current[9]);
+            coutForm.setText(current[10]);
+            coutRech.setText(current[11]);
+            niveauReq.setText(current[12]);
+            tempsRech.setText(current[13]);
         }
 
         @Override
