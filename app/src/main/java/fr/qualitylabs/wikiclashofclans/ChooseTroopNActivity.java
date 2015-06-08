@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,12 +18,12 @@ public class ChooseTroopNActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
-    RelativeLayout gargouille;
-    RelativeLayout chevaucheur;
-    RelativeLayout valkyrie;
-    RelativeLayout golem;
-    RelativeLayout sorciere;
-    RelativeLayout molosse;
+    CardView gargouille;
+    CardView chevaucheur;
+    CardView valkyrie;
+    CardView golem;
+    CardView sorciere;
+    CardView molosse;
 
     Troop troop = new Troop();
 
@@ -39,12 +40,12 @@ public class ChooseTroopNActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        gargouille = (RelativeLayout) findViewById(R.id.gargouille);
-        chevaucheur = (RelativeLayout) findViewById(R.id.chevaucheur);
-        valkyrie = (RelativeLayout) findViewById(R.id.valkyrie);
-        golem = (RelativeLayout) findViewById(R.id.golem);
-        sorciere = (RelativeLayout) findViewById(R.id.sorciere);
-        molosse = (RelativeLayout) findViewById(R.id.molosse);
+        gargouille = (CardView) findViewById(R.id.gargouille);
+        chevaucheur = (CardView) findViewById(R.id.chevaucheur);
+        valkyrie = (CardView) findViewById(R.id.valkyrie);
+        golem = (CardView) findViewById(R.id.golem);
+        sorciere = (CardView) findViewById(R.id.sorciere);
+        molosse = (CardView) findViewById(R.id.molosse);
 
         gargouille.setOnClickListener(gargouilleListener);
         chevaucheur.setOnClickListener(chevaucheurListener);

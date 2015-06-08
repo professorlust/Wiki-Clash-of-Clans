@@ -33,7 +33,7 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/troupes" />
+                    android:background="@drawable/troupes_blanches" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/troupes" />
+                    android:background="@drawable/troupes_noires" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -87,29 +87,6 @@
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
                     android:text="Bâtiments" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/autres_bouton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/batiments_bouton"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/batiments" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Autres" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

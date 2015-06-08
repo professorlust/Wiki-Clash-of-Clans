@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,142 +20,202 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
                 android:id="@+id/gargouille"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/gargouille" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Gargouille" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/gargouille" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Gargouille" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/chevaucheur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/gargouille"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/chevaucheur" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Chevaucheur de cochon" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/chevaucheur" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Chevaucheur de cochon" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/valkyrie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/chevaucheur"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/valkyrie" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Valkyrie" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/valkyrie" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Valkyrie" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/golem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/valkyrie"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/golem" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Golem" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/golem" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Golem" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/sorciere"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/golem"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/sorciere" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Sorcière" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/sorciere" />
 
-            <RelativeLayout
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Sorcière" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/molosse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sorciere"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/molosse" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Molosse de lave" />
-            </RelativeLayout>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/molosse" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Molosse de lave" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
         </RelativeLayout>
     </ScrollView>
 

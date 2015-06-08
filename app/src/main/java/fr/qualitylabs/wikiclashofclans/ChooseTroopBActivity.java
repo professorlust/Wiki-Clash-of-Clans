@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,16 +18,16 @@ public class ChooseTroopBActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
-    RelativeLayout barbare;
-    RelativeLayout archer;
-    RelativeLayout gobelin;
-    RelativeLayout geant;
-    RelativeLayout sapeur;
-    RelativeLayout ballon;
-    RelativeLayout sorcier;
-    RelativeLayout guerisseuse;
-    RelativeLayout dragon;
-    RelativeLayout pekka;
+    CardView barbare;
+    CardView archer;
+    CardView gobelin;
+    CardView geant;
+    CardView sapeur;
+    CardView ballon;
+    CardView sorcier;
+    CardView guerisseuse;
+    CardView dragon;
+    CardView pekka;
 
     Troop troop = new Troop();
 
@@ -43,16 +44,16 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        barbare = (RelativeLayout) findViewById(R.id.barbare);
-        archer = (RelativeLayout) findViewById(R.id.archer);
-        gobelin = (RelativeLayout) findViewById(R.id.gobelin);
-        geant = (RelativeLayout) findViewById(R.id.geant);
-        sapeur = (RelativeLayout) findViewById(R.id.sapeur);
-        ballon = (RelativeLayout) findViewById(R.id.ballon);
-        sorcier = (RelativeLayout) findViewById(R.id.sorcier);
-        guerisseuse = (RelativeLayout) findViewById(R.id.guerisseuse);
-        dragon = (RelativeLayout) findViewById(R.id.dragon);
-        pekka = (RelativeLayout) findViewById(R.id.pekka);
+        barbare = (CardView) findViewById(R.id.barbare);
+        archer = (CardView) findViewById(R.id.archer);
+        gobelin = (CardView) findViewById(R.id.gobelin);
+        geant = (CardView) findViewById(R.id.geant);
+        sapeur = (CardView) findViewById(R.id.sapeur);
+        ballon = (CardView) findViewById(R.id.ballon);
+        sorcier = (CardView) findViewById(R.id.sorcier);
+        guerisseuse = (CardView) findViewById(R.id.guerisseuse);
+        dragon = (CardView) findViewById(R.id.dragon);
+        pekka = (CardView) findViewById(R.id.pekka);
 
         barbare.setOnClickListener(barbareListener);
         archer.setOnClickListener(archerListener);

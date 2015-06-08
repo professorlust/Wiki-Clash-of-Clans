@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -71,7 +70,6 @@ public class HomeActivity extends ActionBarActivity {
     private View.OnClickListener troupesBListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "Choisir une troupe banche", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), ChooseTroopBActivity.class));
         }
     };
@@ -79,7 +77,6 @@ public class HomeActivity extends ActionBarActivity {
     private View.OnClickListener troupesNListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "Choisir une troupe noire", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(getApplicationContext(), ChooseTroopNActivity.class));
         }
     };
@@ -87,7 +84,7 @@ public class HomeActivity extends ActionBarActivity {
     private View.OnClickListener batimentsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "Choisir un bâtiment", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this, "Section à venir...", Toast.LENGTH_SHORT).show();
         }
 
     };
@@ -96,11 +93,9 @@ public class HomeActivity extends ActionBarActivity {
 
         @Override
         public void onClick(View v) {
-
             Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
             intent.putExtra("key", "barbare");
             startActivity(intent);
-
         }
     };
 }
