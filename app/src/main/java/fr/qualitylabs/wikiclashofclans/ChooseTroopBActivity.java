@@ -111,7 +111,7 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
-            intent.putExtra("key", "goblin");
+            intent.putExtra("key", "gobelin");
             startActivity(intent);
         }
     };
@@ -128,48 +128,54 @@ public class ChooseTroopBActivity extends ActionBarActivity {
     private View.OnClickListener sapeurListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 5)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "sapeur");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener ballonListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 6)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "ballon");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener sorcierListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 7)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "sorcier");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener guerisseuseListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 8)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "guerisseuse");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener dragonListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 9)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "dragon");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener pekkaListener = new View.OnClickListener(){
         @Override
         public void onClick(View v){
-            String test = troop.calculerStatistiques("barbare", 10)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "pekka");
+            startActivity(intent);
         }
     };
 }

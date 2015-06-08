@@ -120,10 +120,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/sapeur" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/sapeur" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -143,10 +143,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/ballon" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/ballon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,10 +166,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/sorcier" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/sorcier" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -189,10 +189,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/guerisseuse" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/guerisseuse" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -212,10 +212,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/dragon" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/dragon" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -235,10 +235,10 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-                <!--<ImageView-->
-                    <!--android:layout_width="72dp"-->
-                    <!--android:layout_height="72dp"-->
-                    <!--android:background="@drawable/pekka" />-->
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/pekka" />
 
                 <TextView
                     android:layout_width="wrap_content"

@@ -7,7 +7,7 @@ import java.util.Hashtable;
  */
 public class Troop {
 
-    Hashtable hashStatistiques = new Hashtable();
+    Hashtable<String, String[]> hashStatistiques = new Hashtable();
 
 //    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
     String[] barbare1 = {"Barbare", "1", "Toutes", "Terrestres", "Cible unique", "1", "20s", "24", "8", "45", "25", "N/A", "N/A", "N/A"};
@@ -125,12 +125,12 @@ public class Troop {
         hashStatistiques.put("ballon5", ballon5);
         hashStatistiques.put("ballon6", ballon6);
 
-        hashStatistiques.put("soricer1", sorcier1);
-        hashStatistiques.put("soricer2", sorcier2);
-        hashStatistiques.put("soricer3", sorcier3);
-        hashStatistiques.put("soricer4", sorcier4);
-        hashStatistiques.put("soricer5", sorcier5);
-        hashStatistiques.put("soricer6", sorcier6);
+        hashStatistiques.put("sorcier1", sorcier1);
+        hashStatistiques.put("sorcier2", sorcier2);
+        hashStatistiques.put("sorcier3", sorcier3);
+        hashStatistiques.put("sorcier4", sorcier4);
+        hashStatistiques.put("sorcier5", sorcier5);
+        hashStatistiques.put("sorcier6", sorcier6);
 
         hashStatistiques.put("guerisseuse1", guerisseuse1);
         hashStatistiques.put("guerisseuse2", guerisseuse2);
