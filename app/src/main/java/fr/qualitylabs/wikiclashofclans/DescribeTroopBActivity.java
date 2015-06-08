@@ -50,6 +50,10 @@ public class DescribeTroopBActivity extends ActionBarActivity {
         niveau.setText(troopinit[1]);
         degats.setText(troopinit[8]);
 
+//        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
+        String[] current = troop.calculerStatistiques(data, 1);
+        seekBar.setMax(troop.getMax(current[0]));
+
 //        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
     }

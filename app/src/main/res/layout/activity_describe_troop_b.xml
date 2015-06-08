@@ -44,6 +44,5 @@
         android:layout_centerHorizontal="true"
         android:progressBackgroundTint="@color/grey_light"
         android:progressTint="@color/colorPrimary"
-        android:thumbTint="@color/colorPrimaryDark"
-        android:max="7" />
+        android:thumbTint="@color/colorPrimaryDark"/>
 </RelativeLayout>

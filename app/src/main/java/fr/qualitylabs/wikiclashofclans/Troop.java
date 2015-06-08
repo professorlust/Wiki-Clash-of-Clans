@@ -7,7 +7,7 @@ import java.util.Hashtable;
  */
 public class Troop {
 
-    Hashtable<String, String[]> hashStatistiques = new Hashtable();
+    Hashtable<String, String[]> hashStatistiques = new Hashtable<String, String[]>();
 
 //    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
     String[] barbare1 = {"Barbare", "1", "Toutes", "Terrestres", "Cible unique", "1", "20s", "24", "8", "45", "25", "N/A", "N/A", "N/A"};
@@ -154,75 +154,92 @@ public class Troop {
         String clé = nom + niveau;
         String[] nullStat = {"","","","","","","","","","","","","",""};
         switch (clé){
-            case "barbare1": return (String[]) hashStatistiques.get("barbare1");
-            case "barbare2": return (String[]) hashStatistiques.get("barbare2");
-            case "barbare3": return (String[]) hashStatistiques.get("barbare3");
-            case "barbare4": return (String[]) hashStatistiques.get("barbare4");
-            case "barbare5": return (String[]) hashStatistiques.get("barbare5");
-            case "barbare6": return (String[]) hashStatistiques.get("barbare6");
-            case "barbare7": return (String[]) hashStatistiques.get("barbare7");
+            case "barbare1": return hashStatistiques.get("barbare1");
+            case "barbare2": return hashStatistiques.get("barbare2");
+            case "barbare3": return hashStatistiques.get("barbare3");
+            case "barbare4": return hashStatistiques.get("barbare4");
+            case "barbare5": return hashStatistiques.get("barbare5");
+            case "barbare6": return hashStatistiques.get("barbare6");
+            case "barbare7": return hashStatistiques.get("barbare7");
 
-            case "archer1": return (String[]) hashStatistiques.get("archer1");
-            case "archer2": return (String[]) hashStatistiques.get("archer2");
-            case "archer3": return (String[]) hashStatistiques.get("archer3");
-            case "archer4": return (String[]) hashStatistiques.get("archer4");
-            case "archer5": return (String[]) hashStatistiques.get("archer5");
-            case "archer6": return (String[]) hashStatistiques.get("archer6");
-            case "archer7": return (String[]) hashStatistiques.get("archer7");
+            case "archer1": return hashStatistiques.get("archer1");
+            case "archer2": return hashStatistiques.get("archer2");
+            case "archer3": return hashStatistiques.get("archer3");
+            case "archer4": return hashStatistiques.get("archer4");
+            case "archer5": return hashStatistiques.get("archer5");
+            case "archer6": return hashStatistiques.get("archer6");
+            case "archer7": return hashStatistiques.get("archer7");
 
-            case "gobelin1": return (String[]) hashStatistiques.get("gobelin1");
-            case "gobelin2": return (String[]) hashStatistiques.get("gobelin2");
-            case "gobelin3": return (String[]) hashStatistiques.get("gobelin3");
-            case "gobelin4": return (String[]) hashStatistiques.get("gobelin4");
-            case "gobelin5": return (String[]) hashStatistiques.get("gobelin5");
-            case "gobelin6": return (String[]) hashStatistiques.get("gobelin6");
+            case "gobelin1": return hashStatistiques.get("gobelin1");
+            case "gobelin2": return hashStatistiques.get("gobelin2");
+            case "gobelin3": return hashStatistiques.get("gobelin3");
+            case "gobelin4": return hashStatistiques.get("gobelin4");
+            case "gobelin5": return hashStatistiques.get("gobelin5");
+            case "gobelin6": return hashStatistiques.get("gobelin6");
 
-            case "geant1": return (String[]) hashStatistiques.get("geant1");
-            case "geant2": return (String[]) hashStatistiques.get("geant2");
-            case "geant3": return (String[]) hashStatistiques.get("geant3");
-            case "geant4": return (String[]) hashStatistiques.get("geant4");
-            case "geant5": return (String[]) hashStatistiques.get("geant5");
-            case "geant6": return (String[]) hashStatistiques.get("geant6");
-            case "geant7": return (String[]) hashStatistiques.get("geant7");
+            case "geant1": return hashStatistiques.get("geant1");
+            case "geant2": return hashStatistiques.get("geant2");
+            case "geant3": return hashStatistiques.get("geant3");
+            case "geant4": return hashStatistiques.get("geant4");
+            case "geant5": return hashStatistiques.get("geant5");
+            case "geant6": return hashStatistiques.get("geant6");
+            case "geant7": return hashStatistiques.get("geant7");
 
-            case "sapeur1": return (String[]) hashStatistiques.get("sapeur1");
-            case "sapeur2": return (String[]) hashStatistiques.get("sapeur2");
-            case "sapeur3": return (String[]) hashStatistiques.get("sapeur3");
-            case "sapeur4": return (String[]) hashStatistiques.get("sapeur4");
-            case "sapeur5": return (String[]) hashStatistiques.get("sapeur5");
-            case "sapeur6": return (String[]) hashStatistiques.get("sapeur6");
+            case "sapeur1": return hashStatistiques.get("sapeur1");
+            case "sapeur2": return hashStatistiques.get("sapeur2");
+            case "sapeur3": return hashStatistiques.get("sapeur3");
+            case "sapeur4": return hashStatistiques.get("sapeur4");
+            case "sapeur5": return hashStatistiques.get("sapeur5");
+            case "sapeur6": return hashStatistiques.get("sapeur6");
 
-            case "ballon1": return (String[]) hashStatistiques.get("ballon1");
-            case "ballon2": return (String[]) hashStatistiques.get("ballon2");
-            case "ballon3": return (String[]) hashStatistiques.get("ballon3");
-            case "ballon4": return (String[]) hashStatistiques.get("ballon4");
-            case "ballon5": return (String[]) hashStatistiques.get("ballon5");
-            case "ballon6": return (String[]) hashStatistiques.get("ballon6");
+            case "ballon1": return hashStatistiques.get("ballon1");
+            case "ballon2": return hashStatistiques.get("ballon2");
+            case "ballon3": return hashStatistiques.get("ballon3");
+            case "ballon4": return hashStatistiques.get("ballon4");
+            case "ballon5": return hashStatistiques.get("ballon5");
+            case "ballon6": return hashStatistiques.get("ballon6");
 
-            case "sorcier1": return (String[]) hashStatistiques.get("sorcier1");
-            case "sorcier2": return (String[]) hashStatistiques.get("sorcier2");
-            case "sorcier3": return (String[]) hashStatistiques.get("sorcier3");
-            case "sorcier4": return (String[]) hashStatistiques.get("sorcier4");
-            case "sorcier5": return (String[]) hashStatistiques.get("sorcier5");
-            case "sorcier6": return (String[]) hashStatistiques.get("sorcier6");
+            case "sorcier1": return hashStatistiques.get("sorcier1");
+            case "sorcier2": return hashStatistiques.get("sorcier2");
+            case "sorcier3": return hashStatistiques.get("sorcier3");
+            case "sorcier4": return hashStatistiques.get("sorcier4");
+            case "sorcier5": return hashStatistiques.get("sorcier5");
+            case "sorcier6": return hashStatistiques.get("sorcier6");
 
-            case "guerisseuse1": return (String[]) hashStatistiques.get("guerisseuse1");
-            case "guerisseuse2": return (String[]) hashStatistiques.get("guerisseuse2");
-            case "guerisseuse3": return (String[]) hashStatistiques.get("guerisseuse3");
-            case "guerisseuse4": return (String[]) hashStatistiques.get("guerisseuse4");
+            case "guerisseuse1": return hashStatistiques.get("guerisseuse1");
+            case "guerisseuse2": return hashStatistiques.get("guerisseuse2");
+            case "guerisseuse3": return hashStatistiques.get("guerisseuse3");
+            case "guerisseuse4": return hashStatistiques.get("guerisseuse4");
 
-            case "dragon1": return (String[]) hashStatistiques.get("dragon1");
-            case "dragon2": return (String[]) hashStatistiques.get("dragon2");
-            case "dragon3": return (String[]) hashStatistiques.get("dragon3");
-            case "dragon4": return (String[]) hashStatistiques.get("dragon4");
+            case "dragon1": return hashStatistiques.get("dragon1");
+            case "dragon2": return hashStatistiques.get("dragon2");
+            case "dragon3": return hashStatistiques.get("dragon3");
+            case "dragon4": return hashStatistiques.get("dragon4");
 
-            case "pekka1": return (String[]) hashStatistiques.get("pekka1");
-            case "pekka2": return (String[]) hashStatistiques.get("pekka2");
-            case "pekka3": return (String[]) hashStatistiques.get("pekka3");
-            case "pekka4": return (String[]) hashStatistiques.get("pekka4");
-            case "pekka5": return (String[]) hashStatistiques.get("pekka5");
+            case "pekka1": return hashStatistiques.get("pekka1");
+            case "pekka2": return hashStatistiques.get("pekka2");
+            case "pekka3": return hashStatistiques.get("pekka3");
+            case "pekka4": return hashStatistiques.get("pekka4");
+            case "pekka5": return hashStatistiques.get("pekka5");
 
             default: return nullStat;
         }
+    }
+
+    public int getMax(String nom) {
+        int max = 0;
+        switch (nom){
+            case "Barbare": max = 6; break;
+            case "Archer": max = 6; break;
+            case "Gobelin": max = 5; break;
+            case "Géant": max = 6; break;
+            case "Sapeur": max = 5; break;
+            case "Ballon": max = 5; break;
+            case "Sorcier": max = 5; break;
+            case "Guérisseuse": max = 3; break;
+            case "Dragon": max = 3; break;
+            case "P.E.K.K.A.": max = 4; break;
+        }
+        return max;
     }
 }
