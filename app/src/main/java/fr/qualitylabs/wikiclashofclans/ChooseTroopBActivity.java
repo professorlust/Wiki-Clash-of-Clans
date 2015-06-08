@@ -69,36 +69,41 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    Ouverture de l'activité DescribeTroopActivity pour décrire chaque personnage
     private View.OnClickListener barbareListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troop.calculerStatistiques("barbare", 1)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), DescribeTroopBActivity.class));
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "barbare");
+            startActivity(intent);
+
         }
     };
 
     private View.OnClickListener archerListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troop.calculerStatistiques("barbare", 2)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "archer");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener goblinListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troop.calculerStatistiques("barbare", 3)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "goblin");
+            startActivity(intent);
         }
     };
 
     private View.OnClickListener geantListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            String test = troop.calculerStatistiques("barbare", 4)[9];
-            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
+            intent.putExtra("key", "geant");
+            startActivity(intent);
         }
     };
 }

@@ -15,6 +15,8 @@ public class DescribeTroopBActivity extends ActionBarActivity {
     Toolbar toolbar;
     SeekBar seekBar;
     Troop troop = new Troop();
+    String data;
+    String[] troopinit;
 
     TextView nom;
     TextView niveau;
@@ -33,11 +35,22 @@ public class DescribeTroopBActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+//        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.describe_troop_b_seek_bar);
         nom = (TextView) findViewById(R.id.describe_troop_b_nom);
         niveau = (TextView) findViewById(R.id.describe_troop_b_niveau);
         degats = (TextView) findViewById(R.id.describe_troop_b_degats);
 
+//        Récupère les extras
+        data= getIntent().getStringExtra("key");
+
+//        Initialisation des vues avec les données récupérées
+        troopinit = troop.calculerStatistiques(data, 1);
+        nom.setText(troopinit[0]);
+        niveau.setText(troopinit[1]);
+        degats.setText(troopinit[8]);
+
+//        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
     }
 
@@ -67,7 +80,7 @@ public class DescribeTroopBActivity extends ActionBarActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 //    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
-            String[] current = troop.calculerStatistiques("barbare", progress + 1);
+            String[] current = troop.calculerStatistiques(data, progress + 1);
             nom.setText(current[0]);
             niveau.setText(current[1]);
             degats.setText(current[8]);
