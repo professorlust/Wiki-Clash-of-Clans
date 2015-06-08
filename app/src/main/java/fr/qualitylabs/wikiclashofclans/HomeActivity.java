@@ -76,6 +76,7 @@ public class HomeActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             Toast.makeText(HomeActivity.this, "Choisir une troupe noire", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), ChooseTroopNActivity.class));
         }
     };
 

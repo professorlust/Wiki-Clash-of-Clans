@@ -19,8 +19,14 @@ public class ChooseTroopBActivity extends ActionBarActivity {
 
     RelativeLayout barbare;
     RelativeLayout archer;
-    RelativeLayout goblin;
+    RelativeLayout gobelin;
     RelativeLayout geant;
+    RelativeLayout sapeur;
+    RelativeLayout ballon;
+    RelativeLayout sorcier;
+    RelativeLayout guerisseuse;
+    RelativeLayout dragon;
+    RelativeLayout pekka;
 
     Troop troop = new Troop();
 
@@ -39,13 +45,25 @@ public class ChooseTroopBActivity extends ActionBarActivity {
 
         barbare = (RelativeLayout) findViewById(R.id.barbare);
         archer = (RelativeLayout) findViewById(R.id.archer);
-        goblin = (RelativeLayout) findViewById(R.id.goblin);
+        gobelin = (RelativeLayout) findViewById(R.id.gobelin);
         geant = (RelativeLayout) findViewById(R.id.geant);
+        sapeur = (RelativeLayout) findViewById(R.id.sapeur);
+        ballon = (RelativeLayout) findViewById(R.id.ballon);
+        sorcier = (RelativeLayout) findViewById(R.id.sorcier);
+        guerisseuse = (RelativeLayout) findViewById(R.id.guerisseuse);
+        dragon = (RelativeLayout) findViewById(R.id.dragon);
+        pekka = (RelativeLayout) findViewById(R.id.pekka);
 
         barbare.setOnClickListener(barbareListener);
         archer.setOnClickListener(archerListener);
-        goblin.setOnClickListener(goblinListener);
+        gobelin.setOnClickListener(gobelinListener);
         geant.setOnClickListener(geantListener);
+        sapeur.setOnClickListener(sapeurListener);
+        ballon.setOnClickListener(ballonListener);
+        sorcier.setOnClickListener(sorcierListener);
+        guerisseuse.setOnClickListener(guerisseuseListener);
+        dragon.setOnClickListener(dragonListener);
+        pekka.setOnClickListener(pekkaListener);
     }
 
     @Override
@@ -89,7 +107,7 @@ public class ChooseTroopBActivity extends ActionBarActivity {
         }
     };
 
-    private View.OnClickListener goblinListener = new View.OnClickListener() {
+    private View.OnClickListener gobelinListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
@@ -104,6 +122,54 @@ public class ChooseTroopBActivity extends ActionBarActivity {
             Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
             intent.putExtra("key", "geant");
             startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener sapeurListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 5)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener ballonListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 6)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener sorcierListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 7)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener guerisseuseListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 8)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener dragonListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 9)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener pekkaListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v){
+            String test = troop.calculerStatistiques("barbare", 10)[9];
+            Toast.makeText(getApplicationContext(), test, Toast.LENGTH_SHORT).show();
         }
     };
 }

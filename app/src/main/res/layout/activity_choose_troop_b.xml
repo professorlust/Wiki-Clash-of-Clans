@@ -65,7 +65,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/goblin"
+                android:id="@+id/gobelin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/archer"
@@ -77,21 +77,21 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/geant" />
+                    android:background="@drawable/gobelin" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Goblin" />
+                    android:text="Gobelin" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/geant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/goblin"
+                android:layout_below="@id/gobelin"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:paddingLeft="16dp"
@@ -108,6 +108,144 @@
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
                     android:text="Géant" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sapeur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/geant"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/sapeur" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Sapeur" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ballon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sapeur"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/ballon" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Ballon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sorcier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ballon"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/sorcier" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Sorcier" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/guerisseuse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sorcier"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/guerisseuse" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Guérisseuse" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dragon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guerisseuse"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/dragon" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="Dragon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pekka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dragon"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="72dp"-->
+                    <!--android:layout_height="72dp"-->
+                    <!--android:background="@drawable/pekka" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="88dp"
+                    android:gravity="center"
+                    android:text="P.E.K.K.A." />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

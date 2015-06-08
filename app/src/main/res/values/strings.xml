@@ -18,4 +18,6 @@
     <string name="home_test">Cette activité sera agrémentée de views...</string>
     <string name="title_activity_choose_troop_b">Troupes blanches</string>
     <string name="title_activity_describe_troop_b">DescribeTroopBActivity</string>
+    <string name="title_activity_choose_troop_n">Troupes Noires</string>
+    <string name="title_activity_describe_troop_n">DescribeTroopNActivity</string>
 </resources>
