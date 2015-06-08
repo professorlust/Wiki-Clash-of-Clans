@@ -22,4 +22,7 @@
     <string name="title_activity_choose_troop_n">Troupes Noires</string>
     <string name="title_activity_describe_troop_n">Description</string>
     <string name="reinitialiser">Réinitialiser</string>
+
+    <!-- Strings de l'activité HomeActivity -->
+    <string name="ajouts">Derniers ajouts :</string>
 </resources>
