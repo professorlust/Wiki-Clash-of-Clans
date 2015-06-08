@@ -9,6 +9,7 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar" />
 
+    <!-- nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche-->
 
     <TextView
         android:id="@+id/describe_troop_b_nom"
@@ -20,29 +21,156 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/describe_troop_b_niveau"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/dtb_l1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/describe_troop_b_nom"
-        android:layout_centerHorizontal="true"
-        android:text="niveau" />
+        android:layout_below="@id/describe_troop_b_nom">
 
-    <TextView
-        android:id="@+id/describe_troop_b_degats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/describe_troop_b_niveau"
-        android:layout_centerHorizontal="true"
-        android:text="dps" />
+        <SeekBar
+            android:id="@+id/describe_troop_b_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:progressBackgroundTint="@color/grey_light"
+            android:progressTint="@color/colorPrimary"
+            android:thumbTint="@color/colorPrimaryDark" />
 
-    <SeekBar
-        android:layout_width="200dp"
+        <TextView
+            android:id="@+id/describe_troop_b_niveau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="niveau" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/describe_troop_b_seek_bar"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:progressBackgroundTint="@color/grey_light"
-        android:progressTint="@color/colorPrimary"
-        android:thumbTint="@color/colorPrimaryDark"/>
+        android:layout_below="@id/dtb_l1">
+
+        <TextView
+            android:id="@+id/describe_troop_b_cibles_pref"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ciblesPref" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_type_espace_occupe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="espaceOccupe" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dtb_l2">
+
+        <TextView
+            android:id="@+id/describe_troop_b_type_cibles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="typeCibles" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_duree_formation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="dureeFormation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dtb_l3">
+
+        <TextView
+            android:id="@+id/describe_troop_b_type_degat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="typeDegat" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_vitesse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="vitesse" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dtb_l4">
+
+        <TextView
+            android:id="@+id/describe_troop_b_vie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="vie" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_degats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="dps" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dtb_l5">
+
+        <TextView
+            android:id="@+id/describe_b_cout_formation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="coutFormation" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_cout_recherche"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="coutRecherche" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dtb_l7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dtb_l6">
+
+        <TextView
+            android:id="@+id/describe_troop_b_niveau_requis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="niveauformation" />
+
+        <TextView
+            android:id="@+id/describe_troop_b_temps_recherche"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="tempsRecherche" />
+    </LinearLayout>
+    <!-- nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche-->
 </RelativeLayout>

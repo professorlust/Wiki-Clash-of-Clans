@@ -7,7 +7,7 @@ import java.util.Hashtable;
  */
 public class Troop {
 
-    Hashtable<String, String[]> hashStatistiques = new Hashtable<String, String[]>();
+    Hashtable<String, String[]> hashStatistiques = new Hashtable<>();
 
 //    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
     String[] barbare1 = {"Barbare", "1", "Toutes", "Terrestres", "Cible unique", "1", "20s", "24", "8", "45", "25", "N/A", "N/A", "N/A"};
