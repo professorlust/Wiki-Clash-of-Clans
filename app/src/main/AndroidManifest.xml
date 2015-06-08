@@ -44,6 +44,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopBActivity" />
         </activity>
+        <activity
+            android:name=".ChooseTroopNActivity"
+            android:label="@string/title_activity_choose_troop_n">
+
+            <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity"/>
+        </activity>
+        <activity
+            android:name=".DescribeTroopNActivity"
+            android:label="@string/title_activity_describe_troop_n"
+            android:parentActivityName=".ChooseTroopNActivity">
+
+            <!-- On indique à cette activité qu'elle a un parent qui est .ChooseTroopNActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopNActivity"/>
+        </activity>
     </application>
 
 </manifest>
