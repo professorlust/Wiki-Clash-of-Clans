@@ -19,7 +19,6 @@ public class HomeActivity extends ActionBarActivity {
     RelativeLayout troupesB;
     RelativeLayout troupesN;
     RelativeLayout batiments;
-    CardView cardTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +36,10 @@ public class HomeActivity extends ActionBarActivity {
         troupesB = (RelativeLayout) findViewById(R.id.troupes_b_bouton);
         troupesN = (RelativeLayout) findViewById(R.id.troupes_n_bouton);
         batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
-        cardTest = (CardView) findViewById(R.id.card_view);
 
         troupesB.setOnClickListener(troupesBListener);
         troupesN.setOnClickListener(troupesNListener);
         batiments.setOnClickListener(batimentsListener);
-        cardTest.setOnClickListener(cardTestListener);
     }
 
     @Override
@@ -87,15 +84,5 @@ public class HomeActivity extends ActionBarActivity {
             Toast.makeText(HomeActivity.this, "Section à venir...", Toast.LENGTH_SHORT).show();
         }
 
-    };
-
-    private View.OnClickListener cardTestListener = new View.OnClickListener(){
-
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
-            intent.putExtra("key", "barbare");
-            startActivity(intent);
-        }
     };
 }
