@@ -19,7 +19,7 @@ public class HomeActivity extends ActionBarActivity {
     RelativeLayout troupesB;
     RelativeLayout troupesN;
     RelativeLayout batiments;
-    CardView cardTest;
+    CardView cardChev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,12 @@ public class HomeActivity extends ActionBarActivity {
         troupesB = (RelativeLayout) findViewById(R.id.troupes_b_bouton);
         troupesN = (RelativeLayout) findViewById(R.id.troupes_n_bouton);
         batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
-        cardTest = (CardView) findViewById(R.id.card_view);
+        cardChev = (CardView) findViewById(R.id.card_view);
 
         troupesB.setOnClickListener(troupesBListener);
         troupesN.setOnClickListener(troupesNListener);
         batiments.setOnClickListener(batimentsListener);
-        cardTest.setOnClickListener(cardTestListener);
+        cardChev.setOnClickListener(cardChevListener);
     }
 
     @Override
@@ -89,12 +89,12 @@ public class HomeActivity extends ActionBarActivity {
 
     };
 
-    private View.OnClickListener cardTestListener = new View.OnClickListener(){
+    private View.OnClickListener cardChevListener = new View.OnClickListener(){
 
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeTroopBActivity.class);
-            intent.putExtra("key", "barbare");
+            intent.putExtra("key", "chevaucheur");
             startActivity(intent);
         }
     };
