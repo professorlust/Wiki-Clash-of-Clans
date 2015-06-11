@@ -25,4 +25,9 @@
 
     <!-- Strings de l'activité HomeActivity -->
     <string name="ajouts">Derniers ajouts :</string>
+    <string name="title_activity_choose_building_type">ChooseBuildingTypeActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_describe_defense">DescribeDefenseActivity</string>
+    <string name="title_activity_choose_defense">ChooseDefenseActivity</string>
 </resources>

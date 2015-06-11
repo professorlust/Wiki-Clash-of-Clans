@@ -46,22 +46,46 @@
         </activity>
         <activity
             android:name=".ChooseTroopNActivity"
-            android:label="@string/title_activity_choose_troop_n">
+            android:label="@string/title_activity_choose_troop_n" >
 
             <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+                android:value=".HomeActivity" />
         </activity>
         <activity
             android:name=".DescribeTroopNActivity"
             android:label="@string/title_activity_describe_troop_n"
-            android:parentActivityName=".ChooseTroopNActivity">
+            android:parentActivityName=".ChooseTroopNActivity" >
 
             <!-- On indique à cette activité qu'elle a un parent qui est .ChooseTroopNActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopNActivity"/>
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopNActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseBuildingTypeActivity"
+            android:label="@string/title_activity_choose_building_type"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeDefenseActivity"
+            android:label="@string/title_activity_describe_defense"
+            android:parentActivityName=".ChooseDefenseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseDefenseActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseDefenseActivity"
+            android:label="@string/title_activity_choose_defense"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity" />
         </activity>
     </application>
 

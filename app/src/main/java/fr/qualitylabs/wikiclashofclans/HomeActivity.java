@@ -81,7 +81,7 @@ public class HomeActivity extends ActionBarActivity {
     private View.OnClickListener batimentsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(HomeActivity.this, "Section à venir...", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), ChooseBuildingTypeActivity.class));
         }
 
     };
