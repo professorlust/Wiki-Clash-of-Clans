@@ -14,12 +14,15 @@ public class InfernoTower extends Building {
 
     public InfernoTower(){
         name = "Tour de l'enfer";
+        nameCode = "inferno_tower";
         other = "Tir concentré   \n(initial, >2sec, >5sec): ";
         data.put(1, infernotower1);
         data.put(2, infernotower2);
         data.put(3, infernotower3);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getOther() { return other; }
 

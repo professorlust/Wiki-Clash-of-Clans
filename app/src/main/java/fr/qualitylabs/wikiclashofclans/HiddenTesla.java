@@ -19,6 +19,7 @@ public class HiddenTesla extends Building {
 
     public HiddenTesla(){
         name = "Tesla camouflée";
+        nameCode = "hidden_tesla";
         data.put(1, hiddentesla1);
         data.put(2, hiddentesla2);
         data.put(3, hiddentesla3);
@@ -29,6 +30,8 @@ public class HiddenTesla extends Building {
         data.put(8, hiddentesla8);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

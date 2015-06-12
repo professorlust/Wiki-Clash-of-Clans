@@ -17,6 +17,7 @@ public class Mortar extends Building {
 
     public Mortar(){
         name = "Mortier";
+        nameCode = "mortar";
         data.put(1, mortar1);
         data.put(2, mortar2);
         data.put(3, mortar3);
@@ -27,6 +28,8 @@ public class Mortar extends Building {
         data.put(8, mortar8);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

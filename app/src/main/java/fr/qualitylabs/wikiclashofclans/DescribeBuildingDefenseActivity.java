@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
 
     SeekBar seekBar;
 
+    ImageView image;
 //    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
     TextView name;
     TextView level;
@@ -45,6 +47,7 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
+        image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
         damagepersec = (TextView) findViewById(R.id.damage_per_second);
@@ -62,6 +65,7 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
         property = building.getProperty(1);
 
         name.setText(building.getName());
+        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
         damagepersec.setText(property[1]);
         damagepershot.setText(property[2]);
@@ -104,6 +108,7 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = building.getProperty(progress+1);
 
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
             level.setText(property[0]);
             damagepersec.setText(property[1]);
             damagepershot.setText(property[2]);

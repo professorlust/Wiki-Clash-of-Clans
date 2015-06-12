@@ -15,6 +15,7 @@ public class XBow extends Building {
 
     public XBow(){
         name = "Arc-X";
+        nameCode = "x_bow";
         other = "Coût de rechargement: ";
         data.put(1, xbow1);
         data.put(2, xbow2);
@@ -22,6 +23,8 @@ public class XBow extends Building {
         data.put(4, xbow4);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getOther() { return other; }
 

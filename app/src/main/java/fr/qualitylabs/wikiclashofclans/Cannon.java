@@ -24,6 +24,7 @@ public class Cannon extends Building {
 
     public Cannon(){
         name = "Canon";
+        nameCode = "cannon";
         data.put(1, cannon1);
         data.put(2, cannon2);
         data.put(3, cannon3);
@@ -39,6 +40,8 @@ public class Cannon extends Building {
         data.put(13, cannon13);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

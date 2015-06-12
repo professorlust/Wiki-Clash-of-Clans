@@ -24,6 +24,7 @@ public class ArcherTower extends Building {
 
     public ArcherTower(){
         name = "Tour d'archer";
+        nameCode = "archer_tower";
         data.put(1, archertower1);
         data.put(2, archertower2);
         data.put(3, archertower3);
@@ -39,6 +40,8 @@ public class ArcherTower extends Building {
         data.put(13, archertower13);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

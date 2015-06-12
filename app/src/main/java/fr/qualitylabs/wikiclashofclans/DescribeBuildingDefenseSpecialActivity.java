@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
 
     SeekBar seekBar;
 
+    ImageView image;
     //    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
     TextView name;
     TextView other;
@@ -47,6 +49,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
+        image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         other = (TextView) findViewById(R.id.other);
         otherValue = (TextView) findViewById(R.id.other_value);
@@ -66,6 +69,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         property = building.getProperty(1);
 
         name.setText(building.getName());
+        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         other.setText(building.getOther());
         otherValue.setText(property[8]);
         level.setText(property[0]);
@@ -98,8 +102,8 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.reset) {
+            seekBar.setProgress(0);
         }
 
         return super.onOptionsItemSelected(item);
@@ -110,6 +114,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = building.getProperty(progress+1);
 
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
             otherValue.setText(property[8]);
             level.setText(property[0]);
             damagepersec.setText(property[1]);

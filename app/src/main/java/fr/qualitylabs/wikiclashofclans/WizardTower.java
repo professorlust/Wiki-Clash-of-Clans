@@ -16,7 +16,8 @@ public class WizardTower extends Building {
     String[] wizardtower8 = {"8","48","62,4","900","6 480 000","10j","929","10"};
 
     public WizardTower(){
-        name = "Mortier";
+        name = "Tour de sorcier";
+        nameCode = "wizard_tower";
         data.put(1, wizardtower1);
         data.put(2, wizardtower2);
         data.put(3, wizardtower3);
@@ -27,6 +28,8 @@ public class WizardTower extends Building {
         data.put(8, wizardtower8);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

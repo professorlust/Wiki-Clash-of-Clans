@@ -16,7 +16,8 @@ public class AirDefense extends Building {
     String[] airdefense8 = {"8","320","320","1 170","7 560 000","12j","1 018","10"};
 
     public AirDefense(){
-        name = "Mortier";
+        name = "Défense antiaérienne";
+        nameCode = "air_defense";
         data.put(1, airdefense1);
         data.put(2, airdefense2);
         data.put(3, airdefense3);
@@ -27,6 +28,8 @@ public class AirDefense extends Building {
         data.put(8, airdefense8);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getName(){
         return name;

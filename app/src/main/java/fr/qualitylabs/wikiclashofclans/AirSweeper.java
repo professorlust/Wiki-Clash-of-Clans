@@ -15,6 +15,7 @@ public class AirSweeper extends Building {
 
     public AirSweeper(){
         name = "Propulseur d'air";
+        nameCode = "air_sweeper";
         other = "Force (carreaux): ";
         data.put(1, airsweeper1);
         data.put(2, airsweeper2);
@@ -24,6 +25,8 @@ public class AirSweeper extends Building {
         data.put(6, airsweeper6);
         levelMax = data.size();
     }
+
+    public String getNameCode() { return nameCode; }
 
     public String getOther() { return other; }
 
