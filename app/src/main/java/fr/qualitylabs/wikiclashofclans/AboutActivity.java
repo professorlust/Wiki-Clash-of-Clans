@@ -1,16 +1,22 @@
 package fr.qualitylabs.wikiclashofclans;
 
+import android.media.MediaPlayer;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class AboutActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
+
+    ImageButton about;
+    MediaPlayer surprise;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,11 @@ public class AboutActivity extends ActionBarActivity {
 //        Active et rend visible le bouton Home (de la Action Bar)
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        about = (ImageButton) findViewById(R.id.about_image);
+
+        about.setOnClickListener(aboutListener);
+        surprise = MediaPlayer.create(AboutActivity.this, R.raw.surprise);
     }
 
     @Override
@@ -47,4 +58,13 @@ public class AboutActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private View.OnClickListener aboutListener = new View.OnClickListener(){
+
+        @Override
+        public void onClick(View v) {
+            about.setBackgroundResource(R.drawable.surprise);
+            surprise.start();
+        }
+    };
 }
