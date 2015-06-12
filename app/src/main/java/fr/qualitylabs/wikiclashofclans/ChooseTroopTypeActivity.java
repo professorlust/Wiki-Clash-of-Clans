@@ -10,21 +10,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import java.io.Serializable;
 
-
-public class ChooseBuildingTypeActivity extends ActionBarActivity {
+public class ChooseTroopTypeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
-
-    Building building = new Building();
-
-    CardView defense;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_building_type);
+        setContentView(R.layout.activity_choose_troop_type);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -34,15 +28,20 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        defense = (CardView) findViewById(R.id.defense);
+        CardView white;
+        CardView dark;
 
-        defense.setOnClickListener(defenseListener);
+        white = (CardView) findViewById(R.id.white);
+        dark = (CardView) findViewById(R.id.dark);
+
+        white.setOnClickListener(whiteListener);
+        dark.setOnClickListener(darkListener);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_building_type, menu);
+        getMenuInflater().inflate(R.menu.menu_choose_troop_type, menu);
         return true;
     }
 
@@ -61,10 +60,17 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private View.OnClickListener defenseListener = new View.OnClickListener() {
+    private View.OnClickListener whiteListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseDefenseActivity.class));
+            startActivity(new Intent(getApplicationContext(), ChooseTroopWhiteActivity.class));
+        }
+    };
+
+    private View.OnClickListener darkListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(getApplicationContext(), ChooseTroopDarkActivity.class));
         }
     };
 }

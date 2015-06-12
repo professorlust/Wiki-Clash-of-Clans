@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikiclashofclans.ChooseTroopBActivity">
+    tools:context="fr.qualitylabs.wikiclashofclans.ChooseTroopDarkActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -11,6 +11,7 @@
         layout="@layout/app_bar" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -21,42 +22,9 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/gargouille"
+                android:id="@+id/minion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/gargouille" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Gargouille" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/chevaucheur"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/gargouille"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -74,7 +42,40 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/chevaucheur" />
+                        android:background="@drawable/minion" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Gargouille" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/hogrider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/minion"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/hog_rider" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -89,7 +90,7 @@
                 android:id="@+id/valkyrie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/chevaucheur"
+                android:layout_below="@id/hogrider"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -147,12 +148,12 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Golem" />
+                        android:text="Golème" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/sorciere"
+                android:id="@+id/witch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/golem"
@@ -173,7 +174,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/sorciere" />
+                        android:background="@drawable/witch" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -185,10 +186,10 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/molosse"
+                android:id="@+id/lavahound"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sorciere"
+                android:layout_below="@id/witch"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -206,17 +207,16 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/molosse" />
+                        android:background="@drawable/lava_hound" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Molosse de lave" />
+                        android:text="Molosse de feu" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

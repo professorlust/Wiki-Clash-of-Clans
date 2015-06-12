@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:id="@+id/troupes_b_bouton"
+                android:id="@+id/troop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
@@ -33,44 +33,21 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/troupes_blanches" />
+                    android:background="@drawable/troop_white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="72dp"
                     android:layout_marginLeft="88dp"
                     android:gravity="center"
-                    android:text="Troupes Blanches" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/troupes_n_bouton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/troupes_b_bouton"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/troupes_noires" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Troupes Noires" />
+                    android:text="Troupes" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/batiments_bouton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/troupes_n_bouton"
+                android:layout_below="@id/troop"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:paddingLeft="16dp"
@@ -79,7 +56,7 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:background="@drawable/batiments" />
+                    android:background="@drawable/buildings" />
 
                 <TextView
                     android:layout_width="wrap_content"

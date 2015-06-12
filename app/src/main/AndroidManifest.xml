@@ -26,44 +26,6 @@
                 android:value=".HomeActivity" />
         </activity>
         <activity
-            android:name=".ChooseTroopBActivity"
-            android:label="@string/title_activity_choose_troop_b" >
-
-            <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
-        </activity>
-        <activity
-            android:name=".DescribeTroopBActivity"
-            android:label="@string/title_activity_describe_troop_b"
-            android:parentActivityName=".ChooseTroopBActivity" >
-
-            <!-- On indique à cette activité qu'elle a un parent qui est .ChooseTroopBActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopBActivity" />
-        </activity>
-        <activity
-            android:name=".ChooseTroopNActivity"
-            android:label="@string/title_activity_choose_troop_n" >
-
-            <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
-        </activity>
-        <activity
-            android:name=".DescribeTroopNActivity"
-            android:label="@string/title_activity_describe_troop_n"
-            android:parentActivityName=".ChooseTroopNActivity" >
-
-            <!-- On indique à cette activité qu'elle a un parent qui est .ChooseTroopNActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopNActivity" />
-        </activity>
-        <activity
             android:name=".ChooseBuildingTypeActivity"
             android:label="@string/title_activity_choose_building_type"
             android:parentActivityName=".HomeActivity" >
@@ -86,6 +48,46 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseTroopTypeActivity"
+            android:label="@string/title_activity_choose_troop_type"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseTroopWhiteActivity"
+            android:label="@string/title_activity_choose_troop_white"
+            android:parentActivityName=".ChooseTroopTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeTroopWhiteActivity"
+            android:label="@string/title_activity_describe_troop_white"
+            android:parentActivityName=".ChooseTroopWhiteActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopWhiteActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseTroopDarkActivity"
+            android:label="@string/title_activity_choose_troop_dark"
+            android:parentActivityName=".ChooseTroopTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeTroopDarkActivity"
+            android:label="@string/title_activity_describe_troop_dark"
+            android:parentActivityName=".ChooseTroopTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopTypeActivity" />
         </activity>
     </application>
 

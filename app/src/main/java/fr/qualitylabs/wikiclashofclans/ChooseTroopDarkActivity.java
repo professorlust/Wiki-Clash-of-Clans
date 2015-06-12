@@ -1,7 +1,6 @@
 package fr.qualitylabs.wikiclashofclans;
 
 import android.content.Intent;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -9,28 +8,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 
-public class ChooseTroopNActivity extends ActionBarActivity {
+public class ChooseTroopDarkActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
-    CardView gargouille;
-    CardView chevaucheur;
+    CardView minion;
+    CardView hogrider;
     CardView valkyrie;
     CardView golem;
-    CardView sorciere;
-    CardView molosse;
+    CardView witch;
+    CardView lavahound;
 
     Troop troop = new Troop();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_troop_n);
+        setContentView(R.layout.activity_choose_troop_dark);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -40,25 +36,25 @@ public class ChooseTroopNActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        gargouille = (CardView) findViewById(R.id.gargouille);
-        chevaucheur = (CardView) findViewById(R.id.chevaucheur);
+        minion = (CardView) findViewById(R.id.minion);
+        hogrider = (CardView) findViewById(R.id.hogrider);
         valkyrie = (CardView) findViewById(R.id.valkyrie);
         golem = (CardView) findViewById(R.id.golem);
-        sorciere = (CardView) findViewById(R.id.sorciere);
-        molosse = (CardView) findViewById(R.id.molosse);
+        witch = (CardView) findViewById(R.id.witch);
+        lavahound = (CardView) findViewById(R.id.lavahound);
 
-        gargouille.setOnClickListener(gargouilleListener);
-        chevaucheur.setOnClickListener(chevaucheurListener);
+        minion.setOnClickListener(minionListener);
+        hogrider.setOnClickListener(hogriderListener);
         valkyrie.setOnClickListener(valkyrieListener);
         golem.setOnClickListener(golemListener);
-        sorciere.setOnClickListener(sorciereListener);
-        molosse.setOnClickListener(molosseListener);
+        witch.setOnClickListener(witchListener);
+        lavahound.setOnClickListener(lavahoundListener);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_troop_n, menu);
+        getMenuInflater().inflate(R.menu.menu_choose_troop_dark, menu);
         return true;
     }
 
@@ -69,27 +65,30 @@ public class ChooseTroopNActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        if (id == android.R.id.home) { // Si l'item cliqué est le bouton Home, syntaxe particulière de l'ID car c'est un bouton Home "générique"
-            NavUtils.navigateUpFromSameTask(this); // Redirige vers le parent (indiqué dans AndroidManifest.xml) de la même application (this)
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private View.OnClickListener gargouilleListener = new View.OnClickListener() {
+    private View.OnClickListener minionListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "gargouille");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new Minion();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };
 
-    private View.OnClickListener chevaucheurListener = new View.OnClickListener() {
+    private View.OnClickListener hogriderListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "chevaucheur");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new HogRider();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };
@@ -97,8 +96,9 @@ public class ChooseTroopNActivity extends ActionBarActivity {
     private View.OnClickListener valkyrieListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "valkyrie");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new Valkyrie();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };
@@ -106,26 +106,29 @@ public class ChooseTroopNActivity extends ActionBarActivity {
     private View.OnClickListener golemListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "golem");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new Golem();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };
 
-    private View.OnClickListener sorciereListener = new View.OnClickListener() {
+    private View.OnClickListener witchListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "sorciere");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new Witch();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };
 
-    private View.OnClickListener molosseListener = new View.OnClickListener() {
+    private View.OnClickListener lavahoundListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopNActivity.class);
-            intent.putExtra("key", "molosse");
+            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            troop = new LavaHound();
+            intent.putExtra("troop", troop);
             startActivity(intent);
         }
     };

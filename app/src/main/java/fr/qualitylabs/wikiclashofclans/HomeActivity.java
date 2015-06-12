@@ -16,8 +16,8 @@ import android.widget.Toast;
 public class HomeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
-    RelativeLayout troupesB;
-    RelativeLayout troupesN;
+
+    RelativeLayout troop;
     RelativeLayout batiments;
 
     @Override
@@ -33,12 +33,10 @@ public class HomeActivity extends ActionBarActivity {
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer); // Initialisation du Drawer
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar); // Définit les actions, paramètres, méthodes... du Drawer
 
-        troupesB = (RelativeLayout) findViewById(R.id.troupes_b_bouton);
-        troupesN = (RelativeLayout) findViewById(R.id.troupes_n_bouton);
+        troop = (RelativeLayout) findViewById(R.id.troop);
         batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
 
-        troupesB.setOnClickListener(troupesBListener);
-        troupesN.setOnClickListener(troupesNListener);
+        troop.setOnClickListener(troopListener);
         batiments.setOnClickListener(batimentsListener);
     }
 
@@ -64,17 +62,10 @@ public class HomeActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private View.OnClickListener troupesBListener = new View.OnClickListener() {
+    private View.OnClickListener troopListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseTroopBActivity.class));
-        }
-    };
-
-    private View.OnClickListener troupesNListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseTroopNActivity.class));
+            startActivity(new Intent(getApplicationContext(), ChooseTroopTypeActivity.class));
         }
     };
 
