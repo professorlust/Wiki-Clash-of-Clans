@@ -19,6 +19,9 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
     CardView cannon;
     CardView archerTower;
     CardView mortar;
+    CardView airDefense;
+    CardView wizardTower;
+    CardView hiddenTesla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +39,16 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         cannon = (CardView) findViewById(R.id.cannon);
         archerTower = (CardView) findViewById(R.id.archer_tower);
         mortar = (CardView) findViewById(R.id.mortar);
+        airDefense = (CardView) findViewById(R.id.air_defense);
+        wizardTower = (CardView) findViewById(R.id.wizard_tower);
+        hiddenTesla = (CardView) findViewById(R.id.hidden_tesla);
 
         cannon.setOnClickListener(cannonListener);
         archerTower.setOnClickListener(archerTowerListener);
         mortar.setOnClickListener(mortarListener);
+        airDefense.setOnClickListener(airDefenseListener);
+        wizardTower.setOnClickListener(wizardTowerListener);
+        hiddenTesla.setOnClickListener(hiddenTeslaListener);
     }
 
     @Override
@@ -84,6 +93,36 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
             building = new Mortar();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener airDefenseListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
+            building = new AirDefense();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener wizardTowerListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
+            building = new WizardTower();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener hiddenTeslaListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
+            building = new HiddenTesla();
             intent.putExtra("building", building);
             startActivity(intent);
         }

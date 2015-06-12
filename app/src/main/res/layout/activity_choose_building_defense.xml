@@ -53,37 +53,37 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-            android:id="@+id/archer_tower"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cannon"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="4dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            card_view:cardCornerRadius="4dp"
-            card_view:cardElevation="3dp">
-
-            <RelativeLayout
+                android:id="@+id/archer_tower"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cannon"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
 
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:background="@drawable/archer_tower" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="72dp"
-                    android:layout_marginLeft="88dp"
-                    android:gravity="center"
-                    android:text="Tour d'archer" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/archer_tower" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Tour d'archer" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/mortar"
@@ -115,6 +115,105 @@
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
                         android:text="Mortier" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/air_defense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mortar"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/air_defense" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Défense antiaérienne" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/wizard_tower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/air_defense"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/wizard_tower" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Tour de sorcier" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/hidden_tesla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wizard_tower"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/hidden_tesla" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Tesla camouflé" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>
