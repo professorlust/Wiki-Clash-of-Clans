@@ -84,10 +84,10 @@
         <activity
             android:name=".DescribeTroopDarkActivity"
             android:label="@string/title_activity_describe_troop_dark"
-            android:parentActivityName=".ChooseTroopTypeActivity" >
+            android:parentActivityName=".ChooseTroopDarkActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopTypeActivity" />
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopDarkActivity" />
         </activity>
     </application>
 

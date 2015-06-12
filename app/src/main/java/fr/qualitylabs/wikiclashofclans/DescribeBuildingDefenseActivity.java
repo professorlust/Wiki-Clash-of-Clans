@@ -80,7 +80,7 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_defense, menu);
+        getMenuInflater().inflate(R.menu.menu_describe_builiding_defense, menu);
         return true;
     }
 
@@ -92,8 +92,8 @@ public class DescribeBuildingDefenseActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.reset) {
+            seekBar.setProgress(0);
         }
 
         return super.onOptionsItemSelected(item);

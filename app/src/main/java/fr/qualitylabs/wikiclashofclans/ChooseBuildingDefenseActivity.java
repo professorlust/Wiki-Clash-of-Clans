@@ -16,6 +16,10 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
 
     Building building = new Building();
 
+    CardView cannon;
+    CardView archerTower;
+    CardView mortar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +33,13 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        CardView cannon;
-        CardView archerTower;
-
         cannon = (CardView) findViewById(R.id.cannon);
         archerTower = (CardView) findViewById(R.id.archer_tower);
+        mortar = (CardView) findViewById(R.id.mortar);
 
         cannon.setOnClickListener(cannonListener);
         archerTower.setOnClickListener(archerTowerListener);
+        mortar.setOnClickListener(mortarListener);
     }
 
     @Override
@@ -52,12 +55,6 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -77,6 +74,16 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
             building = new ArcherTower();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener mortarListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
+            building = new Mortar();
             intent.putExtra("building", building);
             startActivity(intent);
         }

@@ -41,7 +41,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/troop_white" />
+                        android:background="@drawable/giant" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/troop_dark" />
+                        android:background="@drawable/witch" />
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -41,7 +41,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/minion" />
+                        android:background="@drawable/mortar" />
 
                     <TextView
                         android:layout_width="wrap_content"

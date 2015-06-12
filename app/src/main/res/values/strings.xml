@@ -21,15 +21,12 @@
     <string name="title_activity_describe_troop_b">Description</string>
     <string name="title_activity_choose_troop_n">Troupes Noires</string>
     <string name="title_activity_describe_troop_n">Description</string>
-    <string name="reinitialiser">Réinitialiser</string>
+    <string name="reset">Réinitialiser</string>
 
     <!-- Strings de l'activité HomeActivity -->
-    <string name="ajouts">Derniers ajouts :</string>
     <string name="title_activity_choose_building_type">ChooseBuildingTypeActivity</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_describe_defense">Description</string>
     <string name="title_activity_choose_defense">Choisir une défense</string>
+    <string name="title_activity_describe_defense">Description</string>
     <string name="title_activity_choose_troop_type">Choisir le type de troupe</string>
     <string name="title_activity_choose_troop_white">Choisir une troupe blanche</string>
     <string name="title_activity_describe_troop_white">Description</string>
