@@ -16,6 +16,7 @@ public class Goblin extends Troop {
 
     public Goblin() {
         name = "Gobelin";
+        namecode = "goblin";
         housingSpace = "1";
         prefferedTarget = "Ressources (x2)";
         targetType = "Terrestres";
@@ -32,6 +33,8 @@ public class Goblin extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

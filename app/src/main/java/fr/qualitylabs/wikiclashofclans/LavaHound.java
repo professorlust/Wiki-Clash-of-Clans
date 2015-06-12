@@ -12,6 +12,7 @@ public class LavaHound extends Troop {
 
     public LavaHound() {
         name = "Molosse de lave";
+        namecode = "lavahound";
         housingSpace = "30";
         prefferedTarget = "Défenses  antiaériennes";
         targetType = "Terrestres et Aériennes";
@@ -25,6 +26,8 @@ public class LavaHound extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

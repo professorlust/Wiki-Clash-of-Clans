@@ -15,6 +15,7 @@ public class Pekka extends Troop {
 
     public Pekka() {
         name = "P.E.K.K.A.";
+        namecode = "pekka";
         housingSpace = "25";
         prefferedTarget = "Toutes";
         targetType = "Terrestres";
@@ -30,6 +31,8 @@ public class Pekka extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

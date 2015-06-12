@@ -16,6 +16,7 @@ public class Archer extends Troop{
 
     public Archer() {
         name = "Archer";
+        namecode = "archer";
         housingSpace = "1";
         prefferedTarget = "Aucune";
         targetType = "Toutes";
@@ -33,6 +34,8 @@ public class Archer extends Troop{
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

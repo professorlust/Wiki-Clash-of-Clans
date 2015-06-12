@@ -11,6 +11,7 @@ public class Witch extends Troop {
 
     public Witch() {
         name = "Sorcière";
+        namecode = "witch";
         housingSpace = "12";
         prefferedTarget = "Totues";
         targetType = "Terrestres et Aériennes";
@@ -23,6 +24,8 @@ public class Witch extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

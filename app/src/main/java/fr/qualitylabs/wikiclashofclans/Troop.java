@@ -9,6 +9,7 @@ import java.util.Hashtable;
 public class Troop implements Serializable {
 
     protected String name;
+    protected String namecode;
     protected String housingSpace;
     protected String prefferedTarget;
     protected String targetType;
@@ -19,12 +20,15 @@ public class Troop implements Serializable {
     public Troop() {
         levelMax = 0;
         name = null;
+        namecode = null;
         data = new Hashtable<>();
     }
 
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

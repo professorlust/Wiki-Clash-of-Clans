@@ -13,6 +13,7 @@ public class Valkyrie extends Troop {
 
     public Valkyrie() {
         name = "Valkyrie";
+        namecode = "valkyrie";
         housingSpace = "8";
         prefferedTarget = "Toutes";
         targetType = "Terrestres";
@@ -27,6 +28,8 @@ public class Valkyrie extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

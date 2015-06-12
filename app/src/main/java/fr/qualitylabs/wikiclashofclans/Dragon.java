@@ -13,6 +13,7 @@ public class Dragon extends Troop {
 
     public Dragon() {
         name = "Dragon";
+        namecode = "dragon";
         housingSpace = "20";
         prefferedTarget = "Toutes";
         targetType = "Terrestres et Aériennes";
@@ -27,6 +28,8 @@ public class Dragon extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

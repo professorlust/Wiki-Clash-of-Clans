@@ -14,6 +14,7 @@ public class HogRider extends Troop {
 
     public HogRider() {
         name = "Chevaucheur de cochon";
+        namecode = "hogrider";
         housingSpace = "5";
         prefferedTarget = "Défenses";
         targetType = "Terrestres";
@@ -29,6 +30,8 @@ public class HogRider extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

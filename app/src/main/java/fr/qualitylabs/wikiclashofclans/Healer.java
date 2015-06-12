@@ -14,6 +14,7 @@ public class Healer extends Troop {
 
     public Healer() {
         name = "Guérissseuse";
+        namecode = "healer";
         housingSpace = "14";
         prefferedTarget = "Toutes";
         targetType = "Terrestres";
@@ -28,6 +29,8 @@ public class Healer extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

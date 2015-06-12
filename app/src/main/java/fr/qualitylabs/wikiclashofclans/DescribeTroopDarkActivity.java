@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -18,6 +19,8 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
     String[] property;
 
     SeekBar seekBar;
+
+    ImageView image;
 
     TextView name;
     TextView housingspace;
@@ -49,6 +52,7 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
+        image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         housingspace = (TextView) findViewById(R.id.housing_space);
         prefferedtarget = (TextView) findViewById(R.id.preffered_target);
@@ -71,6 +75,7 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
         property = troop.getProperty(1);
 
+        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+troop.getNamecode()+1,null,getPackageName())));
         name.setText(troop.getName());
         housingspace.setText(troop.getHousingSpace());
         prefferedtarget.setText(troop.getPrefferedTarget());
@@ -119,6 +124,7 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = troop.getProperty(progress+1);
 
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+troop.getNamecode()+(progress+1),null,getPackageName())));
             level.setText(property[0]);
             trainingtime.setText(property[1]);
             speed.setText(property[2]);

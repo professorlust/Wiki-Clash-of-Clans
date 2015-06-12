@@ -16,6 +16,7 @@ public class Minion extends Troop {
 
     public Minion() {
         name = "Gargouille";
+        namecode = "minion";
         housingSpace = "2";
         prefferedTarget = "Toutes";
         targetType = "Terrestres et Aériennes";
@@ -32,6 +33,8 @@ public class Minion extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

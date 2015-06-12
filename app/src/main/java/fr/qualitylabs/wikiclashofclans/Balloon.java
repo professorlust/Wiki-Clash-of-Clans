@@ -15,6 +15,7 @@ public class Balloon extends Troop {
 
     public Balloon() {
         name = "Ballon";
+        namecode = "balloon";
         housingSpace = "5";
         prefferedTarget = "Défenses";
         targetType = "Terrestres";
@@ -31,6 +32,8 @@ public class Balloon extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;
