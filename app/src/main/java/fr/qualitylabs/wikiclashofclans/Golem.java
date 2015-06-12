@@ -13,7 +13,7 @@ public class Golem extends Troop {
     String[] golem5 = {"Golem", "5", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "54", "6 300", "750", "90 000", "8", "14j"};
 
     public Golem() {
-        name = "Golème";
+        name = "Golem";
         namecode = "golem";
         housingSpace = "30";
         prefferedTarget = "Défenses";

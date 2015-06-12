@@ -8,12 +8,12 @@ import java.util.Hashtable;
 public class ArcherTower extends Building {
 
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
-    String[] archertower1 = {"1","11","5,5","380","1 00","1m","7","1"};
+    String[] archertower1 = {"1","11","5,5","380","1 000","1m","7","1"};
     String[] archertower2 = {"2","15","7,5","420","2 000","30m","42","1"};
     String[] archertower3 = {"3","19","9,5","460","5 000","45m","51","2"};
     String[] archertower4 = {"4","25","12,5","500","20 000","4h","120","3"};
     String[] archertower5 = {"5","30","15","540","80 000","12h","207","4"};
-    String[] archertower6 = {"6","35","17,5,8","580","180 000","1j","293","5"};
+    String[] archertower6 = {"6","35","17,5","580","180 000","1j","293","5"};
     String[] archertower7 = {"7","42","21","620","360 000","2j","415","6"};
     String[] archertower8 = {"8","48","24","660","720 000","3j","509","7"};
     String[] archertower9 = {"9","56","28,8","705","1 500 000","4j","587","8"};

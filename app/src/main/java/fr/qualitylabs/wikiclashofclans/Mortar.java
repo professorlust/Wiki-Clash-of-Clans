@@ -16,7 +16,7 @@ public class Mortar extends Building {
     String[] mortar8 = {"8","13","65","750","6 400 000","10j","929","10"};
 
     public Mortar(){
-        name = "Canon";
+        name = "Mortier";
         data.put(1, mortar1);
         data.put(2, mortar2);
         data.put(3, mortar3);
