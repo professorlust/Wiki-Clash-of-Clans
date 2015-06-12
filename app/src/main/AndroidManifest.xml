@@ -89,6 +89,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopDarkActivity" />
         </activity>
+        <activity
+            android:name=".ChooseBuildingDefenseSpecialActivity"
+            android:label="@string/title_activity_choose_building_defense_special"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingDefenseSpecialActivity"
+            android:label="@string/title_activity_describe_building_defense_special"
+            android:parentActivityName=".ChooseBuildingDefenseSpecialActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseSpecialActivity" />
+        </activity>
     </application>
 
 </manifest>

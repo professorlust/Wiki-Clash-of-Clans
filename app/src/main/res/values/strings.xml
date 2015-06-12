@@ -32,4 +32,12 @@
     <string name="title_activity_describe_troop_white">Description</string>
     <string name="title_activity_choose_troop_dark">Choisir une troupe noire</string>
     <string name="title_activity_describe_troop_dark">Description</string>
+    <string name="title_activity_choose_building_defense_special">
+        ChooseBuildingDefenseSpecialActivity
+    </string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_describe_building_defense_special">
+        DescribeBuildingDefenseSpecialActivity
+    </string>
 </resources>

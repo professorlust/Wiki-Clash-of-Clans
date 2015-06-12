@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity">
+    tools:context="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseSpecialActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/defense"
+                android:id="@+id/x_bow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -41,22 +41,22 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/mortar" />
+                        android:background="@drawable/x_bow" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Défense" />
+                        android:text="Arc X" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/defense_special"
+                android:id="@+id/air_sweeper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/defense"
+                android:layout_below="@id/x_bow"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -74,14 +74,47 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/mortar" />
+                        android:background="@drawable/air_sweeper" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Défense spéciale" />
+                        android:text="Balayeur" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/inferno_tower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/air_sweeper"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/inferno_tower" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Tour de l'enfer" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

@@ -8,6 +8,7 @@ import java.util.Hashtable;
  */
 public class Building implements Serializable {
 
+    protected String other;
     protected String name;
     protected int levelMax;
     protected Hashtable<Integer, String[]> data;
@@ -15,8 +16,11 @@ public class Building implements Serializable {
     public Building() {
         levelMax = 0;
         name = null;
+        other = null;
         data = new Hashtable<>();
     }
+
+    public String getOther() { return other; }
 
     public String getName() {
         return name;
