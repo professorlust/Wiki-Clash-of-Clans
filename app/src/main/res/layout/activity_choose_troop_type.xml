@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <android.support.v7.widget.CardView
                 android:id="@+id/white"
                 android:layout_width="match_parent"
@@ -39,16 +40,18 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/giant" />
+                        android:id="@+id/white_troops"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:src="@drawable/white_troop" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Troupes blanches" />
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/white_troops"
+                        android:layout_centerHorizontal="true"
+                        android:text="Troupes blanches"
+                        android:textSize="20sp"/>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -72,16 +75,18 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/witch" />
+                        android:id="@+id/dark_troops"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:src="@drawable/dark_troop" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Troupes noires" />
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/dark_troops"
+                        android:text="Troupes noires"
+                        android:textSize="20sp"/>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>
