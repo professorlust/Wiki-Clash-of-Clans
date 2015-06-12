@@ -16,7 +16,7 @@ public class AirSweeper extends Building {
     public AirSweeper(){
         name = "Propulseur d'air";
         nameCode = "air_sweeper";
-        other = "Force (carreaux): ";
+        other = "Force (cases): ";
         data.put(1, airsweeper1);
         data.put(2, airsweeper2);
         data.put(3, airsweeper3);
