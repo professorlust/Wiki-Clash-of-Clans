@@ -12,7 +12,7 @@ public class LavaHound extends Troop {
 
     public LavaHound() {
         name = "Molosse de lave";
-        namecode = "lavahound";
+        namecode = "lava_hound";
         housingSpace = "30";
         prefferedTarget = "Défenses  antiaériennes";
         targetType = "Terrestres et Aériennes";

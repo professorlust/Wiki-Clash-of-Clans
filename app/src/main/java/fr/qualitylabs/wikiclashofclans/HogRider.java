@@ -14,7 +14,7 @@ public class HogRider extends Troop {
 
     public HogRider() {
         name = "Chevaucheur de cochon";
-        namecode = "hogrider";
+        namecode = "hog_rider";
         housingSpace = "5";
         prefferedTarget = "Défenses";
         targetType = "Terrestres";

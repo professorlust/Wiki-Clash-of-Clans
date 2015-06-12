@@ -18,6 +18,7 @@ public class Barbarian extends Troop {
 
     public Barbarian() {
         name = "Barbare";
+        namecode = "barbarian";
         housingSpace = "1";
         prefferedTarget = "Toutes";
         targetType = "Terrestres";
@@ -35,6 +36,8 @@ public class Barbarian extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;

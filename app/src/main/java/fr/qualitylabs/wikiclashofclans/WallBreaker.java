@@ -15,6 +15,7 @@ public class WallBreaker extends Troop {
 
     public WallBreaker() {
         name = "Sapeur";
+        namecode = "wall_breaker";
         housingSpace = "2";
         prefferedTarget = "Rempart (x40)";
         targetType = "Terrestres";
@@ -31,6 +32,8 @@ public class WallBreaker extends Troop {
     public String getName() {
         return name;
     }
+
+    public String getNamecode() { return namecode; }
 
     public String getHousingSpace() {
         return housingSpace;
