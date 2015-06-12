@@ -8,9 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
-
-import java.io.Serializable;
 
 
 public class ChooseBuildingTypeActivity extends ActionBarActivity {
@@ -64,7 +61,7 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
     private View.OnClickListener defenseListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseDefenseActivity.class));
+            startActivity(new Intent(getApplicationContext(), ChooseBuildingDefenseActivity.class));
         }
     };
 }

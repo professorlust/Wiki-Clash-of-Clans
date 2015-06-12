@@ -7,9 +7,6 @@ import java.util.Hashtable;
  */
 public class ArcherTower extends Building {
 
-    private String name = super.name;
-    private Hashtable<Integer, String[]> data = super.data;
-
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] archertower1 = {"1","11","5,5","380","1 00","1m","7","1"};
     String[] archertower2 = {"2","15","7,5","420","2 000","30m","42","1"};

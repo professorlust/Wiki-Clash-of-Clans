@@ -34,15 +34,15 @@
                 android:value="fr.qualitylabs.wikiclashofclans.HomeActivity" />
         </activity>
         <activity
-            android:name=".DescribeDefenseActivity"
+            android:name=".DescribeBuildingDefenseActivity"
             android:label="@string/title_activity_describe_defense"
-            android:parentActivityName=".ChooseDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseDefenseActivity" />
+                android:value=".ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name=".ChooseDefenseActivity"
+            android:name=".ChooseBuildingDefenseActivity"
             android:label="@string/title_activity_choose_defense"
             android:parentActivityName=".ChooseBuildingTypeActivity" >
             <meta-data

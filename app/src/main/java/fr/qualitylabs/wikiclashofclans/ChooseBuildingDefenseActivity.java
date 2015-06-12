@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class ChooseDefenseActivity extends ActionBarActivity {
+public class ChooseBuildingDefenseActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
@@ -19,7 +19,7 @@ public class ChooseDefenseActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_defense);
+        setContentView(R.layout.activity_choose_building_defense);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -65,7 +65,7 @@ public class ChooseDefenseActivity extends ActionBarActivity {
     private View.OnClickListener cannonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeDefenseActivity.class);
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
             building = new Cannon();
             intent.putExtra("building", building);
             startActivity(intent);
@@ -75,7 +75,7 @@ public class ChooseDefenseActivity extends ActionBarActivity {
     private View.OnClickListener archerTowerListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeDefenseActivity.class);
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
             building = new ArcherTower();
             intent.putExtra("building", building);
             startActivity(intent);

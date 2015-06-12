@@ -7,10 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-public class DescribeDefenseActivity extends ActionBarActivity {
+public class DescribeBuildingDefenseActivity extends ActionBarActivity {
 
     Toolbar toolbar;
 
@@ -20,14 +19,21 @@ public class DescribeDefenseActivity extends ActionBarActivity {
 
     SeekBar seekBar;
 
+//    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
     TextView name;
     TextView level;
-    TextView hp;
+    TextView damagepersec;
+    TextView damagepershot;
+    TextView health;
+    TextView buildcost;
+    TextView buildtime;
+    TextView xp;
+    TextView levelrequiered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe_defense);
+        setContentView(R.layout.activity_describe_building_defense);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -41,16 +47,29 @@ public class DescribeDefenseActivity extends ActionBarActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
-        hp = (TextView) findViewById(R.id.hp);
+        damagepersec = (TextView) findViewById(R.id.damage_per_second);
+        damagepershot = (TextView) findViewById(R.id.damage_per_shot);
+        health = (TextView) findViewById(R.id.health);
+        buildcost = (TextView) findViewById(R.id.build_cost);
+        buildtime = (TextView) findViewById(R.id.build_time);
+        xp = (TextView) findViewById(R.id.experience);
+        levelrequiered = (TextView) findViewById(R.id.level_requiered);
 
 //        Récupère les extras
         building = (Building) getIntent().getSerializableExtra("building");
 
 //        Initialisation des vues avec les données récupérées
         property = building.getProperty(1);
+
         name.setText(building.getName());
         level.setText(property[0]);
-        hp.setText(property[3]);
+        damagepersec.setText(property[1]);
+        damagepershot.setText(property[2]);
+        health.setText(property[3]);
+        buildcost.setText(property[4]);
+        buildtime.setText(property[5]);
+        xp.setText(property[6]);
+        levelrequiered.setText(property[7]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(building.getLevelMax() - 1);
@@ -83,10 +102,16 @@ public class DescribeDefenseActivity extends ActionBarActivity {
     private SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//    Modèle du String[]: {nom, niveau, ciblesPréférées, typeCibles, typeDégats, espaceOccupé, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
             property = building.getProperty(progress+1);
+
             level.setText(property[0]);
-            hp.setText(property[3]);
+            damagepersec.setText(property[1]);
+            damagepershot.setText(property[2]);
+            health.setText(property[3]);
+            buildcost.setText(property[4]);
+            buildtime.setText(property[5]);
+            xp.setText(property[6]);
+            levelrequiered.setText(property[7]);
         }
 
         @Override
