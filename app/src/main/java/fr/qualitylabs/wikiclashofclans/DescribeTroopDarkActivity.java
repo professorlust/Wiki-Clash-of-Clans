@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class DescribeTroopDarkActivity extends ActionBarActivity {
@@ -17,6 +20,11 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
     Troop troop = new Troop();
 
     String[] property;
+
+    Animation fadeOut;
+    Animation fadeIn;
+
+    int sliderProgress;
 
     SeekBar seekBar;
 
@@ -50,6 +58,10 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+//        Récupération des animations
+        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
+
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         image = (ImageView) findViewById(R.id.image);
@@ -75,7 +87,7 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
         property = troop.getProperty(1);
 
-        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+troop.getNamecode()+1,null,getPackageName())));
+        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + troop.getNamecode() + 1, null, getPackageName())));
         name.setText(troop.getName());
         housingspace.setText(troop.getHousingSpace());
         prefferedtarget.setText(troop.getPrefferedTarget());
@@ -86,15 +98,18 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         speed.setText(property[2]);
         damage.setText(property[3]);
         health.setText(property[4]);
-        trainingcost.setText(property[5]+" elixir noir");
+        trainingcost.setText(property[5] + " elixir noir");
         researchcost.setText(property[6]);
         requiredlevel.setText(property[7]);
         researchtime.setText(property[8]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(troop.getLevelMax() - 1);
+
 //        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
+
+        fadeOut.setAnimationListener(fadeOutListener);
     }
 
     @Override
@@ -122,15 +137,17 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
     private SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            property = troop.getProperty(progress+1);
+            property = troop.getProperty(progress + 1);
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+troop.getNamecode()+(progress+1),null,getPackageName())));
+            image.startAnimation(fadeOut);
+            sliderProgress = progress;
+
             level.setText(property[0]);
             trainingtime.setText(property[1]);
             speed.setText(property[2]);
             damage.setText(property[3]);
             health.setText(property[4]);
-            trainingcost.setText(property[5]+" elixir noir");
+            trainingcost.setText(property[5] + " elixir noir");
             researchcost.setText(property[6]);
             requiredlevel.setText(property[7]);
             researchtime.setText(property[8]);
@@ -143,6 +160,24 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 
         @Override
         public void onStopTrackingTouch(SeekBar seekBar) {
+
+        }
+    };
+
+    private Animation.AnimationListener fadeOutListener = new Animation.AnimationListener() {
+        @Override
+        public void onAnimationStart(Animation animation) {
+
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + troop.getNamecode() + (sliderProgress + 1), null, getPackageName())));
+            image.startAnimation(fadeIn);
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
 
         }
     };
