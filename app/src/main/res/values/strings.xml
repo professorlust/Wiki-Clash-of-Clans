@@ -32,6 +32,8 @@
     <string name="title_activity_describe_troop_white">Description</string>
     <string name="title_activity_choose_troop_dark">Choisir une troupe noire</string>
     <string name="title_activity_describe_troop_dark">Description</string>
-    <string name="title_activity_choose_building_defense_special">Choisir une défense spéciale</string>
-    <string name="title_activity_describe_building_defense_special">Description</string>
+    <string name="title_activity_describe_building_defense_wall">Description</string>
+    <string name="title_activity_describe_building_defense_xbow">Description</string>
+    <string name="title_activity_describe_building_defense_air_sweeper">Description</string>
+    <string name="title_activity_describe_building_defense_inferno_tower">Description</string>
 </resources>

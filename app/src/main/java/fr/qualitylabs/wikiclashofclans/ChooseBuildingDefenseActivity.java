@@ -16,12 +16,16 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
 
     Building building = new Building();
 
+    CardView wall;
     CardView cannon;
     CardView archerTower;
     CardView mortar;
     CardView airDefense;
     CardView wizardTower;
     CardView hiddenTesla;
+    CardView xBow;
+    CardView airSweeper;
+    CardView infernoTower;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +40,27 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        wall = (CardView) findViewById(R.id.wall);
         cannon = (CardView) findViewById(R.id.cannon);
         archerTower = (CardView) findViewById(R.id.archer_tower);
         mortar = (CardView) findViewById(R.id.mortar);
         airDefense = (CardView) findViewById(R.id.air_defense);
         wizardTower = (CardView) findViewById(R.id.wizard_tower);
         hiddenTesla = (CardView) findViewById(R.id.hidden_tesla);
+        xBow = (CardView) findViewById(R.id.x_bow);
+        airSweeper = (CardView) findViewById(R.id.air_sweeper);
+        infernoTower = (CardView) findViewById(R.id.inferno_tower);
 
+        wall.setOnClickListener(wallListener);
         cannon.setOnClickListener(cannonListener);
         archerTower.setOnClickListener(archerTowerListener);
         mortar.setOnClickListener(mortarListener);
         airDefense.setOnClickListener(airDefenseListener);
         wizardTower.setOnClickListener(wizardTowerListener);
         hiddenTesla.setOnClickListener(hiddenTeslaListener);
+        xBow.setOnClickListener(xBowListener);
+        airSweeper.setOnClickListener(airSweeperListener);
+        infernoTower.setOnClickListener(infernoTowerListener);
     }
 
     @Override
@@ -67,7 +79,18 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //    Ouverture de l'activité DescribeTroopActivity pour décrire chaque personnage
+    //    Ouverture de l'activité DescribeBuildingDefenseWallActivity pour décrire le mur
+    private View.OnClickListener wallListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseWallActivity.class);
+            building = new Wall();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    //Ouverture de l'activité DescribeBuildingDefenseActivity pour décrire chaque batiment
     private View.OnClickListener cannonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -123,6 +146,36 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseActivity.class);
             building = new HiddenTesla();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener xBowListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseXBowActivity.class);
+            building = new XBow();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener airSweeperListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseAirSweeperActivity.class);
+            building = new AirSweeper();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener infernoTowerListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingDefenseInfernoTowerActivity.class);
+            building = new InfernoTower();
             intent.putExtra("building", building);
             startActivity(intent);
         }

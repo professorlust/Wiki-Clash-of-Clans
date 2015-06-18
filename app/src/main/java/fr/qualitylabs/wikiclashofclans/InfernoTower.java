@@ -7,15 +7,14 @@ package fr.qualitylabs.wikiclashofclans;
  */
 public class InfernoTower extends Building {
 
-    //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
-    String[] infernotower1 = {"1","","30","1 500","5 000 000","7j","777","10", "24, 100, 1 000"};
-    String[] infernotower2 = {"2","","38","1 800","6 500 000","10j","929","10", "30, 125, 1 250"};
-    String[] infernotower3 = {"3","","42","2 100","8 000 000","14j","1 099","10", "36, 140, 1 400"};
+    //    {lvl, dpsInit, dps2+, dps5+, dps/target, hp, costLoad, cost, build time, xp, th requiered}
+    String[] infernotower1 = {"1","24","100","1 000","30","1 500","500","5 000 000","7j","777","10"};
+    String[] infernotower2 = {"2","30","125","1 250","38","1 800","600","6 500 000","10j","929","10"};
+    String[] infernotower3 = {"3","36","140","1 400","42","2 100","700","8 000 000","14j","1 099","10"};
 
     public InfernoTower(){
         name = "Tour de l'enfer";
         nameCode = "inferno_tower";
-        other = "Tir concentré  \n(initial, >2sec, >5sec): ";
         data.put(1, infernotower1);
         data.put(2, infernotower2);
         data.put(3, infernotower3);
@@ -23,8 +22,6 @@ public class InfernoTower extends Building {
     }
 
     public String getNameCode() { return nameCode; }
-
-    public String getOther() { return other; }
 
     public String getName(){
         return name;

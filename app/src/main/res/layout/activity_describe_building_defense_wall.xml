@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikiclashofclans.DescribeBuildingDefenseSpecialActivity">
+    tools:context="fr.qualitylabs.wikiclashofclans.DescribeBuildingDefenseWallActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -29,7 +29,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/x_bow"/>
+                    android:src="@drawable/wall" />
             </TableRow>
 
             <TableRow
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Combat"
+                    android:text="Défense"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -102,40 +102,6 @@
                     android:layout_height="1dp"
                     android:layout_weight="1"
                     android:background="@android:color/darker_gray" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Dommages (/s): " />
-
-                <TextView
-                    android:id="@+id/damage_per_second"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="dommagesParTir" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Dommages (/tir): " />
-
-                <TextView
-                    android:id="@+id/damage_per_shot"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="dommagesParSec" />
             </TableRow>
 
             <TableRow>
@@ -162,102 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Spécial"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow android:paddingBottom="10dp">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/darker_gray" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:id="@+id/other"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Autre: " />
-
-                <TextView
-                    android:id="@+id/other_value"
-                    android:layout_width="0dp"
-                    android:gravity="bottom"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="autre" />
-            </TableRow>
-
-            <TableRow android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Formation"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow android:paddingBottom="10dp">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/darker_gray" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Coût: " />
-
-                <TextView
-                    android:id="@+id/build_cost"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="cout" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Temps de construction: " />
-
-                <TextView
-                    android:id="@+id/build_time"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="tempsDeConstruction" />
-            </TableRow>
-
-            <TableRow android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Formation"
+                    android:text="Construction"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -285,7 +156,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="niveauRequis" />
+                    android:text="coutOr" />
             </TableRow>
 
             <TableRow>
@@ -295,16 +166,72 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="XP gagnée: " />
+                    android:text="Coût (or): " />
 
                 <TextView
-                    android:id="@+id/experience"
+                    android:id="@+id/build_cost_gold"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="experience" />
+                    android:text="coutOr" />
             </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Coût cumulé (or): " />
+
+                <TextView
+                    android:id="@+id/build_cost_gold_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="coutOrTotal" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Coût (elixir): " />
+
+                <TextView
+                    android:id="@+id/build_cost_elixir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="coutElixir" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Coût cumulé (elixir): " />
+
+                <TextView
+                    android:id="@+id/build_cost_elixir_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="coutElixirTotal" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Note: à partir du niveau 9, l'amélioration se paie avec de l'or OU avec de l'elixir." />
         </TableLayout>
     </ScrollView>
-
 </RelativeLayout>

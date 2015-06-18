@@ -90,20 +90,36 @@
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopDarkActivity" />
         </activity>
         <activity
-            android:name=".ChooseBuildingDefenseSpecialActivity"
-            android:label="@string/title_activity_choose_building_defense_special"
-            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            android:name=".DescribeBuildingDefenseWallActivity"
+            android:label="@string/title_activity_describe_building_defense_wall"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity" />
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name=".DescribeBuildingDefenseSpecialActivity"
-            android:label="@string/title_activity_describe_building_defense_special"
-            android:parentActivityName=".ChooseBuildingDefenseSpecialActivity" >
+            android:name=".DescribeBuildingDefenseXBowActivity"
+            android:label="@string/title_activity_describe_building_defense_xbow"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseSpecialActivity" />
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingDefenseAirSweeperActivity"
+            android:label="@string/title_activity_describe_building_defense_air_sweeper"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingDefenseInfernoTowerActivity"
+            android:label="@string/title_activity_describe_building_defense_inferno_tower"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseActivity" />
         </activity>
     </application>
 

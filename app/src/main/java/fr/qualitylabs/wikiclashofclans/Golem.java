@@ -6,11 +6,11 @@ package fr.qualitylabs.wikiclashofclans;
 public class Golem extends Troop {
 
     //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
-    String[] golem1 = {"Golem", "1", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "38", "4 500", "450", "N/A", "N/A", "N/A"};
-    String[] golem2 = {"Golem", "2", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "42", "5 000", "525", "60 000", "6", "10j"};
-    String[] golem3 = {"Golem", "3", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "46", "5 500", "600", "70 000", "7", "12j"};
-    String[] golem4 = {"Golem", "4", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "50", "6 000", "675", "80 000", "7", "14j"};
-    String[] golem5 = {"Golem", "5", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "54", "6 300", "750", "90 000", "8", "14j"};
+    String[] golem1 = {"1", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "38", "4 500", "450", "N/A", "N/A", "N/A"};
+    String[] golem2 = {"2", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "42", "5 000", "525", "60 000", "6", "10j"};
+    String[] golem3 = {"3", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "46", "5 500", "600", "70 000", "7", "12j"};
+    String[] golem4 = {"4", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "50", "6 000", "675", "80 000", "7", "14j"};
+    String[] golem5 = {"5", "Défenses", "Terrestres", "Mêlée", "30", "45m", "12", "54", "6 300", "750", "90 000", "8", "14j"};
 
     public Golem() {
         name = "Golem";

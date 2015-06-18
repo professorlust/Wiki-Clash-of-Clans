@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
-public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
+public class DescribeBuildingDefenseInfernoTowerActivity extends ActionBarActivity {
 
     Toolbar toolbar;
 
@@ -20,15 +22,18 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
 
     SeekBar seekBar;
 
+    Switch altswitch;
+
     ImageView image;
-    //    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
+    //    {lvl, dpsInit, dps2+, dps5+, dps/target, hp, costLoad, cost, build time, xp, th requiered}
     TextView name;
-    TextView other;
-    TextView otherValue;
     TextView level;
     TextView damagepersec;
-    TextView damagepershot;
+    TextView damagepersec2;
+    TextView damagepersec5;
+    TextView damagepersecmulti;
     TextView health;
+    TextView costload;
     TextView buildcost;
     TextView buildtime;
     TextView xp;
@@ -37,7 +42,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe_building_defense_special);
+        setContentView(R.layout.activity_describe_building_defense_inferno_tower);
 
         //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -49,13 +54,15 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
+        altswitch = (Switch) findViewById(R.id.alt_switch);
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
-        other = (TextView) findViewById(R.id.other);
-        otherValue = (TextView) findViewById(R.id.other_value);
         level = (TextView) findViewById(R.id.level);
         damagepersec = (TextView) findViewById(R.id.damage_per_second);
-        damagepershot = (TextView) findViewById(R.id.damage_per_shot);
+        damagepersec2 = (TextView) findViewById(R.id.damage_per_second_2);
+        damagepersec5 = (TextView) findViewById(R.id.damage_per_second_5);
+        damagepersecmulti = (TextView) findViewById(R.id.damage_per_second_multitarget);
+        costload = (TextView) findViewById(R.id.cost_loading);
         health = (TextView) findViewById(R.id.health);
         buildcost = (TextView) findViewById(R.id.build_cost);
         buildtime = (TextView) findViewById(R.id.build_time);
@@ -67,30 +74,32 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
 
 //        Initialisation des vues avec les données récupérées
         property = building.getProperty(1);
-
+//    {lvl, dpsInit, dps2+, dps5+, dps/target, hp, costLoad, cost, build time, xp, th requiered}
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
-        other.setText(building.getOther());
-        otherValue.setText(property[8]);
         level.setText(property[0]);
         damagepersec.setText(property[1]);
-        damagepershot.setText(property[2]);
-        health.setText(property[3]);
-        buildcost.setText(property[4]);
-        buildtime.setText(property[5]);
-        xp.setText(property[6]);
-        levelrequiered.setText(property[7]);
+        damagepersec2.setText(property[2]);
+        damagepersec5.setText(property[3]);
+        damagepersecmulti.setText(property[4]);
+        health.setText(property[5]);
+        costload.setText(property[6]);
+        buildcost.setText(property[7]);
+        buildtime.setText(property[8]);
+        xp.setText(property[9]);
+        levelrequiered.setText(property[10]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(building.getLevelMax() - 1);
 //        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
+        altswitch.setOnCheckedChangeListener(altswitchListener);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_building_defense_special, menu);
+        getMenuInflater().inflate(R.menu.menu_describe_building_defense_inferno_tower, menu);
         return true;
     }
 
@@ -104,6 +113,7 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.reset) {
             seekBar.setProgress(0);
+            altswitch.setChecked(false);
         }
 
         return super.onOptionsItemSelected(item);
@@ -114,16 +124,23 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = building.getProperty(progress+1);
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
-            otherValue.setText(property[8]);
+            if (altswitch.isChecked()){
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1)+"alt",null,getPackageName())));
+            }
+            else {
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
+            }
             level.setText(property[0]);
             damagepersec.setText(property[1]);
-            damagepershot.setText(property[2]);
-            health.setText(property[3]);
-            buildcost.setText(property[4]);
-            buildtime.setText(property[5]);
-            xp.setText(property[6]);
-            levelrequiered.setText(property[7]);
+            damagepersec2.setText(property[2]);
+            damagepersec5.setText(property[3]);
+            damagepersecmulti.setText(property[4]);
+            health.setText(property[5]);
+            costload.setText(property[6]);
+            buildcost.setText(property[7]);
+            buildtime.setText(property[8]);
+            xp.setText(property[9]);
+            levelrequiered.setText(property[10]);
         }
 
         @Override
@@ -134,6 +151,18 @@ public class DescribeBuildingDefenseSpecialActivity extends ActionBarActivity {
         @Override
         public void onStopTrackingTouch(SeekBar seekBar) {
 
+        }
+    };
+
+    private CompoundButton.OnCheckedChangeListener altswitchListener = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if(isChecked){
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(property[0])+"alt",null,getPackageName())));
+            }
+            else{
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(property[0]),null,getPackageName())));
+            }
         }
     };
 }

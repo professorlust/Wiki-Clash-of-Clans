@@ -4,7 +4,6 @@ package fr.qualitylabs.wikiclashofclans;
  * Created by Quentin on 12/06/2015.
  */
 public class Mortar extends Building {
-
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] mortar1 = {"1","4","20","400","8 000","8h","169","3"};
     String[] mortar2 = {"2","5","25","450","32 000","12h","207","4"};
