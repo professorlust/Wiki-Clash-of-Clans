@@ -36,4 +36,16 @@
     <string name="title_activity_describe_building_defense_xbow">Description</string>
     <string name="title_activity_describe_building_defense_air_sweeper">Description</string>
     <string name="title_activity_describe_building_defense_inferno_tower">Description</string>
+    <string name="title_activity_choose_building_trap">ChooseBuildingTrapActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_describe_building_trap">DescribeBuildingTrapActivity</string>
+    <string name="title_activity_describe_building_trap_spring">DescribeBuildingTrapSpringActivity
+    </string>
+    <string name="title_activity_describe_building_trap_skeleton">
+        DescribeBuildingTrapSkeletonActivity
+    </string>
+    <string name="title_activity_describe_building_trap_giant_bomb">
+        DescribeBuildingTrapGiantBombActivity
+    </string>
 </resources>

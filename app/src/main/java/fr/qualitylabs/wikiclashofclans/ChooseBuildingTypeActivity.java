@@ -17,6 +17,7 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
     Building building = new Building();
 
     CardView defense;
+    CardView trap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,10 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         defense = (CardView) findViewById(R.id.defense);
+        trap = (CardView) findViewById(R.id.trap);
 
         defense.setOnClickListener(defenseListener);
+        trap.setOnClickListener(trapListener);
     }
 
     @Override
@@ -56,6 +59,13 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(getApplicationContext(), ChooseBuildingDefenseActivity.class));
+        }
+    };
+
+    private View.OnClickListener trapListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(getApplicationContext(), ChooseBuildingTrapActivity.class));
         }
     };
 }

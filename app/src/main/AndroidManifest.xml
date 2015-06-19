@@ -121,6 +121,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingDefenseActivity" />
         </activity>
+        <activity
+            android:name=".ChooseBuildingTrapActivity"
+            android:label="@string/title_activity_choose_building_trap"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingTrapActivity"
+            android:label="@string/title_activity_describe_building_trap"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTrapActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingTrapSpringActivity"
+            android:label="@string/title_activity_describe_building_trap_spring"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTrapActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingTrapSkeletonActivity"
+            android:label="@string/title_activity_describe_building_trap_skeleton"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTrapActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingTrapGiantBombActivity"
+            android:label="@string/title_activity_describe_building_trap_giant_bomb"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTrapActivity" />
+        </activity>
     </application>
 
 </manifest>
