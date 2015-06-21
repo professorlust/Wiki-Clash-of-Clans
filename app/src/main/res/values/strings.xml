@@ -48,4 +48,5 @@
     <string name="title_activity_describe_building_trap_giant_bomb">
         DescribeBuildingTrapGiantBombActivity
     </string>
+    <string name="title_activity_choose_troop_hero">ChooseTroopHeroActivity</string>
 </resources>

@@ -16,74 +16,80 @@
         android:layout_alignParentBottom="true"
         android:layout_below="@id/app_bar">
 
-        <RelativeLayout
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/defense"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
+                android:layout_height="match_parent">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/defense"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:padding="5dp">
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="3dp">
 
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/mortar" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="Défense" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
+                        android:padding="5dp">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/trap"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_below="@id/defense"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
+                        <ImageView
+                            android:id="@+id/defense_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:src="@drawable/mortar" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/defense_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="Défenses"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/trap"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:padding="5dp">
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="3dp">
 
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/giant_bomb" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="Piège" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-        </RelativeLayout>
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/trap_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/hidden_tesla" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/trap_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pièges"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </TableRow>
+        </TableLayout>
     </ScrollView>
 </RelativeLayout>

@@ -161,6 +161,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikiclashofclans.ChooseBuildingTrapActivity" />
         </activity>
+        <activity
+            android:name=".ChooseTroopHeroActivity"
+            android:label="@string/title_activity_choose_troop_hero"
+            android:parentActivityName=".ChooseTroopTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikiclashofclans.ChooseTroopTypeActivity" />
+        </activity>
     </application>
 
 </manifest>
