@@ -20,39 +20,17 @@
 
             <ImageButton
                 android:id="@+id/about_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/about" />
+                android:layout_margin="10dp"
+                android:background="@drawable/about"
+                android:layout_width="150dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/about_image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="@string/about_title" />
-
-            <TextView
-                android:id="@+id/app_description"
+            <WebView
+                android:id="@+id/about_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/about_image"
-                android:layout_marginTop="50dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/about_description" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/app_description"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:text="@string/about_footer" />
-
+                android:layout_below="@id/about_image" />
         </RelativeLayout>
     </ScrollView>
-
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package fr.qualitylabs.wikiclashofclans;
 
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 
 
@@ -17,6 +19,8 @@ public class AboutActivity extends ActionBarActivity {
 
     ImageButton about;
     MediaPlayer surprise;
+
+    WebView about_description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,10 @@ public class AboutActivity extends ActionBarActivity {
 
         about.setOnClickListener(aboutListener);
         surprise = MediaPlayer.create(AboutActivity.this, R.raw.surprise);
+        about_description = (WebView) findViewById(R.id.about_text);
+
+        about_description.loadUrl("file:///android_res/raw/about.html");
+        about_description.setBackgroundColor(Color.TRANSPARENT);
     }
 
     @Override

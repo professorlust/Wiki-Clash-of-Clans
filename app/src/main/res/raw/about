@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <style>
+        html{background-color: #00000000;}
+        h1{text-align: center;}
+    </style>
+</head>
+<body>
+<h1>À savoir...</h1>
+
+<h2>Description</h2>
+
+<p>Cette application regroupe toutes les statistiques et informations utiles sur les troupes,
+    bâtiments, items... de Clash of Clans. Retrouvez avec facilité et rapidement les infos utiles du
+    jeu même en étant hors ligne!</p>
+
+<h2>Mentions légales</h2>
+
+<p>Plusieurs points sont à préciser concernant les droits relatifs aux oeuvres incluses et/ou
+    décrites explicitement et/ou implicitement dans cette application:</p>
+<ol>
+    <li>Le nom Clash of Clans et les oeuvres graphiques dérivées sont la propriété exclusive de
+        Supercell©
+    </li>
+    <li>En aucun cas, QuAlity Labs ne s'approprie le contenu extrait de Clash of Clans</li>
+    <li>Supercell© demeure à titre immuable le possesseur des contenus dérivées du jeu Clash of
+        Clans et ce, en dépit des interprétations et/ou modifications apportées par QuAlity Labs
+        dans leur représentation
+    </li>
+</ol>
+<p>Cette application ne fait qu'office de base de données, celles-ci peuvent s'avérer erronnées ou
+    obselète. Nous fairons évidemment tout notre possible pour la garder à jour.</p>
+
+<p>Merci de prendre le temps de partager votre avis et de reporter la moindre erreur. Votre avis
+    nous sera toujours utile!</p>
+</body>
