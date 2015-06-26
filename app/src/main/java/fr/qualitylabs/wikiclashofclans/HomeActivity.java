@@ -1,16 +1,15 @@
 package fr.qualitylabs.wikiclashofclans;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -19,8 +18,10 @@ public class HomeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
-    RelativeLayout troop;
-    RelativeLayout batiments;
+    CardView troop;
+    CardView batiments;
+    CardView resources;
+    CardView spells;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,15 @@ public class HomeActivity extends ActionBarActivity {
         NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer); // Initialisation du Drawer
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar); // Définit les actions, paramètres, méthodes... du Drawer
 
-        troop = (RelativeLayout) findViewById(R.id.troop);
-        batiments = (RelativeLayout) findViewById(R.id.batiments_bouton);
+        troop = (CardView) findViewById(R.id.troop);
+        batiments = (CardView) findViewById(R.id.buildings);
+        resources = (CardView) findViewById(R.id.resources);
+        spells = (CardView) findViewById(R.id.spells);
 
         troop.setOnClickListener(troopListener);
         batiments.setOnClickListener(batimentsListener);
+        resources.setOnClickListener(resourcesListener);
+        spells.setOnClickListener(spellsListener);
     }
 
     @Override
@@ -76,6 +81,20 @@ public class HomeActivity extends ActionBarActivity {
         public void onClick(View v) {
             startActivity(new Intent(getApplicationContext(), ChooseBuildingTypeActivity.class));
         }
+
+    };
+
+    private View.OnClickListener resourcesListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();        }
+
+    };
+
+    private View.OnClickListener spellsListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();        }
 
     };
 }

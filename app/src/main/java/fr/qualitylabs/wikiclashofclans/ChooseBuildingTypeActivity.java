@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class ChooseBuildingTypeActivity extends ActionBarActivity {
@@ -18,6 +19,7 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
 
     CardView defense;
     CardView trap;
+    CardView special;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,11 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
 
         defense = (CardView) findViewById(R.id.defense);
         trap = (CardView) findViewById(R.id.trap);
+        special = (CardView) findViewById(R.id.special);
 
         defense.setOnClickListener(defenseListener);
         trap.setOnClickListener(trapListener);
+        special.setOnClickListener(specialListener);
     }
 
     @Override
@@ -66,6 +70,13 @@ public class ChooseBuildingTypeActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(getApplicationContext(), ChooseBuildingTrapActivity.class));
+        }
+    };
+
+    private View.OnClickListener specialListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
         }
     };
 }

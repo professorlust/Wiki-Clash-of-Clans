@@ -2,17 +2,21 @@
 <head>
     <style>
         html{background-color: #00000000;}
-        h1{text-align: center;}
+        h4{text-align: center; color: teal; text-shadow: 0px 1px 1px grey;}
     </style>
 </head>
 <body>
-<h1>À savoir...</h1>
-
 <h2>Description</h2>
 
 <p>Cette application regroupe toutes les statistiques et informations utiles sur les troupes,
     bâtiments, items... de Clash of Clans. Retrouvez avec facilité et rapidement les infos utiles du
     jeu même en étant hors ligne!</p>
+
+<p>La base de données est <u>faite manuellement</u>, certaines peuvent donc s'avérer <u>erronées ou
+    obsolète</u>. Nous ferons évidemment tout notre possible pour la garder à jour.</p>
+
+<p>Merci de prendre le temps de partager votre avis et de reporter la moindre erreur. Votre avis
+    nous sera toujours utile!</p>
 
 <h2>Mentions légales</h2>
 
@@ -28,9 +32,14 @@
         dans leur représentation
     </li>
 </ol>
-<p>Cette application ne fait qu'office de base de données, celles-ci peuvent s'avérer erronnées ou
-    obselète. Nous fairons évidemment tout notre possible pour la garder à jour.</p>
 
-<p>Merci de prendre le temps de partager votre avis et de reporter la moindre erreur. Votre avis
-    nous sera toujours utile!</p>
+<h2>Crédits</h2>
+
+<p>Tadraes: code, design</p>
+
+<p>Ironova: ressources, base de données</p>
+
+<br>
+
+<h4>Conçu par QuAlity Labs</h4>
 </body>

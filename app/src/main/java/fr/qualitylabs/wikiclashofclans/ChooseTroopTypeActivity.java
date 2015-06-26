@@ -15,6 +15,10 @@ public class ChooseTroopTypeActivity extends ActionBarActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
+    CardView white;
+    CardView dark;
+    CardView heroes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +32,13 @@ public class ChooseTroopTypeActivity extends ActionBarActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        CardView white;
-        CardView dark;
-
         white = (CardView) findViewById(R.id.white);
         dark = (CardView) findViewById(R.id.dark);
+        heroes = (CardView) findViewById(R.id.heroes);
 
         white.setOnClickListener(whiteListener);
         dark.setOnClickListener(darkListener);
+        heroes.setOnClickListener(heroesListener);
     }
 
     @Override
@@ -65,6 +68,13 @@ public class ChooseTroopTypeActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(getApplicationContext(), ChooseTroopDarkActivity.class));
+        }
+    };
+
+    private View.OnClickListener heroesListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
         }
     };
 }
