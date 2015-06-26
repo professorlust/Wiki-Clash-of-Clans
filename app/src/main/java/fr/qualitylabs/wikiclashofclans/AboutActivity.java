@@ -44,6 +44,15 @@ public class AboutActivity extends ActionBarActivity {
 
         about_description.loadUrl("file:///android_res/raw/about.html");
         about_description.setBackgroundColor(Color.TRANSPARENT);
+        about_description.setOnLongClickListener(new View.OnLongClickListener() {
+                                                     @Override
+                                                     public boolean onLongClick(View v) {
+                                                         return true;
+                                                     }
+                                                 }
+        );
+        about_description.setLongClickable(false);
+        about_description.setHapticFeedbackEnabled(false);
     }
 
     @Override
@@ -67,7 +76,7 @@ public class AboutActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private View.OnClickListener aboutListener = new View.OnClickListener(){
+    private View.OnClickListener aboutListener = new View.OnClickListener() {
 
         @Override
         public void onClick(View v) {

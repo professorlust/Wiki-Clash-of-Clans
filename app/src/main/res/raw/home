@@ -1,0 +1,14 @@
+<!doctype html>
+<head>
+    <style>
+        html{background-color: #00000000;}
+        h1{text-align: center;}
+        h4{text-align: center; color: teal; text-shadow: 1px 0px 1px grey;}
+    </style>
+</head>
+<body>
+<h1>Bienvenue</h1>
+
+<p>Vous cherchez des statistiques? Vous êtes au bon endroit!</p>
+
+</body>
