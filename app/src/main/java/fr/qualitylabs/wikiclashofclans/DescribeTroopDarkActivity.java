@@ -21,10 +21,10 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 
     String[] property;
 
-    Animation fadeOut;
-    Animation fadeIn;
+//    Animation fadeOut;
+//    Animation fadeIn;
 
-    int sliderProgress;
+//    int sliderProgress;
 
     SeekBar seekBar;
 
@@ -59,8 +59,8 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 //        Récupération des animations
-        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out);
-        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
+//        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out);
+//        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
@@ -109,7 +109,7 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
 //        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
 
-        fadeOut.setAnimationListener(fadeOutListener);
+//        fadeOut.setAnimationListener(fadeOutListener);
     }
 
     @Override
@@ -139,8 +139,10 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = troop.getProperty(progress + 1);
 
-            image.startAnimation(fadeOut);
-            sliderProgress = progress;
+//            image.startAnimation(fadeOut);
+//            sliderProgress = progress;
+
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + troop.getNamecode() + (progress+1), null, getPackageName())));
 
             level.setText(property[0]);
             trainingtime.setText(property[1]);
@@ -164,21 +166,21 @@ public class DescribeTroopDarkActivity extends ActionBarActivity {
         }
     };
 
-    private Animation.AnimationListener fadeOutListener = new Animation.AnimationListener() {
-        @Override
-        public void onAnimationStart(Animation animation) {
-
-        }
-
-        @Override
-        public void onAnimationEnd(Animation animation) {
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + troop.getNamecode() + (sliderProgress + 1), null, getPackageName())));
-            image.startAnimation(fadeIn);
-        }
-
-        @Override
-        public void onAnimationRepeat(Animation animation) {
-
-        }
-    };
+//    private Animation.AnimationListener fadeOutListener = new Animation.AnimationListener() {
+//        @Override
+//        public void onAnimationStart(Animation animation) {
+//
+//        }
+//
+//        @Override
+//        public void onAnimationEnd(Animation animation) {
+//            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + troop.getNamecode() + (sliderProgress + 1), null, getPackageName())));
+//            image.startAnimation(fadeIn);
+//        }
+//
+//        @Override
+//        public void onAnimationRepeat(Animation animation) {
+//
+//        }
+//    };
 }
