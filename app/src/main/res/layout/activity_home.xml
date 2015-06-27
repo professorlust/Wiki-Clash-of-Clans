@@ -74,7 +74,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:padding="2dp"
-                        android:text="Ouvrez le drawer et sélectionnez une catégorie." />
+                        android:text="@string/home_text" />
                 </TableRow>
 
             </TableLayout>

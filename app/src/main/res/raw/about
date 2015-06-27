@@ -9,40 +9,42 @@
 <body>
 <h2>Description</h2>
 
-<p>Cette application regroupe toutes les statistiques et informations utiles sur les troupes,
-    bâtiments, items... de Clash of Clans. Retrouvez avec facilité et rapidement les infos utiles du
-    jeu même en étant hors ligne!</p>
+<p>Vous cherchez le prix d'un bâtiment, les dégâts d'une troupe ou vous voulez rêver en voyant les
+    statistiques d'une défense niveau max? Cette application pourrait bien devenir un outil
+    indispensable!
+    Trouvez facilement les statistiques et diverses informations sur le jeu Clash of Clans™, le tout
+    dans une application entièrement en français.</p>
 
-<p>La base de données est <u>faite manuellement</u>, certaines peuvent donc s'avérer <u>erronées ou
-    obsolète</u>. Nous ferons évidemment tout notre possible pour la garder à jour.</p>
+<p>Conçue par des passionnés pour des passionnés, les données collectées ont toutes été <u>intégrées
+    à
+    la main</u>. Il se peut que certaines soient <u>obsolètes voire erronées</u>. Vous pouvez
+    contribuer en nous
+    <u>reportant la moindre erreur</u> ou simplement en partageant votre avis!</p>
 
-<p>Merci de prendre le temps de partager votre avis et de reporter la moindre erreur. Votre avis
-    nous sera toujours utile!</p>
+<p>Merci d'avoir téléchargé cette application, nous espérons qu'elle répond à vos besoin et sommes
+    ouverts à toute propostion pour l'améliorer.</p>
 
 <h2>Mentions légales</h2>
 
 <p>Plusieurs points sont à préciser concernant les droits relatifs aux oeuvres incluses et/ou
     décrites explicitement et/ou implicitement dans cette application:</p>
 <ul>
-    <li>Clash of Clans™ est un jeu commercial de l'entreprise ©SuperCell
+    <li>Clash of Clans™ est un jeu commercial de l'entreprise ©Supercell.
     </li>
-    <li>Cette application n'est ni associée, affiliée, sponsorisée ou même approuvée par ©SuperCell
+    <li>
+        Il va de soi que cette application n'est ni associée, sponsorisée ou approuvée d'aucune
+        manière par ©Supercell, détenteur légitime du jeu Clash of Clans™ et œuvres dérivées.
     </li>
-    <li>Les images sont enregistrées sous copyright et appartiennent à ©SuperCell</li>
-
-    <li>Visitez
-        www.supercell.net pour plus d'informations
-    </li>
-    <li>Les données ont été récupérées depuis wikia.com sous license Creative Commons CC-BY-SA
-        ©Wikia.
+    <li>Les données incluses dans cette application ne proviennent pas de ©Supercell et ne sont que
+        supposées, elles n'en sont pas fausses pour autant!
     </li>
 </ul>
 
 <h2>Crédits</h2>
 
-<p>Tadraes: code, design</p>
+<p>Tadraes: code, interface, infographie</p>
 
-<p>Ironova: ressources, base de données</p>
+<p>Ironova: ressources, base de données, administration</p>
 
 <br>
 

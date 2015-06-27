@@ -3,14 +3,6 @@
     <string name="app_name">Wiki Clash of Clans</string>
     <string name="action_settings">Paramètres</string>
 
-    <!-- String de l'activité AboutActivity-->
-    <string name="about_description">Cette application a été conçue par QuAlity Labs™, une association de deux développeurs du dimanche.\n\nVous retrouverez ici toutes les informations concernant les troupes, batiments et aures ressources de Clash of Clans.\n\nSachez que vous retrouverez le code source sur GitHub!</string>
-    <string name="about_footer">Conçu par QuAlity Labs™</string>
-    <string name="about_title">Wiki Clash of Clans</string>
-
-    <!-- TEMPORAIRE-->
-    <string name="home_test">Cette activité sera agrémentée de views...</string>
-
     <!-- Balises du Drawer NE PAS TOUCHER-->
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
@@ -49,4 +41,5 @@
         DescribeBuildingTrapGiantBombActivity
     </string>
     <string name="title_activity_choose_troop_hero">ChooseTroopHeroActivity</string>
+    <string name="home_text">Ouvrez le drawer et sélectionnez une catégorie.\n\nPensez aussi à visiter la section \"À propos\" pour en savoir plus sur cette application.\n\nNote: les sections grisées seront débloquées dans les prochaines mises à jour!</string>
 </resources>
