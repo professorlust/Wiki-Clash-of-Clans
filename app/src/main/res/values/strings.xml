@@ -1,6 +1,6 @@
 <resources>
     <!-- Générique-->
-    <string name="app_name">Wiki Clash of Clans</string>
+    <string name="app_name">Wiki CoC</string>
     <string name="action_settings">Paramètres</string>
 
     <!-- Balises du Drawer NE PAS TOUCHER-->

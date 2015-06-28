@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_light"
-    tools:context="fr.qualitylabs.wikiclashofclans.NavigationDrawerFragment">
+    tools:context="fr.qualitylabs.wikicoc.NavigationDrawerFragment">
 
     <ImageView
         android:id="@+id/drawer_header"

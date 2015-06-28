@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikiclashofclans.DescribeBuildingTrapSpringActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeBuildingTrapSpringActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -47,6 +47,7 @@
                     android:textSize="22sp"
                     android:textStyle="bold" />
             </TableRow>
+
             <TableRow android:paddingTop="10dp">
 
                 <TextView
@@ -83,6 +84,23 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="cout" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Coût de réarmement: " />
+
+                <TextView
+                    android:id="@+id/rearm_cost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="rearmement" />
             </TableRow>
         </TableLayout>
     </ScrollView>

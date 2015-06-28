@@ -85,7 +85,7 @@
     <!-- Ce fragment est le Drawer, il fait référence au Layout du Drawer-->
     <fragment
         android:id="@+id/fragment_navigation_drawer"
-        android:name="fr.qualitylabs.wikiclashofclans.NavigationDrawerFragment"
+        android:name="fr.qualitylabs.wikicoc.NavigationDrawerFragment"
         android:layout_width="@dimen/nav_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"

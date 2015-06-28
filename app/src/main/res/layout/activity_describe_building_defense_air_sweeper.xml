@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikiclashofclans.DescribeBuildingDefenseAirSweeperActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeBuildingDefenseAirSweeperActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Formation"
+                    android:text="Construction"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -199,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Formation"
+                    android:text="Niveau"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
