@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeBuildingDefenseWallActivity extends ActionBarActivity {
+public class DescribeBuildingDefenseWallActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -64,10 +64,10 @@ public class DescribeBuildingDefenseWallActivity extends ActionBarActivity {
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
-        costgold.setText(property[1]);
-        costgoldtotal.setText(property[2]);
-        costelixir.setText(property[3]);
-        costelixirtotal.setText(property[4]);
+        costgold.setText(property[1] + " or");
+        costgoldtotal.setText(property[2] + " or");
+        costelixir.setText(property[3] + " elixir");
+        costelixirtotal.setText(property[4] + " elixir");
         health.setText(property[5]);
         levelrequiered.setText(property[6]);
 
@@ -106,10 +106,10 @@ public class DescribeBuildingDefenseWallActivity extends ActionBarActivity {
 
             image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress + 1), null, getPackageName())));
             level.setText(property[0]);
-            costgold.setText(property[1]);
-            costgoldtotal.setText(property[2]);
-            costelixir.setText(property[3]);
-            costelixirtotal.setText(property[4]);
+            costgold.setText(property[1] + " or");
+            costgoldtotal.setText(property[2] + " or");
+            costelixir.setText(property[3] + " elixir");
+            costelixirtotal.setText(property[4] + " elixir");
             health.setText(property[5]);
             levelrequiered.setText(property[6]);
         }

@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeBuildingDefenseXBowActivity extends ActionBarActivity {
+public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -74,8 +74,8 @@ public class DescribeBuildingDefenseXBowActivity extends ActionBarActivity {
         damagepersec.setText(property[1]);
         damagepershot.setText(property[2]);
         health.setText(property[3]);
-        costloading.setText(property[4]);
-        buildcost.setText(property[5]);
+        costloading.setText(property[4] + " elixir");
+        buildcost.setText(property[5] + " or");
         buildtime.setText(property[6]);
         xp.setText(property[7]);
         levelrequiered.setText(property[8]);
@@ -119,8 +119,8 @@ public class DescribeBuildingDefenseXBowActivity extends ActionBarActivity {
             damagepersec.setText(property[1]);
             damagepershot.setText(property[2]);
             health.setText(property[3]);
-            costloading.setText(property[4]);
-            buildcost.setText(property[5]);
+            costloading.setText(property[4] + " elixir");
+            buildcost.setText(property[5] + " or");
             buildtime.setText(property[6]);
             xp.setText(property[7]);
             levelrequiered.setText(property[8]);

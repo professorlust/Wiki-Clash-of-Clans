@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeTroopWhiteActivity extends ActionBarActivity {
+public class DescribeTroopWhiteActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -86,8 +86,8 @@ public class DescribeTroopWhiteActivity extends ActionBarActivity {
         speed.setText(property[2]);
         damage.setText(property[3]);
         health.setText(property[4]);
-        trainingcost.setText(property[5]+" elixir");
-        researchcost.setText(property[6]);
+        trainingcost.setText(property[5] + " elixir");
+        researchcost.setText(property[6] + " elixir");
         requiredlevel.setText(property[7]);
         researchtime.setText(property[8]);
 
@@ -130,8 +130,8 @@ public class DescribeTroopWhiteActivity extends ActionBarActivity {
             speed.setText(property[2]);
             damage.setText(property[3]);
             health.setText(property[4]);
-            trainingcost.setText(property[5]+" elixir");
-            researchcost.setText(property[6]);
+            trainingcost.setText(property[5] + " elixir");
+            researchcost.setText(property[6] + " elixir");
             requiredlevel.setText(property[7]);
             researchtime.setText(property[8]);
         }

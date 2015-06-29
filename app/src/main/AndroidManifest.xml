@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="fr.qualitylabs.wikicoc.HomeActivity"
+            android:name=".HomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.AboutActivity"
+            android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
 
             <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
@@ -26,148 +26,164 @@
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity"
+            android:name=".ChooseBuildingTypeActivity"
             android:label="@string/title_activity_choose_building_type"
-            android:parentActivityName="fr.qualitylabs.wikicoc.HomeActivity" >
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingDefenseActivity"
+            android:name=".DescribeBuildingDefenseActivity"
             android:label="@string/title_activity_describe_defense"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity"
+            android:name=".ChooseBuildingDefenseActivity"
             android:label="@string/title_activity_choose_defense"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" >
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity"
+            android:name=".ChooseTroopTypeActivity"
             android:label="@string/title_activity_choose_troop_type"
-            android:parentActivityName="fr.qualitylabs.wikicoc.HomeActivity" >
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseTroopWhiteActivity"
+            android:name=".ChooseTroopWhiteActivity"
             android:label="@string/title_activity_choose_troop_white"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" >
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeTroopWhiteActivity"
+            android:name=".DescribeTroopWhiteActivity"
             android:label="@string/title_activity_describe_troop_white"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseTroopWhiteActivity" >
+            android:parentActivityName=".ChooseTroopWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopWhiteActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseTroopDarkActivity"
+            android:name=".ChooseTroopDarkActivity"
             android:label="@string/title_activity_choose_troop_dark"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" >
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeTroopDarkActivity"
+            android:name=".DescribeTroopDarkActivity"
             android:label="@string/title_activity_describe_troop_dark"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseTroopDarkActivity" >
+            android:parentActivityName=".ChooseTroopDarkActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopDarkActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingDefenseWallActivity"
+            android:name=".DescribeBuildingDefenseWallActivity"
             android:label="@string/title_activity_describe_building_defense_wall"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingDefenseXBowActivity"
+            android:name=".DescribeBuildingDefenseXBowActivity"
             android:label="@string/title_activity_describe_building_defense_xbow"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingDefenseAirSweeperActivity"
+            android:name=".DescribeBuildingDefenseAirSweeperActivity"
             android:label="@string/title_activity_describe_building_defense_air_sweeper"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingDefenseInfernoTowerActivity"
+            android:name=".DescribeBuildingDefenseInfernoTowerActivity"
             android:label="@string/title_activity_describe_building_defense_inferno_tower"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" >
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity"
+            android:name=".ChooseBuildingTrapActivity"
             android:label="@string/title_activity_choose_building_trap"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" >
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingTrapActivity"
+            android:name=".DescribeBuildingTrapActivity"
             android:label="@string/title_activity_describe_building_trap"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" >
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingTrapSpringActivity"
+            android:name=".DescribeBuildingTrapSpringActivity"
             android:label="@string/title_activity_describe_building_trap_spring"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" >
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingTrapSkeletonActivity"
+            android:name=".DescribeBuildingTrapSkeletonActivity"
             android:label="@string/title_activity_describe_building_trap_skeleton"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" >
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.DescribeBuildingTrapGiantBombActivity"
+            android:name=".DescribeBuildingTrapGiantBombActivity"
             android:label="@string/title_activity_describe_building_trap_giant_bomb"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" >
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
-            android:name="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity"
+            android:name=".ChooseTroopHeroActivity"
             android:label="@string/title_activity_choose_troop_hero"
-            android:parentActivityName="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" >
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeTroopBarbarianKingActivity"
+            android:label="@string/title_activity_describe_troop_barbarian_king"
+            android:parentActivityName=".ChooseTroopHeroActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeTroopArcherQueenActivity"
+            android:label="@string/title_activity_describe_troop_archer_queen"
+            android:parentActivityName=".ChooseTroopHeroActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity" />
         </activity>
     </application>
 
