@@ -1,16 +1,15 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeBuildingTrapSpringActivity extends ActionBarActivity {
+public class DescribeBuildingTrapSpringActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -55,16 +54,16 @@ public class DescribeBuildingTrapSpringActivity extends ActionBarActivity {
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
-        cost.setText(property[1]);
-        rearmCost.setText(property[2]);
+        cost.setText(property[1] + " or");
+        rearmCost.setText(property[2] + " or");
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_building_trap_spring, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_describe_building_trap_spring, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

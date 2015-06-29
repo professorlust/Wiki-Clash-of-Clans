@@ -2,15 +2,14 @@ package fr.qualitylabs.wikicoc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
 
-public class ChooseBuildingDefenseActivity extends ActionBarActivity {
+public class ChooseBuildingDefenseActivity extends AppCompatActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
@@ -70,14 +69,14 @@ public class ChooseBuildingDefenseActivity extends ActionBarActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//        return super.onOptionsItemSelected(item);
+//    }
 
     //    Ouverture de l'activité DescribeBuildingDefenseWallActivity pour décrire le mur
     private View.OnClickListener wallListener = new View.OnClickListener() {

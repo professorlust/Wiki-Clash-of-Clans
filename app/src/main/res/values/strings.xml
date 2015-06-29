@@ -28,18 +28,22 @@
     <string name="title_activity_describe_building_defense_xbow">Description</string>
     <string name="title_activity_describe_building_defense_air_sweeper">Description</string>
     <string name="title_activity_describe_building_defense_inferno_tower">Description</string>
-    <string name="title_activity_choose_building_trap">ChooseBuildingTrapActivity</string>
+    <string name="title_activity_choose_building_trap">Choisir un piège</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_describe_building_trap">DescribeBuildingTrapActivity</string>
-    <string name="title_activity_describe_building_trap_spring">DescribeBuildingTrapSpringActivity
+    <string name="title_activity_describe_building_trap">Description</string>
+    <string name="title_activity_describe_building_trap_spring">Description
     </string>
     <string name="title_activity_describe_building_trap_skeleton">
-        DescribeBuildingTrapSkeletonActivity
+        Description
     </string>
     <string name="title_activity_describe_building_trap_giant_bomb">
-        DescribeBuildingTrapGiantBombActivity
+        Description
     </string>
-    <string name="title_activity_choose_troop_hero">ChooseTroopHeroActivity</string>
+    <string name="title_activity_choose_troop_hero">Choisir un héros</string>
     <string name="home_text">Ouvrez le drawer et sélectionnez une catégorie.\n\nPensez aussi à visiter la section \"À propos\" pour en savoir plus sur cette application.\n\nNote: les sections grisées seront débloquées dans les prochaines mises à jour!</string>
+    <string name="title_activity_describe_troop_barbarian_king">Description
+    </string>
+    <string name="title_activity_describe_troop_archer_queen">Description
+    </string>
 </resources>

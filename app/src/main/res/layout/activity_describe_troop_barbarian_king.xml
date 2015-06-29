@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikicoc.DescribeBuildingDefenseXBowActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeTroopBarbarianKingActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -29,7 +29,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/x_bow" />
+                    android:src="@drawable/barbarian_king" />
             </TableRow>
 
             <TableRow
@@ -72,13 +72,86 @@
 
                 <SeekBar
                     android:id="@+id/level_seekbar"
-                    android:layout_width="250dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
                     android:progressBackgroundTint="@color/grey_light"
                     android:progressTint="@color/colorPrimary"
                     android:thumbTint="@color/colorPrimaryDark" />
             </TableRow>
+
+            <TableRow android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Cibles"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="10dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Cibles préférées: " />
+
+                <TextView
+                    android:id="@+id/preffered_target"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ciblesPref" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Type de cibles: " />
+
+                <TextView
+                    android:id="@+id/target_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="typeCibles" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Type de dégats: " />
+
+                <TextView
+                    android:id="@+id/attack_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="typeDegat" />
+            </TableRow>
+
 
             <TableRow android:paddingTop="10dp">
 
@@ -108,31 +181,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Dommages (/s): " />
+                    android:text="Vitesse: " />
 
                 <TextView
-                    android:id="@+id/damage_per_second"
+                    android:id="@+id/speed"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="dommagesParTir" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Dommages (/tir): " />
-
-                <TextView
-                    android:id="@+id/damage_per_shot"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="dommagesParSec" />
+                    android:text="vitesse" />
             </TableRow>
 
             <TableRow>
@@ -150,6 +206,40 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="vie" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Dégats (/s): " />
+
+                <TextView
+                    android:id="@+id/damage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="dps" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Dégats (/coup): " />
+
+                <TextView
+                    android:id="@+id/damage_per_shot"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="dpshot" />
             </TableRow>
 
             <TableRow android:paddingTop="10dp">
@@ -180,15 +270,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Coût de rechargement: " />
+                    android:text="Temps de regénération: " />
 
                 <TextView
-                    android:id="@+id/cost_loading"
+                    android:id="@+id/regeneration_time"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:text="coutRechargement" />
+                    android:text="regeneration" />
             </TableRow>
 
             <TableRow>
@@ -198,15 +287,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Couleur du tir: " />
+                    android:text="Poigne de fer niveau: " />
 
                 <TextView
-                    android:id="@+id/shot_color"
+                    android:id="@+id/ability_level"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="bottom"
-                    android:text="couleur" />
+                    android:text="ability" />
             </TableRow>
 
             <TableRow android:paddingTop="10dp">
@@ -216,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Construction"
+                    android:text="Recherches"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -237,52 +325,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Coût: " />
+                    android:text="Coût de recherche: " />
 
                 <TextView
-                    android:id="@+id/build_cost"
+                    android:id="@+id/research_cost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="cout" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Temps de construction: " />
-
-                <TextView
-                    android:id="@+id/build_time"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="tempsDeConstruction" />
-            </TableRow>
-
-            <TableRow android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Niveau"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow android:paddingBottom="10dp">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/darker_gray" />
+                    android:text="coutRecherche" />
             </TableRow>
 
             <TableRow>
@@ -295,11 +345,11 @@
                     android:text="Niveau requis: " />
 
                 <TextView
-                    android:id="@+id/level_requiered"
+                    android:id="@+id/requiered_level"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="niveauRequis" />
+                    android:text="niveauformation" />
             </TableRow>
 
             <TableRow>
@@ -309,14 +359,169 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="XP gagnée: " />
+                    android:text="Temp de recherche: " />
 
                 <TextView
-                    android:id="@+id/experience"
+                    android:id="@+id/research_time"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="experience" />
+                    android:text="tempsRecherche" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="10dp"></TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Abilité"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Niveau: " />
+
+                <TextView
+                    android:id="@+id/ability_lvl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="niveau" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <SeekBar
+                    android:id="@+id/ability_level_seekbar"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:progressBackgroundTint="@color/grey_light"
+                    android:progressTint="@color/colorPrimary"
+                    android:thumbTint="@color/colorPrimaryDark" />
+            </TableRow>
+
+            <!-- //    {lvl, damages+, hp+, speed+, unitsCreated, time}-->
+
+            <TableRow android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Poigne de fer"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="10dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Dégats +: " />
+
+                <TextView
+                    android:id="@+id/ability_damages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="abi dmg" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Vie +: " />
+
+                <TextView
+                    android:id="@+id/ability_hp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="abi hp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Vitesse +: " />
+
+                <TextView
+                    android:id="@+id/ability_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="abi speed" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Barbares créés: " />
+
+                <TextView
+                    android:id="@+id/ability_units"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="abi units" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Durée: " />
+
+                <TextView
+                    android:id="@+id/ability_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="abi time" />
             </TableRow>
         </TableLayout>
     </ScrollView>

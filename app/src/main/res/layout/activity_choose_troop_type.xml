@@ -97,11 +97,10 @@
                     android:id="@+id/heroes"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/dark"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:foreground="#40000000"
+                    android:foreground="?android:attr/selectableItemBackground"
                     card_view:cardCornerRadius="4dp"
                     card_view:cardElevation="3dp">
 

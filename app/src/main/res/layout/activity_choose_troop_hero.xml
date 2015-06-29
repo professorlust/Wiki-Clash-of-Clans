@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/minion"
+                android:id="@+id/barbarian_king"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
@@ -42,22 +42,22 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/minion" />
+                        android:background="@drawable/barbarian_king" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Gargouille" />
+                        android:text="Roi des barbares" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/hogrider"
+                android:id="@+id/archer_queen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/minion"
+                android:layout_below="@id/barbarian_king"
                 android:layout_marginBottom="4dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -75,7 +75,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/hog_rider" />
+                        android:background="@drawable/archer_queen" />
 
                     <TextView
                         android:layout_width="wrap_content"

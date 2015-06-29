@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="fr.qualitylabs.wikicoc.DescribeBuildingDefenseAirSweeperActivity">
 
@@ -28,7 +29,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/air_sweeper"/>
+                    android:src="@drawable/air_sweeper" />
             </TableRow>
 
             <TableRow
@@ -49,22 +50,19 @@
 
             <TableRow>
 
-                <LinearLayout
-                    android:layout_column="0"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="right"
+                    android:text="Niveau: " />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Niveau: " />
-
-                    <TextView
-                        android:id="@+id/level"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="niveau" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/level"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="niveau" />
             </TableRow>
 
             <TableRow

@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeBuildingTrapSkeletonActivity extends ActionBarActivity {
+public class DescribeBuildingTrapSkeletonActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -66,8 +66,8 @@ public class DescribeBuildingTrapSkeletonActivity extends ActionBarActivity {
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
         units.setText(property[1]);
-        buildcost.setText(property[2]);
-        rearmcost.setText(property[3]);
+        buildcost.setText(property[2] + " or");
+        rearmcost.setText(property[3] + " or");
         buildtime.setText(property[4]);
         xp.setText(property[5]);
         levelrequiered.setText(property[6]);
@@ -108,8 +108,8 @@ public class DescribeBuildingTrapSkeletonActivity extends ActionBarActivity {
             image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress + 1), null, getPackageName())));
             level.setText(property[0]);
             units.setText(property[1]);
-            buildcost.setText(property[2]);
-            rearmcost.setText(property[3]);
+            buildcost.setText(property[2] + " or");
+            rearmcost.setText(property[3] + " or");
             buildtime.setText(property[4]);
             xp.setText(property[5]);
             levelrequiered.setText(property[6]);

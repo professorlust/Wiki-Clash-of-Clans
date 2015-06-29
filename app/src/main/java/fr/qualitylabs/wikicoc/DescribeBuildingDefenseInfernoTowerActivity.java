@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,7 +12,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 
-public class DescribeBuildingDefenseInfernoTowerActivity extends ActionBarActivity {
+public class DescribeBuildingDefenseInfernoTowerActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -83,8 +83,8 @@ public class DescribeBuildingDefenseInfernoTowerActivity extends ActionBarActivi
         damagepersec5.setText(property[3]);
         damagepersecmulti.setText(property[4]);
         health.setText(property[5]);
-        costload.setText(property[6]);
-        buildcost.setText(property[7]);
+        costload.setText(property[6] + " elixir");
+        buildcost.setText(property[7] + " or");
         buildtime.setText(property[8]);
         xp.setText(property[9]);
         levelrequiered.setText(property[10]);
@@ -136,8 +136,8 @@ public class DescribeBuildingDefenseInfernoTowerActivity extends ActionBarActivi
             damagepersec5.setText(property[3]);
             damagepersecmulti.setText(property[4]);
             health.setText(property[5]);
-            costload.setText(property[6]);
-            buildcost.setText(property[7]);
+            costload.setText(property[6] + " elixir");
+            buildcost.setText(property[7] + " or");
             buildtime.setText(property[8]);
             xp.setText(property[9]);
             levelrequiered.setText(property[10]);

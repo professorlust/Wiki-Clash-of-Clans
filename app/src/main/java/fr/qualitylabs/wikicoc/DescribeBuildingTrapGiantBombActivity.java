@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeBuildingTrapGiantBombActivity extends ActionBarActivity {
+public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -69,8 +69,8 @@ public class DescribeBuildingTrapGiantBombActivity extends ActionBarActivity {
         level.setText(property[0]);
         damage.setText(property[1]);
         radius.setText(property[2]);
-        buildcost.setText(property[3]);
-        rearmcost.setText(property[4]);
+        buildcost.setText(property[3] + " or");
+        rearmcost.setText(property[4] + " or");
         buildtime.setText(property[5]);
         xp.setText(property[6]);
         levelrequiered.setText(property[7]);
@@ -112,8 +112,8 @@ public class DescribeBuildingTrapGiantBombActivity extends ActionBarActivity {
             level.setText(property[0]);
             damage.setText(property[1]);
             radius.setText(property[2]);
-            buildcost.setText(property[3]);
-            rearmcost.setText(property[4]);
+            buildcost.setText(property[3] + " or");
+            rearmcost.setText(property[4] + " or");
             buildtime.setText(property[5]);
             xp.setText(property[6]);
             levelrequiered.setText(property[7]);
