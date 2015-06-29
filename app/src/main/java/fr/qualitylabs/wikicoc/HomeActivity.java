@@ -14,6 +14,9 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -25,6 +28,10 @@ public class HomeActivity extends AppCompatActivity {
     CardView batiments;
     CardView resources;
     CardView spells;
+
+    // Google Analytics Trackers
+    public static GoogleAnalytics analytics;
+    public static Tracker tracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,15 @@ public class HomeActivity extends AppCompatActivity {
         batiments.setOnClickListener(batimentsListener);
         resources.setOnClickListener(resourcesListener);
         spells.setOnClickListener(spellsListener);
+
+        analytics = GoogleAnalytics.getInstance(this);
+        analytics.setLocalDispatchPeriod(1800);
+
+        tracker = analytics.newTracker("UA-45228515-2"); //ID Google Analytics
+        tracker.enableExceptionReporting(true);
+        tracker.enableAdvertisingIdCollection(true);
+        tracker.enableAutoActivityTracking(true);
+
     }
 
     @Override
