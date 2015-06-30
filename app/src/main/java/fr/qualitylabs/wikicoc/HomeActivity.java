@@ -115,8 +115,8 @@ public class HomeActivity extends AppCompatActivity {
     private View.OnClickListener resourcesListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();        }
-
+            startActivity(new Intent(getApplicationContext(), ChooseResourceTypeActivity.class));
+        }
     };
 
     private View.OnClickListener spellsListener = new View.OnClickListener() {
@@ -125,4 +125,5 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();        }
 
     };
-}
+    };
+

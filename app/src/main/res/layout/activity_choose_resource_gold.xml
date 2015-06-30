@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.qualitylabs.wikicoc.ChooseResourceGoldActivity">
+
+    <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/app_bar"
+        android:id="@+id/scrollView">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <TableRow>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/goldmine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/goldmine_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/gold_mine" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/goldmine_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="Mine d'or"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+            <TableRow>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/goldstorage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/goldstorage_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/gold_storage" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/goldstorage_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="Réservoir d'or"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
