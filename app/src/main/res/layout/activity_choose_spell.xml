@@ -3,30 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_light"
-    tools:context="fr.qualitylabs.wikicoc.NavigationDrawerFragment">
+    tools:context="fr.qualitylabs.wikicoc.ChooseSpellActivity">
 
-    <ImageView
-        android:id="@+id/drawer_header"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/drawer_header" />
+    <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/drawer_header">
+        android:layout_below="@id/app_bar">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/troop"
+                android:id="@+id/lightning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
@@ -34,98 +36,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/pekka" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Troupes" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/buildings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/troop"
-                android:layout_margin="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/buildings" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Bâtiments" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/resources"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/buildings"
-                android:layout_margin="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:background="@drawable/gold_mine" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="72dp"
-                        android:layout_marginLeft="88dp"
-                        android:gravity="center"
-                        android:text="Ressources" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/spells"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/resources"
-                android:layout_margin="4dp"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                card_view:cardCornerRadius="4dp"
-                card_view:cardElevation="3dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:padding="5dp">
 
                     <ImageView
@@ -138,7 +49,139 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sorts" />
+                        android:text="Sort de foudre" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/healing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lightning"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/healing_spell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Sort de guérison" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/rage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/healing"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/rage_spell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Sort de rage" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/jump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rage"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/jump_spell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Sort de saut" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/freeze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jump"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/freeze_spell" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="88dp"
+                        android:gravity="center"
+                        android:text="Sort de gel" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

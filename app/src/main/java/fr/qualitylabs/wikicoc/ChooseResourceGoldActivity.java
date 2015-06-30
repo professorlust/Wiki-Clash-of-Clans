@@ -9,9 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
-/**
- * Created by Alex on 30/06/2015.
- */
+
 public class ChooseResourceGoldActivity extends AppCompatActivity {
 
     Toolbar toolbar;

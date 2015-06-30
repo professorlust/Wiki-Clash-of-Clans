@@ -1,8 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikicoc.DescribeResourceMineActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeSpellLightningActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -29,7 +28,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/gold_mine" />
+                    android:src="@drawable/lightning_spell" />
             </TableRow>
 
             <TableRow
@@ -87,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Production"
+                    android:text="Effet"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -108,14 +107,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Production par heure: " />
+                    android:text="Rayon: " />
 
                 <TextView
-                    android:id="@+id/prodrate"
+                    android:id="@+id/radius"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="prodrate" />
+                    android:text="radius" />
             </TableRow>
 
             <TableRow>
@@ -125,14 +124,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Capacité: " />
+                    android:text="Rayon aléatoire: " />
 
                 <TextView
-                    android:id="@+id/capacity"
+                    android:id="@+id/radius_random"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="capacity" />
+                    android:text="radiusRandom" />
             </TableRow>
 
             <TableRow>
@@ -142,14 +141,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Temps de remplissage: " />
+                    android:text="Durée: " />
 
                 <TextView
-                    android:id="@+id/filltime"
+                    android:id="@+id/length"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="filltime" />
+                    android:text="length" />
             </TableRow>
 
             <TableRow>
@@ -159,14 +158,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Accélérer (coût): " />
+                    android:text="Dommages: " />
 
                 <TextView
-                    android:id="@+id/boost"
+                    android:id="@+id/damage"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="boost" />
+                    android:text="damage" />
             </TableRow>
 
             <TableRow android:paddingTop="10dp">
@@ -176,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Résistance"
+                    android:text="Fabrication"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -197,35 +196,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Vie: " />
+                    android:text="Niveau de l'usine de sorts: " />
 
                 <TextView
-                    android:id="@+id/health"
+                    android:id="@+id/spell_factory_level"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="hp" />
-            </TableRow>
-
-            <TableRow android:paddingTop="10dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Construction"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow android:paddingBottom="10dp">
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/darker_gray" />
+                    android:text="usinelvl" />
             </TableRow>
 
             <TableRow>
@@ -235,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Coût de construction: " />
+                    android:text="Coût de production: " />
 
                 <TextView
                     android:id="@+id/build_cost"
@@ -252,14 +230,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Temps de construction: " />
+                    android:text="Temps de production: " />
 
                 <TextView
                     android:id="@+id/build_time"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="tempsDeConstruction" />
+                    android:text="tempsDeProd" />
             </TableRow>
 
             <TableRow android:paddingTop="10dp">
@@ -269,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Niveau"
+                    android:text="Recherches"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -290,14 +268,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Niveau requis: " />
+                    android:text="Niveau du laboratoire: " />
 
                 <TextView
-                    android:id="@+id/level_requiered"
+                    android:id="@+id/lab_level_requiered"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="niveauRequis" />
+                    android:text="lablvl" />
             </TableRow>
 
             <TableRow>
@@ -307,14 +285,31 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="XP gagnée: " />
+                    android:text="Coût de recherche: " />
 
                 <TextView
-                    android:id="@+id/experience"
+                    android:id="@+id/research_cost"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="experience" />
+                    android:text="rescost" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Temps de recherche: " />
+
+                <TextView
+                    android:id="@+id/research_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="restime" />
             </TableRow>
         </TableLayout>
     </ScrollView>

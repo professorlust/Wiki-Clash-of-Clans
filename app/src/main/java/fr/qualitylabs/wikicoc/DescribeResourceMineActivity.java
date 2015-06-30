@@ -9,10 +9,8 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-/**
- * Created by Alex on 30/06/2015.
- */
-public class DescribeResourceMineActivity extends AppCompatActivity{
+
+public class DescribeResourceMineActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -74,11 +72,11 @@ public class DescribeResourceMineActivity extends AppCompatActivity{
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
-        buildcost.setText(property[1]);
+        buildcost.setText(property[1] + " or");
         buildtime.setText(property[2]);
         xp.setText(property[3]);
         boost.setText(property[4] + " gemmes");
-        capacity.setText(property[5]);
+        capacity.setText(property[5] + " or");
         prodrate.setText(property[6] + " or");
         health.setText(property[7]);
         filltime.setText(property[8]);
@@ -116,13 +114,15 @@ public class DescribeResourceMineActivity extends AppCompatActivity{
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+            property = building.getProperty(progress+1);
+
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress+1), null, getPackageName())));
             level.setText(property[0]);
-            buildcost.setText(property[1]);
+            buildcost.setText(property[1] + " or");
             buildtime.setText(property[2]);
             xp.setText(property[3]);
             boost.setText(property[4] + " gemmes");
-            capacity.setText(property[5]);
+            capacity.setText(property[5] + " or");
             prodrate.setText(property[6] + " or");
             health.setText(property[7]);
             filltime.setText(property[8]);

@@ -2,18 +2,15 @@ package fr.qualitylabs.wikicoc;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
-/**
- * Created by Alex on 30/06/2015.
- */
-public class ChooseResourceTypeActivity extends AppCompatActivity {
 
+public class ChooseResourceTypeActivity extends ActionBarActivity {
     Toolbar toolbar;  //ToolBar provenant du package android.support.v7.widget !
 
     Building building = new Building();

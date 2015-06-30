@@ -11,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -65,14 +64,15 @@ public class HomeActivity extends AppCompatActivity {
         resources.setOnClickListener(resourcesListener);
         spells.setOnClickListener(spellsListener);
 
-        analytics = GoogleAnalytics.getInstance(this);
-        analytics.setLocalDispatchPeriod(1800);
-
-        tracker = analytics.newTracker("UA-45228515-2"); //ID Google Analytics
-        tracker.enableExceptionReporting(true);
-        tracker.enableAdvertisingIdCollection(true);
-        tracker.enableAutoActivityTracking(true);
-
+//        GOOGLE ANALYTICS
+//        analytics = GoogleAnalytics.getInstance(this);
+//        analytics.setLocalDispatchPeriod(1800);
+//
+//        tracker = analytics.newTracker("UA-45228515-2"); //ID Google Analytics
+//        tracker.enableExceptionReporting(true);
+//        tracker.enableAdvertisingIdCollection(true);
+//        tracker.enableAutoActivityTracking(true);
+//        /GOOGLE ANALYTICS
     }
 
     @Override
@@ -122,8 +122,8 @@ public class HomeActivity extends AppCompatActivity {
     private View.OnClickListener spellsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();        }
-
+            startActivity(new Intent(getApplicationContext(), ChooseSpellActivity.class));
+        }
     };
-    };
+}
 
