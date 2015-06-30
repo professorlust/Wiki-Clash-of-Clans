@@ -13,9 +13,9 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
-    LightningSpell spell = new LightningSpell();
+    Spell spell = new Spell();
 
-    String[] property;
+    String[] property = null;
 
     SeekBar seekBar;
 
@@ -24,7 +24,6 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
     TextView level;
     TextView radius;
     TextView radiusRandom;
-    TextView length;
     TextView damage;
     TextView spellFactoryLvl;
     TextView buildCost;
@@ -52,7 +51,7 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         level = (TextView) findViewById(R.id.level);
         radius = (TextView) findViewById(R.id.radius);
         radiusRandom = (TextView) findViewById(R.id.radius_random);
-        length = (TextView) findViewById(R.id.length);
+        damage = (TextView) findViewById(R.id.damage);
         spellFactoryLvl = (TextView) findViewById(R.id.spell_factory_level);
         buildCost = (TextView) findViewById(R.id.build_cost);
         buildTime = (TextView) findViewById(R.id.build_time);
@@ -61,13 +60,14 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         researchTime = (TextView) findViewById(R.id.research_time);
 
 //        Récupère les extras
-        spell = (LightningSpell) getIntent().getSerializableExtra("spell");
+        spell = new LightningSpell();
 
 //        Initialisation des vues avec les données récupérées
-        property = spell.getProperty(1);
+        property = spell.getData().get(1);
         //    {lvl, radius, randomRadius, damages, buildCost, buildTime, researchCost, researchTime, labRequiered}
 
         name.setText(spell.getName());
+        spellFactoryLvl.setText(spell.getFactoryRequiered());
         level.setText(property[0]);
         radius.setText(property[1]);
         radiusRandom.setText(property[2]);

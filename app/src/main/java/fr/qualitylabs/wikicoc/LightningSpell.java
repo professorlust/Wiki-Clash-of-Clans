@@ -46,6 +46,6 @@ public class LightningSpell extends Spell {
     }
 
     public String[] getProperty(int level) {
-        return super.getProperty(level);
+        return data.get(level);
     }
 }

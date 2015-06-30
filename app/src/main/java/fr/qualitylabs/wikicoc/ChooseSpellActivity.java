@@ -66,7 +66,7 @@ public class ChooseSpellActivity extends AppCompatActivity {
     private View.OnClickListener lightningListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), DescribeTroopDarkActivity.class);
+            Intent intent = new Intent(getApplicationContext(), DescribeSpellLightningActivity.class);
             spell = new LightningSpell();
             intent.putExtra("spell", spell);
             startActivity(intent);
