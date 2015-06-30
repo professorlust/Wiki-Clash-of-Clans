@@ -48,7 +48,7 @@
     </string>
     <string name="title_activity_choose_spell">ChooseSpellActivity</string>
     <string name="title_activity_describe_spell_lightning">DescribeSpellLightningActivity</string>
-    <string name="title_activity_choose_resource_type">ChooseResourceTypeActivity</string>
-    <string name="title_activity_choose_resource_gold">ChooseResourceGoldActivity</string>
-    <string name="title_activity_describe_resource_mine">DescribeResourceMineActivity</string>
+    <string name="title_activity_choose_resource_type">Choisir une ressource</string>
+    <string name="title_activity_choose_resource_gold">Choisir un bâtiment</string>
+    <string name="title_activity_describe_resource_mine">Description</string>
 </resources>
