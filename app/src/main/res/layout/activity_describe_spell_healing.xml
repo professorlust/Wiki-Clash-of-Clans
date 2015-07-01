@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikicoc.DescribeSpellLightningActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeSpellHealingActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -28,7 +29,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/lightning_spell" />
+                    android:src="@drawable/healing_spell" />
             </TableRow>
 
             <TableRow
@@ -124,31 +125,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Rayon aléatoire: " />
+                    android:text="Guérison: " />
 
                 <TextView
-                    android:id="@+id/radius_random"
+                    android:id="@+id/heal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="radiusRandom" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="Dommages: " />
-
-                <TextView
-                    android:id="@+id/damage"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="damage" />
+                    android:text="heal" />
             </TableRow>
 
             <TableRow>

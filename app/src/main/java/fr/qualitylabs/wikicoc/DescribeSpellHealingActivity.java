@@ -9,7 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeSpellLightningActivity extends AppCompatActivity {
+public class DescribeSpellHealingActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -19,12 +19,11 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
 
     SeekBar seekBar;
 
-    //    {lvl, radius, randomRadius, damages, buildCost, buildTime, researchCost, researchTime, labRequiered}
+    //    {lvl, radius, heal, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
     TextView radius;
-    TextView radiusRandom;
-    TextView damage;
+    TextView heal;
     TextView length;
     TextView spellFactoryLvl;
     TextView buildCost;
@@ -36,7 +35,7 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe_spell_lightning);
+        setContentView(R.layout.activity_describe_spell_healing);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -51,8 +50,7 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
         radius = (TextView) findViewById(R.id.radius);
-        radiusRandom = (TextView) findViewById(R.id.radius_random);
-        damage = (TextView) findViewById(R.id.damage);
+        heal = (TextView) findViewById(R.id.heal);
         length = (TextView) findViewById(R.id.length);
         spellFactoryLvl = (TextView) findViewById(R.id.spell_factory_level);
         buildCost = (TextView) findViewById(R.id.build_cost);
@@ -62,24 +60,23 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         researchTime = (TextView) findViewById(R.id.research_time);
 
 //        Récupère les extras
-        spell = new LightningSpell();
+        spell = new HealingSpell();
 
 //        Initialisation des vues avec les données récupérées
         property = spell.getData().get(1);
-        //    {lvl, radius, randomRadius, damages, buildCost, buildTime, researchCost, researchTime, labRequiered}
+        //    {lvl, radius, heal, buildCost, buildTime, researchCost, researchTime, labRequiered}
 
         name.setText(spell.getName());
         length.setText(spell.getLength());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
         level.setText(property[0]);
         radius.setText(property[1]);
-        radiusRandom.setText(property[2]);
-        damage.setText(property[3]);
-        buildCost.setText(property[4] + " elixir");
-        buildTime.setText(property[5]);
-        researchCost.setText(property[6] + " elixir");
-        researchTime.setText(property[7]);
-        labLvl.setText(property[8]);
+        heal.setText(property[2]);
+        buildCost.setText(property[3] + " elixir");
+        buildTime.setText(property[4]);
+        researchCost.setText(property[5] + " elixir");
+        researchTime.setText(property[6]);
+        labLvl.setText(property[7]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(spell.getLevelMax() - 1);
@@ -90,7 +87,7 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_spell_lightning, menu);
+        getMenuInflater().inflate(R.menu.menu_describe_spell_healing, menu);
         return true;
     }
 
@@ -116,13 +113,12 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
 
             level.setText(property[0]);
             radius.setText(property[1]);
-            radiusRandom.setText(property[2]);
-            damage.setText(property[3]);
-            buildCost.setText(property[4] + " elixir");
-            buildTime.setText(property[5]);
-            researchCost.setText(property[6] + " elixir");
-            researchTime.setText(property[7]);
-            labLvl.setText(property[8]);
+            heal.setText(property[2]);
+            buildCost.setText(property[3] + " elixir");
+            buildTime.setText(property[4]);
+            researchCost.setText(property[5] + " elixir");
+            researchTime.setText(property[6]);
+            labLvl.setText(property[7]);
         }
 
         @Override

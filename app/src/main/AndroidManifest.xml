@@ -269,6 +269,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseResourceGoldActivity" />
         </activity>
+        <activity
+            android:name=".DescribeSpellHealingActivity"
+            android:label="@string/title_activity_describe_spell_healing"
+            android:parentActivityName=".ChooseSpellActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellRageActivity"
+            android:label="@string/title_activity_describe_spell_rage"
+            android:parentActivityName=".ChooseSpellActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellJumpActivity"
+            android:label="@string/title_activity_describe_jump_spell"
+            android:parentActivityName=".ChooseSpellActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellFreezeActivity"
+            android:label="@string/title_activity_describe_spell_freeze"
+            android:parentActivityName=".ChooseSpellActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -41,10 +41,10 @@ public class ChooseSpellActivity extends AppCompatActivity {
         freeze = (CardView) findViewById(R.id.freeze);
 
         lightning.setOnClickListener(lightningListener);
-//        healing.setOnClickListener(healingListener);
-//        rage.setOnClickListener(rageListener);
-//        jump.setOnClickListener(jumpListener);
-//        freeze.setOnClickListener(freezeListener);
+        healing.setOnClickListener(healingListener);
+        rage.setOnClickListener(rageListener);
+        jump.setOnClickListener(jumpListener);
+        freeze.setOnClickListener(freezeListener);
     }
 
     @Override
@@ -67,8 +67,38 @@ public class ChooseSpellActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeSpellLightningActivity.class);
-            spell = new LightningSpell();
-            intent.putExtra("spell", spell);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener healingListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeSpellHealingActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener rageListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeSpellRageActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener jumpListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeSpellJumpActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener freezeListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeSpellFreezeActivity.class);
             startActivity(intent);
         }
     };

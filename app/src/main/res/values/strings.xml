@@ -51,4 +51,8 @@
     <string name="title_activity_choose_resource_type">Choisir une ressource</string>
     <string name="title_activity_choose_resource_gold">Choisir un bâtiment</string>
     <string name="title_activity_describe_resource_mine">Description</string>
+    <string name="title_activity_describe_spell_healing">Description</string>
+    <string name="title_activity_describe_spell_rage">Description</string>
+    <string name="title_activity_describe_jump_spell">Description</string>
+    <string name="title_activity_describe_spell_freeze">Description</string>
 </resources>
