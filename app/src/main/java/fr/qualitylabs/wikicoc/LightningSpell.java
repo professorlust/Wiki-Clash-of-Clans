@@ -15,6 +15,7 @@ public class LightningSpell extends Spell {
     public LightningSpell() {
         name = "Sort de foudre";
         namecode = "lightning_spell";
+        length = "2,4s";
         factoryRequiered = "1";
         data.put(1, lightning1);
         data.put(2, lightning2);
@@ -33,6 +34,10 @@ public class LightningSpell extends Spell {
         return namecode;
     }
 
+    public String getLength() {
+        return length;
+    }
+
     public String getFactoryRequiered() {
         return factoryRequiered;
     }
@@ -46,6 +51,6 @@ public class LightningSpell extends Spell {
     }
 
     public String[] getProperty(int level) {
-        return super.getProperty(level);
+        return data.get(level);
     }
 }

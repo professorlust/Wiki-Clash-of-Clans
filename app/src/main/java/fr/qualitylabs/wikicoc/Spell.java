@@ -8,12 +8,14 @@ public class Spell implements Serializable{
     protected String name;
     protected String namecode;
     protected String factoryRequiered;
+    protected String length;
     protected int levelMax;
     protected Hashtable<Integer, String[]> data;
 
     public Spell() {
         name = null;
         namecode = null;
+        length = null;
         factoryRequiered = null;
         levelMax = 0;
         data = new Hashtable<>();
@@ -25,6 +27,10 @@ public class Spell implements Serializable{
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getLength() {
+        return length;
     }
 
     public String getFactoryRequiered() {
