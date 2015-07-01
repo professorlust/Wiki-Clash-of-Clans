@@ -18,6 +18,8 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
 
     String[] property;
 
+    String[] currency = {"null","null"};
+
     SeekBar seekBar;
 
     ImageView image;
@@ -66,18 +68,29 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
         //Récupère les extras
         building = (Building) getIntent().getSerializableExtra("building");
 
+//        Définit la monnaie
+        if(building.getClass()==GoldMine.class){
+            currency = new String[]{" elixir", " or"};
+        }
+        if(building.getClass()==ElixirCollector.class){
+            currency = new String[]{" or", " elixir"};
+        }
+//        if(building.getClass()==DarkElixirCollector.class){
+//            currency = new String[]{" elixir", " elixir noir"};
+//        }
+
         //Initialisation des vues avec les données récupérées
         property = building.getProperty(1);
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
-        buildcost.setText(property[1] + " or");
+        buildcost.setText(property[1] + currency[0]);
         buildtime.setText(property[2]);
         xp.setText(property[3]);
         boost.setText(property[4] + " gemmes");
-        capacity.setText(property[5] + " or");
-        prodrate.setText(property[6] + " or");
+        capacity.setText(property[5] + currency[1]);
+        prodrate.setText(property[6] + currency[1]);
         health.setText(property[7]);
         filltime.setText(property[8]);
         levelrequired.setText(property[9]);
@@ -118,12 +131,12 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
 
             image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress+1), null, getPackageName())));
             level.setText(property[0]);
-            buildcost.setText(property[1] + " or");
+            buildcost.setText(property[1] + currency[0]);
             buildtime.setText(property[2]);
             xp.setText(property[3]);
             boost.setText(property[4] + " gemmes");
-            capacity.setText(property[5] + " or");
-            prodrate.setText(property[6] + " or");
+            capacity.setText(property[5] + currency[1]);
+            prodrate.setText(property[6] + currency[1]);
             health.setText(property[7]);
             filltime.setText(property[8]);
             levelrequired.setText(property[9]);

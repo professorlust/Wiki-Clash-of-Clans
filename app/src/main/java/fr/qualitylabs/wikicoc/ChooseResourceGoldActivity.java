@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
@@ -39,12 +38,12 @@ public class ChooseResourceGoldActivity extends AppCompatActivity {
         goldstorage.setOnClickListener(goldstorageListener);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_resource_gold, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_choose_resource_gold, menu);
+//        return true;
+//    }
 
     private View.OnClickListener goldmineListener = new View.OnClickListener() {
         @Override
