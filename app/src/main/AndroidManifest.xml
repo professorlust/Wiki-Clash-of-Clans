@@ -269,6 +269,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseResourceGoldActivity" />
         </activity>
+        <activity
+            android:name=".ChooseResourceElixirActivity"
+            android:label="@string/title_activity_choose_resource_elixir" >
+        </activity>
     </application>
 
 </manifest>

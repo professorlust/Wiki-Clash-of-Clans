@@ -46,9 +46,10 @@
     </string>
     <string name="title_activity_describe_troop_archer_queen">Description
     </string>
-    <string name="title_activity_choose_spell">ChooseSpellActivity</string>
-    <string name="title_activity_describe_spell_lightning">DescribeSpellLightningActivity</string>
+    <string name="title_activity_choose_spell">Choisir un sort</string>
+    <string name="title_activity_describe_spell_lightning">Description</string>
     <string name="title_activity_choose_resource_type">Choisir une ressource</string>
     <string name="title_activity_choose_resource_gold">Choisir un bâtiment</string>
     <string name="title_activity_describe_resource_mine">Description</string>
+    <string name="title_activity_choose_resource_elixir">Choisir un bâtiment</string>
 </resources>

@@ -57,7 +57,7 @@ public class ChooseResourceTypeActivity extends ActionBarActivity {
     private View.OnClickListener elixirListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), ChooseResourceElixirActivity.class));
         }
     };
 

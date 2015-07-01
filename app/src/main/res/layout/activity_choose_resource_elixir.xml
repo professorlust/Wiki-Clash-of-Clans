@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikicoc.ChooseResourceTypeActivity">
+    tools:context="fr.qualitylabs.wikicoc.ChooseResourceGoldActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -11,6 +11,7 @@
         layout="@layout/app_bar" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -22,12 +23,10 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TableRow>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/gold"
+                    android:id="@+id/elixircollector"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
@@ -44,50 +43,17 @@
                         android:padding="5dp">
 
                         <ImageView
-                            android:id="@+id/gold_img"
-                            android:layout_width="wrap_content"
-                            android:layout_height="150dp"
-                            android:src="@drawable/gold_storage" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/gold_img"
-                            android:layout_centerHorizontal="true"
-                            android:text="Or"
-                            android:textSize="20sp" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/elixir"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    card_view:cardCornerRadius="4dp"
-                    card_view:cardElevation="3dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/elixir_img"
+                            android:id="@+id/elixircollector_img"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/elixir_storage" />
+                            android:src="@drawable/elixir_collector" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/elixir_img"
+                            android:layout_below="@id/elixircollector_img"
                             android:layout_centerHorizontal="true"
-                            android:text="Elixir"
+                            android:text="Extracteur d'élixir"
                             android:textSize="20sp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
@@ -96,13 +62,13 @@
             <TableRow>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/darkelixir"
+                    android:id="@+id/elixirstorage"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:layout_weight="1"
                     android:clickable="true"
-                    android:foreground="#40000000"
+                    android:foreground="?android:attr/selectableItemBackground"
                     card_view:cardCornerRadius="4dp"
                     card_view:cardElevation="3dp">
 
@@ -113,17 +79,17 @@
                         android:padding="5dp">
 
                         <ImageView
-                            android:id="@+id/dark_elixir_img"
+                            android:id="@+id/elixirstorage_img"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:src="@drawable/dark_elixir_storage" />
+                            android:src="@drawable/elixir_storage" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/dark_elixir_img"
+                            android:layout_below="@id/elixirstorage_img"
                             android:layout_centerHorizontal="true"
-                            android:text="Elixir Noir"
+                            android:text="Réservoir d'élixir"
                             android:textSize="20sp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
