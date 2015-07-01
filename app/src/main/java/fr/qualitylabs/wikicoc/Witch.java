@@ -9,7 +9,7 @@ public class Witch extends Troop {
         name = "Sorcière";
         namecode = "witch";
         housingSpace = "12";
-        prefferedTarget = "Totues";
+        prefferedTarget = "Toutes";
         targetType = "Terrestres et Aériennes";
         attackType = "Zone étendue (0,3 cases)";
         data.put(1, witch1);

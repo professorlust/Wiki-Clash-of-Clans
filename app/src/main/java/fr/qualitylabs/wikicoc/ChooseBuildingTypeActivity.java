@@ -18,7 +18,8 @@ public class ChooseBuildingTypeActivity extends AppCompatActivity {
 
     CardView defense;
     CardView trap;
-    CardView special;
+    CardView army;
+    CardView other;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,13 @@ public class ChooseBuildingTypeActivity extends AppCompatActivity {
 
         defense = (CardView) findViewById(R.id.defense);
         trap = (CardView) findViewById(R.id.trap);
-        special = (CardView) findViewById(R.id.special);
+        army = (CardView) findViewById(R.id.army);
+        other = (CardView) findViewById(R.id.other);
 
         defense.setOnClickListener(defenseListener);
         trap.setOnClickListener(trapListener);
-        special.setOnClickListener(specialListener);
+        army.setOnClickListener(armyListener);
+        other.setOnClickListener(otherListener);
     }
 
     @Override
@@ -72,7 +75,14 @@ public class ChooseBuildingTypeActivity extends AppCompatActivity {
         }
     };
 
-    private View.OnClickListener specialListener = new View.OnClickListener() {
+    private View.OnClickListener armyListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
+        }
+    };
+
+    private View.OnClickListener otherListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();

@@ -2,7 +2,7 @@ package fr.qualitylabs.wikicoc;
 public class Giant extends Troop {
 
     //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
-    String[] giant1 = {"1", "2m", "12", "11", "300", "500", "N/A", "N/A", "N/A"};
+    String[] giant1 = {"1", "2m", "12", "11", "300", "250", "N/A", "N/A", "N/A"};
     String[] giant2 = {"2", "2m", "12", "14", "360", "750", "100 000", "2", "1j"};
     String[] giant3 = {"3", "2m", "12", "19", "430", "1 250", "250 000", "4", "2j"};
     String[] giant4 = {"4", "2m", "12", "24", "520", "1 750", "750 000", "5", "3j"};

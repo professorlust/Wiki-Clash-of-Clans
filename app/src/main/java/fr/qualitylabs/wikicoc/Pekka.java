@@ -4,9 +4,9 @@ public class Pekka extends Troop {
     //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
     String[] pekka1 = {"1","45m", "16", "240", "2 800", "30 000", "N/A", "N/A", "N/A"};
     String[] pekka2 = {"2","45m", "16", "270", "3 100", "35 000", "3 000 000", "6", "10j"};
-    String[] pekka3 = {"3","45m", "16", "300", "3 500", "40 000", "6 000 000", "6", "12j"};
-    String[] pekka4 = {"4","45m", "16", "340", "4 000", "45 000", "7 000 000", "8", "14j"};
-    String[] pekka5 = {"5","45m", "16", "380", "4 500", "50 000", "8 000 000", "8", "14j"};
+    String[] pekka3 = {"3","45m", "16", "300", "3 500", "36 000", "6 000 000", "6", "12j"};
+    String[] pekka4 = {"4","45m", "16", "340", "4 000", "40 000", "7 000 000", "8", "14j"};
+    String[] pekka5 = {"5","45m", "16", "380", "4 500", "45 000", "8 000 000", "8", "14j"};
 
 
     public Pekka() {

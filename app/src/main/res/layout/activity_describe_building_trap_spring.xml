@@ -102,6 +102,12 @@
                     android:layout_weight="1"
                     android:text="rearmement" />
             </TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Note: les P.E.K.K.A. sont assez lourds pour ne pas se faire éjecter, le piège sera gâché s'ils passent dessus." />
         </TableLayout>
     </ScrollView>
 

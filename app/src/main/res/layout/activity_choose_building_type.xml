@@ -94,7 +94,40 @@
             <TableRow>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/special"
+                    android:id="@+id/army"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="#40000000"
+                    card_view:cardCornerRadius="4dp"
+                    card_view:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/army_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/army" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/army_img"
+                            android:layout_centerHorizontal="true"
+                            android:text="Armée"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/other"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
@@ -121,7 +154,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/special_img"
                             android:layout_centerHorizontal="true"
-                            android:text="Spéciaux"
+                            android:text="Autres"
                             android:textSize="20sp" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>

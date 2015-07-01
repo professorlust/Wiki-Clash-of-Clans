@@ -22,6 +22,9 @@ public class DescribeTroopWhiteActivity extends AppCompatActivity {
 
     ImageView image;
 
+//    Change "Dégats(/s)" to "Soins(/s)" for Healer
+    TextView damageTitle;
+
     TextView name;
     TextView housingspace;
     TextView prefferedtarget;
@@ -51,6 +54,8 @@ public class DescribeTroopWhiteActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 //        Récupération des vues
+        damageTitle = (TextView) findViewById(R.id.damage_title);
+
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
@@ -72,6 +77,8 @@ public class DescribeTroopWhiteActivity extends AppCompatActivity {
         troop = (Troop) getIntent().getSerializableExtra("troop");
 
 //        Initialisation des vues avec les données récupérées
+        if(troop.getClass()==Healer.class){damageTitle.setText("Soins (/s): ");}
+
 //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
         property = troop.getProperty(1);
 
