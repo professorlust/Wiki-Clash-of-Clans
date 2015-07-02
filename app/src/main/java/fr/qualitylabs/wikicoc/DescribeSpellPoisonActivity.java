@@ -9,7 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeSpellFreezeActivity extends AppCompatActivity {
+public class DescribeSpellPoisonActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -19,12 +19,14 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
 
     SeekBar seekBar;
 
-    //    {lvl, radius, length, buildCost, buildTime, researchCost, researchTime, labRequiered}
+    //    {lvl, radius, damages, speed-, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
     TextView prefferedtarget;
     TextView targettype;
     TextView radius;
+    TextView damage;
+    TextView speed;
     TextView length;
     TextView spellFactoryLvl;
     TextView buildCost;
@@ -36,7 +38,7 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe_spell_freeze);
+        setContentView(R.layout.activity_describe_spell_poison);
 
         //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -53,6 +55,8 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
         prefferedtarget = (TextView) findViewById(R.id.preffered_target);
         targettype = (TextView) findViewById(R.id.target_type);
         radius = (TextView) findViewById(R.id.radius);
+        speed = (TextView) findViewById(R.id.speed);
+        damage = (TextView) findViewById(R.id.damage);
         length = (TextView) findViewById(R.id.length);
         spellFactoryLvl = (TextView) findViewById(R.id.spell_factory_level);
         buildCost = (TextView) findViewById(R.id.build_cost);
@@ -62,24 +66,26 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
         researchTime = (TextView) findViewById(R.id.research_time);
 
 //        Récupère les extras
-        spell = new FreezeSpell();
+        spell = new PoisonSpell();
 
 //        Initialisation des vues avec les données récupérées
         property = spell.getData().get(1);
-        //    {lvl, radius, length, buildCost, buildTime, researchCost, researchTime, labRequiered}
+        //    {lvl, radius, damages, speed-, buildCost, buildTime, researchCost, researchTime, labRequiered}
 
         name.setText(spell.getName());
+        length.setText(spell.getLength());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
         prefferedtarget.setText(spell.getPrefferedTarget());
         targettype.setText(spell.getTargetType());
         level.setText(property[0]);
         radius.setText(property[1]);
-        length.setText(property[2]);
-        buildCost.setText(property[3] + " elixir");
-        buildTime.setText(property[4]);
-        researchCost.setText(property[5] + " elixir");
-        researchTime.setText(property[6]);
-        labLvl.setText(property[7]);
+        damage.setText(property[2]);
+        speed.setText(property[3]);
+        buildCost.setText(property[4] + " elixir noir");
+        buildTime.setText(property[5]);
+        researchCost.setText(property[6] + " elixir noir");
+        researchTime.setText(property[7]);
+        labLvl.setText(property[8]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(spell.getLevelMax() - 1);
@@ -90,7 +96,7 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_spell_freeze, menu);
+        getMenuInflater().inflate(R.menu.menu_describe_spell_poison, menu);
         return true;
     }
 
@@ -116,12 +122,13 @@ public class DescribeSpellFreezeActivity extends AppCompatActivity {
 
             level.setText(property[0]);
             radius.setText(property[1]);
-            length.setText(property[2]);
-            buildCost.setText(property[3] + " elixir");
-            buildTime.setText(property[4]);
-            researchCost.setText(property[5] + " elixir");
-            researchTime.setText(property[6]);
-            labLvl.setText(property[7]);
+            damage.setText(property[2]);
+            speed.setText(property[3]);
+            buildCost.setText(property[4] + " elixir noir");
+            buildTime.setText(property[5]);
+            researchCost.setText(property[6] + " elixir noir");
+            researchTime.setText(property[7]);
+            labLvl.setText(property[8]);
         }
 
         @Override

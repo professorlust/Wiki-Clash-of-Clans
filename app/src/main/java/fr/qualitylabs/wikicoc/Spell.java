@@ -7,6 +7,8 @@ public class Spell implements Serializable{
 
     protected String name;
     protected String namecode;
+    protected String prefferedTarget;
+    protected String targetType;
     protected String factoryRequiered;
     protected String length;
     protected int levelMax;
@@ -27,6 +29,14 @@ public class Spell implements Serializable{
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
     }
 
     public String getLength() {

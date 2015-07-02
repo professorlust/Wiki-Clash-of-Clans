@@ -56,6 +56,4 @@
     <string name="title_activity_choose_resource_gold">Choisir un bâtiment</string>
     <string name="title_activity_describe_resource_mine">Description</string>
     <string name="title_activity_choose_resource_elixir">Choisir un bâtiment</string>
-    <string name="title_activity_describe_resource_storage">Description</string>
-    <string name="title_activity_choose_resource_dark_elixir">Choisir un bâtiment</string>
 </resources>

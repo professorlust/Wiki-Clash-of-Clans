@@ -1,4 +1,4 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
-    tools:context="fr.qualitylabs.wikicoc.ChooseSpellActivity">
+    tools:context="fr.qualitylabs.wikicoc.ChooseSpellDarkActivity">
     <!-- USELESS-->
 </menu>

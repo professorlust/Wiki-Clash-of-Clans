@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.View;
 
 
-public class ChooseSpellActivity extends AppCompatActivity {
+public class ChooseSpellWhiteActivity extends AppCompatActivity {
 
     Toolbar toolbar; // Tool Bar provenant du package android.support.v7.widget !
 
@@ -24,7 +24,7 @@ public class ChooseSpellActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_spell);
+        setContentView(R.layout.activity_choose_spell_white);
 
 //        On redéfinit la Tool Bar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -50,7 +50,7 @@ public class ChooseSpellActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_spell, menu);
+        getMenuInflater().inflate(R.menu.menu_choose_spell_white, menu);
         return true;
     }
 

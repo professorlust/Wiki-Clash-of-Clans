@@ -11,6 +11,8 @@ public class JumpSpell extends Spell {
     public JumpSpell() {
         name = "Sort de saut";
         namecode = "jump_spell";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres (alliées)";
         factoryRequiered = "4";
         data.put(1, jump1);
         data.put(2, jump2);
@@ -24,6 +26,14 @@ public class JumpSpell extends Spell {
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
     }
 
     public String getFactoryRequiered() {

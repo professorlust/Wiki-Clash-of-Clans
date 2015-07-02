@@ -22,6 +22,8 @@ public class DescribeSpellRageActivity extends AppCompatActivity {
     //    {lvl, radius, damage+, speed+, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
     TextView radius;
     TextView damage;
     TextView speed;
@@ -50,6 +52,8 @@ public class DescribeSpellRageActivity extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
         radius = (TextView) findViewById(R.id.radius);
         damage = (TextView) findViewById(R.id.damage);
         speed = (TextView) findViewById(R.id.speed);
@@ -71,6 +75,8 @@ public class DescribeSpellRageActivity extends AppCompatActivity {
         name.setText(spell.getName());
         length.setText(spell.getLength());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
+        prefferedtarget.setText(spell.getPrefferedTarget());
+        targettype.setText(spell.getTargetType());
         level.setText(property[0]);
         radius.setText(property[1]);
         damage.setText(property[2]);
