@@ -16,7 +16,7 @@ public class ElixirStorage extends Building{
     String[] elixirstorage8 = {"8", "250 000", "1 700", "50 000", "8h", "169", "4"};
     String[] elixirstorage9 = {"9", "500 000", "1 800", "100 000", "12h", "207", "5"};
     String[] elixirstorage10 = {"10", "1 000 000", "1 900", "250 000", "1j", "293", "6"};
-    String[] elixirstorage11 = {"11", "2 000 000", "2 000", "500 000", "2j", "415", "7"};
+    String[] elixirstorage11 = {"11", "2 000 000", "2 100", "500 000", "2j", "415", "7"};
 
     public ElixirStorage(){
         name = "Réservoir d'élixir";

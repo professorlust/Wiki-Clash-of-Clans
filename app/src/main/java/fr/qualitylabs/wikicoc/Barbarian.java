@@ -2,13 +2,13 @@ package fr.qualitylabs.wikicoc;
 public class Barbarian extends Troop {
 
 //    {niveau, duréeFormation, vitesse, dégatsParSeconde, pointsVie, coutFormation, coutRecherche, nibveauRequis, tempsRecherche}
-    String[] barbarian1 = {"1", "20s", "24", "8", "45", "25", "N/A", "N/A", "N/A"};
-    String[] barbarian2 = {"2", "20s", "24", "11", "54", "40", "50 000", "1", "6h"};
-    String[] barbarian3 = {"3", "20s", "24", "14", "65", "60", "150 000", "3", "1j"};
-    String[] barbarian4 = {"4", "20s", "24", "18", "78", "80", "500 000", "5", "3j"};
-    String[] barbarian5 = {"5", "20s", "24", "23", "95", "150", "1 500 00", "6", "5j"};
-    String[] barbarian6 = {"6", "20s", "24", "26", "110", "200", "4 500 000", "7", "10j"};
-    String[] barbarian7 = {"7", "20s", "24", "30", "125", "250", "6 000 000", "8", "14j"};
+    String[] barbarian1 = {"1", "20s", "16", "8", "45", "25", "N/A", "N/A", "N/A"};
+    String[] barbarian2 = {"2", "20s", "16", "11", "54", "40", "50 000", "1", "6h"};
+    String[] barbarian3 = {"3", "20s", "16", "14", "65", "60", "150 000", "3", "1j"};
+    String[] barbarian4 = {"4", "20s", "16", "18", "78", "80", "500 000", "5", "3j"};
+    String[] barbarian5 = {"5", "20s", "16", "23", "95", "150", "1 500 000", "6", "5j"};
+    String[] barbarian6 = {"6", "20s", "16", "26", "110", "200", "4 500 000", "7", "10j"};
+    String[] barbarian7 = {"7", "20s", "16", "30", "125", "250", "6 000 000", "8", "14j"};
 
     public Barbarian() {
         name = "Barbare";

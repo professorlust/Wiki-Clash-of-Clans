@@ -11,7 +11,7 @@ public class DarkElixirDrill extends Building{
     String[] darkelixirdrill3 = {"3", "2 000 000", "3j", "509", "15", "540", "45", "820", "12h", "7"};
     String[] darkelixirdrill4 = {"4", "3 000 000", "4j", "587", "20", "840", "60", "980", "14h", "9"};
     String[] darkelixirdrill5 = {"5", "4 000 000", "6j", "720", "25", "1 280", "80", "1 040", "16h", "9"};
-    String[] darkelixirdrill6 = {"6", "5 000 000", "8j", "831", "34", "1 800", "100", "1 800", "18h", "9"};
+    String[] darkelixirdrill6 = {"6", "5 000 000", "8j", "831", "30", "1 800", "100", "1 800", "18h", "9"};
 
     public DarkElixirDrill(){
         name = "Foreuse d'élixir noir";

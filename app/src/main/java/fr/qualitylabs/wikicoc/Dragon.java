@@ -19,6 +19,7 @@ public class Dragon extends Troop {
         data.put(2, dragon2);
         data.put(3, dragon3);
         data.put(4, dragon4);
+        data.put(5, dragon5);
         levelMax = data.size();
     }
 
