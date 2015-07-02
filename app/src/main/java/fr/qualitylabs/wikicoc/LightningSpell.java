@@ -15,6 +15,8 @@ public class LightningSpell extends Spell {
     public LightningSpell() {
         name = "Sort de foudre";
         namecode = "lightning_spell";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres et Aériennes (ennemies)";
         length = "2,4s";
         factoryRequiered = "1";
         data.put(1, lightning1);
@@ -32,6 +34,14 @@ public class LightningSpell extends Spell {
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
     }
 
     public String getLength() {

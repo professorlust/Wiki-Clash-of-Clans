@@ -22,6 +22,8 @@ public class DescribeSpellHealingActivity extends AppCompatActivity {
     //    {lvl, radius, heal, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
     TextView radius;
     TextView heal;
     TextView length;
@@ -49,6 +51,8 @@ public class DescribeSpellHealingActivity extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
         radius = (TextView) findViewById(R.id.radius);
         heal = (TextView) findViewById(R.id.heal);
         length = (TextView) findViewById(R.id.length);
@@ -69,6 +73,8 @@ public class DescribeSpellHealingActivity extends AppCompatActivity {
         name.setText(spell.getName());
         length.setText(spell.getLength());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
+        prefferedtarget.setText(spell.getPrefferedTarget());
+        targettype.setText(spell.getTargetType());
         level.setText(property[0]);
         radius.setText(property[1]);
         heal.setText(property[2]);

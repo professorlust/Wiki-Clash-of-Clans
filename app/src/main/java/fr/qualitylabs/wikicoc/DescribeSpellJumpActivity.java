@@ -1,7 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,7 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeSpellJumpActivity extends ActionBarActivity {
+public class DescribeSpellJumpActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -22,6 +22,8 @@ public class DescribeSpellJumpActivity extends ActionBarActivity {
     //    {lvl, radius, radiusRandom, length, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
     TextView radius;
     TextView radiusRandom;
     TextView length;
@@ -49,6 +51,8 @@ public class DescribeSpellJumpActivity extends ActionBarActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
         radius = (TextView) findViewById(R.id.radius);
         radiusRandom = (TextView) findViewById(R.id.radius_random);
         length = (TextView) findViewById(R.id.length);
@@ -68,6 +72,8 @@ public class DescribeSpellJumpActivity extends ActionBarActivity {
 
         name.setText(spell.getName());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
+        prefferedtarget.setText(spell.getPrefferedTarget());
+        targettype.setText(spell.getTargetType());
         level.setText(property[0]);
         radius.setText(property[1]);
         radiusRandom.setText(property[2]);

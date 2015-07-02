@@ -22,6 +22,8 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
     //    {lvl, radius, randomRadius, damages, buildCost, buildTime, researchCost, researchTime, labRequiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
     TextView radius;
     TextView radiusRandom;
     TextView damage;
@@ -50,6 +52,8 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
         radius = (TextView) findViewById(R.id.radius);
         radiusRandom = (TextView) findViewById(R.id.radius_random);
         damage = (TextView) findViewById(R.id.damage);
@@ -71,6 +75,8 @@ public class DescribeSpellLightningActivity extends AppCompatActivity {
         name.setText(spell.getName());
         length.setText(spell.getLength());
         spellFactoryLvl.setText(spell.getFactoryRequiered());
+        prefferedtarget.setText(spell.getPrefferedTarget());
+        targettype.setText(spell.getTargetType());
         level.setText(property[0]);
         radius.setText(property[1]);
         radiusRandom.setText(property[2]);

@@ -14,6 +14,8 @@ public class HealingSpell extends Spell {
     public HealingSpell() {
         name = "Sort de guérison";
         namecode = "helaing_spell";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres et Aériennes (alliées)";
         length = "12s";
         factoryRequiered = "2";
         data.put(1, healing1);
@@ -31,6 +33,14 @@ public class HealingSpell extends Spell {
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
     }
 
     public String getLength() {

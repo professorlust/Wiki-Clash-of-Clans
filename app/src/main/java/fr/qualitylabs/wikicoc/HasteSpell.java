@@ -2,26 +2,23 @@ package fr.qualitylabs.wikicoc;
 
 import java.util.Hashtable;
 
-public class RageSpell extends Spell {
-    //    {lvl, radius, damage+, speed+, buildCost, buildTime, researchCost, researchTime, labRequiered}
-    String[] rage1 = {"1", "5", "130%","20", "23 000", "45m", "N/A", "N/A", "N/A"};
-    String[] rage2 = {"2", "5", "140%","22", "25 500", "45m", "450 000", "2j", "3"};
-    String[] rage3 = {"3", "5", "150%","24", "27 000", "45m", "900 000", "3j", "4"};
-    String[] rage4 = {"4", "5", "160%","26", "30 000", "45m", "1 800 000", "5j", "5"};
-    String[] rage5 = {"5", "5", "170%","28", "33 000", "45m", "3 000 000", "7j", "6"};
+public class HasteSpell extends Spell {
+    //    {lvl, radius, speed+, length, buildCost, buildTime, researchCost, researchTime, labRequiered}
+    String[] earthquake1 = {"1", "4", "28","10s", "80", "15m", "N/A", "N/A", "N/A"};
+    String[] earthquake2 = {"2", "4", "34","15s", "85", "15m", "40 000", "8j", "8"};
+    String[] earthquake3 = {"3", "4", "40","20s", "90", "15m", "80 000", "10j", "8"};
+    String[] earthquake4 = {"4", "4", "46","25s", "95", "15m", "100 000", "14j", "8"};
 
-    public RageSpell() {
-        name = "Sort de rage";
-        namecode = "rage_spell";
+    public HasteSpell() {
+        name = "Sort de précipitation";
+        namecode = "haste_spell";
         prefferedTarget = "Aucune";
         targetType = "Terrestres et Aériennes (alliées)";
-        length = "18s";
         factoryRequiered = "3";
-        data.put(1, rage1);
-        data.put(2, rage2);
-        data.put(3, rage3);
-        data.put(4, rage4);
-        data.put(5, rage5);
+        data.put(1, earthquake1);
+        data.put(2, earthquake2);
+        data.put(3, earthquake3);
+        data.put(4, earthquake4);
         levelMax = data.size();
     }
 

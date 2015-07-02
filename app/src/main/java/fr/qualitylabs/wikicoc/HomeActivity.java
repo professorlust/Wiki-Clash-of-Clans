@@ -122,7 +122,7 @@ public class HomeActivity extends AppCompatActivity {
     private View.OnClickListener spellsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseSpellActivity.class));
+            startActivity(new Intent(getApplicationContext(), ChooseSpellTypeActivity.class));
         }
     };
 }

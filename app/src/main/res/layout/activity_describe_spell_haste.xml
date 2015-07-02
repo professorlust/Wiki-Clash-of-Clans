@@ -1,8 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.qualitylabs.wikicoc.DescribeSpellHealingActivity">
+    tools:context="fr.qualitylabs.wikicoc.DescribeSpellHasteActivity">
 
     <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
     <include
@@ -29,7 +28,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:src="@drawable/healing_spell" />
+                    android:src="@drawable/haste_spell" />
             </TableRow>
 
             <TableRow
@@ -180,14 +179,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Guérison: " />
+                    android:text="Vitesse +: " />
 
                 <TextView
-                    android:id="@+id/heal"
+                    android:id="@+id/speed"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="heal" />
+                    android:text="speed" />
             </TableRow>
 
             <TableRow>
@@ -235,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Niveau de l'usine de sorts: " />
+                    android:text="Niveau de l'usine de sorts noirs: " />
 
                 <TextView
                     android:id="@+id/spell_factory_level"

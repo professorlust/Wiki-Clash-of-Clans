@@ -13,6 +13,8 @@ public class FreezeSpell extends Spell {
     public FreezeSpell() {
         name = "Sort de gel";
         namecode = "freeze_spell";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres et Aériennes (ennemies)";
         factoryRequiered = "5";
         data.put(1, freeze1);
         data.put(2, freeze2);
@@ -28,6 +30,14 @@ public class FreezeSpell extends Spell {
 
     public String getNamecode() {
         return namecode;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
     }
 
     public String getFactoryRequiered() {

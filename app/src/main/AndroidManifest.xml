@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.qualitylabs.wikicoc">
+    package="fr.qualitylabs.wikicoc" >
 
     <!-- Google Analytics required permissions -->
     <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
@@ -9,10 +9,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_activity_about">
+            android:label="@string/title_activity_about" >
 
             <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
@@ -31,15 +31,15 @@
         <activity
             android:name=".ChooseBuildingTypeActivity"
             android:label="@string/title_activity_choose_building_type"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingDefenseActivity"
-            android:label="@string/title_activity_describe_defense"
-            android:parentActivityName=".ChooseBuildingDefenseActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
@@ -47,7 +47,7 @@
         <activity
             android:name=".ChooseBuildingDefenseActivity"
             android:label="@string/title_activity_choose_defense"
-            android:parentActivityName=".ChooseBuildingTypeActivity">
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
@@ -55,7 +55,7 @@
         <activity
             android:name=".ChooseTroopTypeActivity"
             android:label="@string/title_activity_choose_troop_type"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
@@ -63,15 +63,15 @@
         <activity
             android:name=".ChooseTroopWhiteActivity"
             android:label="@string/title_activity_choose_troop_white"
-            android:parentActivityName=".ChooseTroopTypeActivity">
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeTroopWhiteActivity"
-            android:label="@string/title_activity_describe_troop_white"
-            android:parentActivityName=".ChooseTroopWhiteActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseTroopWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopWhiteActivity" />
@@ -79,47 +79,47 @@
         <activity
             android:name=".ChooseTroopDarkActivity"
             android:label="@string/title_activity_choose_troop_dark"
-            android:parentActivityName=".ChooseTroopTypeActivity">
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeTroopDarkActivity"
-            android:label="@string/title_activity_describe_troop_dark"
-            android:parentActivityName=".ChooseTroopDarkActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseTroopDarkActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopDarkActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingDefenseWallActivity"
-            android:label="@string/title_activity_describe_building_defense_wall"
-            android:parentActivityName=".ChooseBuildingDefenseActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingDefenseXBowActivity"
-            android:label="@string/title_activity_describe_building_defense_xbow"
-            android:parentActivityName=".ChooseBuildingDefenseActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingDefenseAirSweeperActivity"
-            android:label="@string/title_activity_describe_building_defense_air_sweeper"
-            android:parentActivityName=".ChooseBuildingDefenseActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingDefenseInfernoTowerActivity"
-            android:label="@string/title_activity_describe_building_defense_inferno_tower"
-            android:parentActivityName=".ChooseBuildingDefenseActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingDefenseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingDefenseActivity" />
@@ -127,39 +127,39 @@
         <activity
             android:name=".ChooseBuildingTrapActivity"
             android:label="@string/title_activity_choose_building_trap"
-            android:parentActivityName=".ChooseBuildingTypeActivity">
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingTrapActivity"
-            android:label="@string/title_activity_describe_building_trap"
-            android:parentActivityName=".ChooseBuildingTrapActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingTrapSpringActivity"
-            android:label="@string/title_activity_describe_building_trap_spring"
-            android:parentActivityName=".ChooseBuildingTrapActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingTrapSkeletonActivity"
-            android:label="@string/title_activity_describe_building_trap_skeleton"
-            android:parentActivityName=".ChooseBuildingTrapActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
         </activity>
         <activity
             android:name=".DescribeBuildingTrapGiantBombActivity"
-            android:label="@string/title_activity_describe_building_trap_giant_bomb"
-            android:parentActivityName=".ChooseBuildingTrapActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingTrapActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTrapActivity" />
@@ -167,23 +167,23 @@
         <activity
             android:name=".ChooseTroopHeroActivity"
             android:label="@string/title_activity_choose_troop_hero"
-            android:parentActivityName=".ChooseTroopTypeActivity">
+            android:parentActivityName=".ChooseTroopTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeTroopBarbarianKingActivity"
-            android:label="@string/title_activity_describe_troop_barbarian_king"
-            android:parentActivityName=".ChooseTroopHeroActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseTroopHeroActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity" />
         </activity>
         <activity
             android:name=".DescribeTroopArcherQueenActivity"
-            android:label="@string/title_activity_describe_troop_archer_queen"
-            android:parentActivityName=".ChooseTroopHeroActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseTroopHeroActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity" />
@@ -203,7 +203,7 @@
         -->
         <receiver
             android:name="com.google.android.gms.analytics.AnalyticsReceiver"
-            android:enabled="true">
+            android:enabled="true" >
             <intent-filter>
                 <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
             </intent-filter>
@@ -220,7 +220,7 @@
         -->
         <receiver
             android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
@@ -230,57 +230,57 @@
 
         <!-- ... -->
         <activity
-            android:name=".ChooseSpellActivity"
-            android:label="@string/title_activity_choose_spell"
-            android:parentActivityName=".HomeActivity">
+            android:name=".ChooseSpellWhiteActivity"
+            android:label="@string/title_activity_choose_spell_white"
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.HomeActivity" />
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeSpellLightningActivity"
-            android:label="@string/title_activity_describe_spell_lightning"
-            android:parentActivityName=".ChooseSpellActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+                android:value=".ChooseSpellWhiteActivity" />
         </activity>
         <activity
             android:name=".DescribeSpellHealingActivity"
-            android:label="@string/title_activity_describe_spell_healing"
-            android:parentActivityName=".ChooseSpellActivity" >
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+                android:value=".ChooseSpellWhiteActivity" />
         </activity>
         <activity
             android:name=".DescribeSpellRageActivity"
-            android:label="@string/title_activity_describe_spell_rage"
-            android:parentActivityName=".ChooseSpellActivity" >
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+                android:value=".ChooseSpellWhiteActivity" />
         </activity>
         <activity
             android:name=".DescribeSpellJumpActivity"
-            android:label="@string/title_activity_describe_jump_spell"
-            android:parentActivityName=".ChooseSpellActivity" >
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+                android:value=".ChooseSpellWhiteActivity" />
         </activity>
         <activity
             android:name=".DescribeSpellFreezeActivity"
-            android:label="@string/title_activity_describe_spell_freeze"
-            android:parentActivityName=".ChooseSpellActivity" >
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellWhiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.qualitylabs.wikicoc.ChooseSpellActivity" />
+                android:value=".ChooseSpellWhiteActivity" />
         </activity>
         <activity
             android:name=".ChooseResourceTypeActivity"
             android:label="@string/title_activity_choose_resource_type"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
@@ -288,25 +288,65 @@
         <activity
             android:name=".ChooseResourceGoldActivity"
             android:label="@string/title_activity_choose_resource_gold"
-            android:parentActivityName=".ChooseResourceTypeActivity">
+            android:parentActivityName=".ChooseResourceTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseResourceTypeActivity" />
         </activity>
         <activity
             android:name=".DescribeResourceMineActivity"
-            android:label="@string/title_activity_describe_resource_mine"
-            android:parentActivityName=".ChooseResourceGoldActivity">
+            android:label="@string/description"
+            android:parentActivityName=".ChooseResourceGoldActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseResourceGoldActivity" />
         </activity>
         <activity
             android:name=".ChooseResourceElixirActivity"
-            android:label="@string/title_activity_choose_resource_elixir">
+            android:label="@string/title_activity_choose_resource_elixir" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseResourceTypeActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseSpellTypeActivity"
+            android:label="@string/title_activity_choose_spell_type"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseSpellDarkActivity"
+            android:label="@string/title_activity_choose_spell_dark"
+            android:parentActivityName=".ChooseSpellTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellPoisonActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellDarkActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellDarkActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellEarthquakeActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellDarkActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellDarkActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeSpellHasteActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseSpellDarkActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseSpellDarkActivity" />
         </activity>
     </application>
 
