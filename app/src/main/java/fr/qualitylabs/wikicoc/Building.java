@@ -6,6 +6,9 @@ public class Building implements Serializable {
 
     protected String nameCode;
     protected String name;
+    protected String prefferedTarget;
+    protected String targetType;
+    protected String attackType;
     protected int levelMax;
     protected Hashtable<Integer, String[]> data;
 
@@ -13,6 +16,9 @@ public class Building implements Serializable {
         nameCode = null;
         levelMax = 0;
         name = null;
+        prefferedTarget = null;
+        targetType = null;
+        attackType = null;
         data = new Hashtable<>();
     }
 
@@ -20,6 +26,18 @@ public class Building implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class AirDefense extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] airdefense1 = {"1","80","80","800","22 500","5h","134","4"};
     String[] airdefense2 = {"2","110","110","850","90 000","1j","293","4"};
@@ -14,6 +18,9 @@ public class AirDefense extends Building {
     public AirDefense(){
         name = "Défense antiaérienne";
         nameCode = "air_defense";
+        prefferedTarget = "Aucune";
+        targetType = "Aériennes";
+        attackType = "Cible unique";
         data.put(1, airdefense1);
         data.put(2, airdefense2);
         data.put(3, airdefense3);
@@ -29,6 +36,18 @@ public class AirDefense extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

@@ -28,6 +28,9 @@ public class DescribeBuildingDefenseInfernoTowerActivity extends AppCompatActivi
     //    {lvl, dpsInit, dps2+, dps5+, dps/target, hp, costLoad, cost, build time, xp, th requiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView damagepersec;
     TextView damagepersec2;
     TextView damagepersec5;
@@ -58,6 +61,9 @@ public class DescribeBuildingDefenseInfernoTowerActivity extends AppCompatActivi
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         damagepersec = (TextView) findViewById(R.id.damage_per_second);
         damagepersec2 = (TextView) findViewById(R.id.damage_per_second_2);
         damagepersec5 = (TextView) findViewById(R.id.damage_per_second_5);
@@ -77,6 +83,9 @@ public class DescribeBuildingDefenseInfernoTowerActivity extends AppCompatActivi
 //    {lvl, dpsInit, dps2+, dps5+, dps/target, hp, costLoad, cost, build time, xp, th requiered}
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
+        attacktype.setText(building.getAttackType());
         level.setText(property[0]);
         damagepersec.setText(property[1]);
         damagepersec2.setText(property[2]);

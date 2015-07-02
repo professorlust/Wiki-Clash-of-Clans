@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class AirSweeper extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, stregth, hp, cost, build time, xp, thRequiered}
     String[] airsweeper1 = {"1","1,6","750","500 000","1j","293","6"};
     String[] airsweeper2 = {"2","2","800","750 000","3j","509","6"};
@@ -12,6 +16,9 @@ public class AirSweeper extends Building {
     public AirSweeper(){
         name = "Propulseur d'air";
         nameCode = "air_sweeper";
+        prefferedTarget = "Aucune";
+        targetType = "Aériennes";
+        attackType = "Zone étendue (arc de cercle)";
         data.put(1, airsweeper1);
         data.put(2, airsweeper2);
         data.put(3, airsweeper3);
@@ -25,6 +32,18 @@ public class AirSweeper extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

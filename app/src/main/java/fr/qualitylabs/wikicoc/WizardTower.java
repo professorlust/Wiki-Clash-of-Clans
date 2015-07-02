@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class WizardTower extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] wizardtower1 = {"1","11","14,3","620","180 000","12h","207","5"};
     String[] wizardtower2 = {"2","13","16,9","650","360 000","1j","293","5"};
@@ -14,6 +18,9 @@ public class WizardTower extends Building {
     public WizardTower(){
         name = "Tour de sorcier";
         nameCode = "wizard_tower";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres et Aériennes";
+        attackType = "Zone étendue (1 case)";
         data.put(1, wizardtower1);
         data.put(2, wizardtower2);
         data.put(3, wizardtower3);
@@ -29,6 +36,18 @@ public class WizardTower extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

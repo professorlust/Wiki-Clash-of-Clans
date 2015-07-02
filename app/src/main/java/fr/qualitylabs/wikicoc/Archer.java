@@ -15,7 +15,7 @@ public class Archer extends Troop{
         namecode = "archer";
         housingSpace = "1";
         prefferedTarget = "Aucune";
-        targetType = "Toutes";
+        targetType = "Terrestres et Aériennes";
         attackType = "Cible unique";
         data.put(1, archer1);
         data.put(2, archer2);

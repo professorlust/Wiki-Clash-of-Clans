@@ -1,5 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class Mortar extends Building {
+
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] mortar1 = {"1","4","20","400","8 000","8h","169","3"};
     String[] mortar2 = {"2","5","25","450","32 000","12h","207","4"};
@@ -13,6 +18,9 @@ public class Mortar extends Building {
     public Mortar(){
         name = "Mortier";
         nameCode = "mortar";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres";
+        attackType = "Zone étendue (1,5 case)";
         data.put(1, mortar1);
         data.put(2, mortar2);
         data.put(3, mortar3);
@@ -28,6 +36,18 @@ public class Mortar extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

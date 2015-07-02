@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class ArcherTower extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] archertower1 = {"1","11","5,5","380","1 000","1m","7","2"};
     String[] archertower2 = {"2","15","7,5","420","2 000","30m","42","2"};
@@ -19,6 +23,9 @@ public class ArcherTower extends Building {
     public ArcherTower(){
         name = "Tour d'archer";
         nameCode = "archer_tower";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres et Aériennes";
+        attackType = "Cible unique";
         data.put(1, archertower1);
         data.put(2, archertower2);
         data.put(3, archertower3);
@@ -39,6 +46,18 @@ public class ArcherTower extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

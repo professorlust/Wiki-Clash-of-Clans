@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class HiddenTesla extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
     //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] hiddentesla1 = {"1","34","20,4","600","1 000 000","1j","293","7"};
     String[] hiddentesla2 = {"2","40","24","630","1 250 000","3j","509","7"};
@@ -14,6 +18,9 @@ public class HiddenTesla extends Building {
     public HiddenTesla(){
         name = "Tesla camouflée";
         nameCode = "hidden_tesla";
+        prefferedTarget = "P.E.K.K.A. (x2)";
+        targetType = "Terrestres et Aériennes";
+        attackType = "Cible unique";
         data.put(1, hiddentesla1);
         data.put(2, hiddentesla2);
         data.put(3, hiddentesla3);
@@ -29,6 +36,18 @@ public class HiddenTesla extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

@@ -24,6 +24,9 @@ public class DescribeBuildingDefenseAirSweeperActivity extends AppCompatActivity
     //    <!--{lvl, stregth, hp, cost, build time, xp, th requiered}-->
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView strength;
     TextView health;
     TextView buildcost;
@@ -49,6 +52,9 @@ public class DescribeBuildingDefenseAirSweeperActivity extends AppCompatActivity
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         strength = (TextView) findViewById(R.id.strength);
         health = (TextView) findViewById(R.id.health);
         buildcost = (TextView) findViewById(R.id.build_cost);
@@ -64,6 +70,9 @@ public class DescribeBuildingDefenseAirSweeperActivity extends AppCompatActivity
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
+        attacktype.setText(building.getAttackType());
         level.setText(property[0]);
         strength.setText(property[1]);
         health.setText(property[2]);

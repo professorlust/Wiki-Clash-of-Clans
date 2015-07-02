@@ -1,6 +1,10 @@
 package fr.qualitylabs.wikicoc;
 public class Cannon extends Building {
 
+    private String prefferedTarget;
+    private String targetType;
+    private String attackType;
+
 //    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     String[] cannon1 = {"1",   "9","7,2" ,"420"  ,"250"  ,      "10s","3"   ,"1"};
     String[] cannon2 = {"2",  "11","8,8" ,"470"  ,"1 000",      "15m","30"  ,"1"};
@@ -19,6 +23,9 @@ public class Cannon extends Building {
     public Cannon(){
         name = "Canon";
         nameCode = "cannon";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres";
+        attackType = "Cible unique";
         data.put(1, cannon1);
         data.put(2, cannon2);
         data.put(3, cannon3);
@@ -39,6 +46,18 @@ public class Cannon extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

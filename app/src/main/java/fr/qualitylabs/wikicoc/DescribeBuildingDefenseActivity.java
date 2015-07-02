@@ -24,6 +24,9 @@ public class DescribeBuildingDefenseActivity extends AppCompatActivity {
 //    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView damagepersec;
     TextView damagepershot;
     TextView health;
@@ -50,6 +53,9 @@ public class DescribeBuildingDefenseActivity extends AppCompatActivity {
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         damagepersec = (TextView) findViewById(R.id.damage_per_second);
         damagepershot = (TextView) findViewById(R.id.damage_per_shot);
         health = (TextView) findViewById(R.id.health);
@@ -66,6 +72,9 @@ public class DescribeBuildingDefenseActivity extends AppCompatActivity {
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
+        attacktype.setText(building.getAttackType());
         level.setText(property[0]);
         damagepersec.setText(property[1]);
         damagepershot.setText(property[2]);

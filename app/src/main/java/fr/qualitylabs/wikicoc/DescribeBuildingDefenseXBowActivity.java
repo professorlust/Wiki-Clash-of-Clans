@@ -26,6 +26,9 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
     TextView shotcolor;
     TextView costloading;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView damagepersec;
     TextView damagepershot;
     TextView health;
@@ -54,6 +57,9 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
         shotcolor = (TextView) findViewById(R.id.shot_color);
         costloading = (TextView) findViewById(R.id.cost_loading);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         damagepersec = (TextView) findViewById(R.id.damage_per_second);
         damagepershot = (TextView) findViewById(R.id.damage_per_shot);
         health = (TextView) findViewById(R.id.health);
@@ -70,6 +76,9 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
 //    {lvl, damage/s, damage/shot, hp, costLoad, cost, buildTime, xp, lvlRequiered, shotColor}
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
+        attacktype.setText(building.getAttackType());
         level.setText(property[0]);
         damagepersec.setText(property[1]);
         damagepershot.setText(property[2]);
