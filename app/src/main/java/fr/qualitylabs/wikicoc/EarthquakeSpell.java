@@ -12,7 +12,7 @@ public class EarthquakeSpell extends Spell {
         name = "Sort sismique";
         namecode = "earthquake_spell";
         prefferedTarget = "Murs (x4)";
-        targetType = "Terrestres (bâtiments)";
+        targetType = "Terrestres (bâtiments, sauf extracteurs)";
         length = "N/A";
         factoryRequiered = "2";
         data.put(1, earthquake1);

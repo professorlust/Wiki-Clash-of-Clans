@@ -5,7 +5,7 @@ import java.util.Hashtable;
 public class RageSpell extends Spell {
     //    {lvl, radius, damage+, speed+, buildCost, buildTime, researchCost, researchTime, labRequiered}
     String[] rage1 = {"1", "5", "130%","20", "23 000", "45m", "N/A", "N/A", "N/A"};
-    String[] rage2 = {"2", "5", "140%","22", "25 500", "45m", "450 000", "2j", "3"};
+    String[] rage2 = {"2", "5", "140%","22", "25 000", "45m", "450 000", "2j", "3"};
     String[] rage3 = {"3", "5", "150%","24", "27 000", "45m", "900 000", "3j", "4"};
     String[] rage4 = {"4", "5", "160%","26", "30 000", "45m", "1 800 000", "5j", "5"};
     String[] rage5 = {"5", "5", "170%","28", "33 000", "45m", "3 000 000", "7j", "6"};
