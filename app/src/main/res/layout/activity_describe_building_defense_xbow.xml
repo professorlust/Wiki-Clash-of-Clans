@@ -80,6 +80,34 @@
                     android:thumbTint="@color/colorPrimaryDark" />
             </TableRow>
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Terrestre" />
+
+                <Switch
+                    android:id="@+id/alt_switch"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="1"
+                    android:text="Terrestre et Aérien" />
+            </TableRow>
+
             <TableRow android:paddingTop="10dp">
 
                 <TextView

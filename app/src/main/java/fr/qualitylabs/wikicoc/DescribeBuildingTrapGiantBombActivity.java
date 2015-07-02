@@ -24,6 +24,9 @@ public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
     //    {lvl, damage, radius, cost, rearmCost, buildTime, xp, thRequiered}
     TextView name;
     TextView level;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView damage;
     TextView radius;
     TextView buildcost;
@@ -50,6 +53,9 @@ public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         damage = (TextView) findViewById(R.id.damage);
         radius = (TextView) findViewById(R.id.radius);
         buildcost = (TextView) findViewById(R.id.build_cost);
@@ -66,6 +72,8 @@ public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
         level.setText(property[0]);
         damage.setText(property[1]);
         radius.setText(property[2]);
@@ -74,6 +82,7 @@ public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
         buildtime.setText(property[5]);
         xp.setText(property[6]);
         levelrequiered.setText(property[7]);
+        attacktype.setText(property[8]);
 
 //        Définition du niveau maximum d'une troupe avec une valeur générique de niveau
         seekBar.setMax(building.getLevelMax() - 1);
@@ -117,6 +126,7 @@ public class DescribeBuildingTrapGiantBombActivity extends AppCompatActivity {
             buildtime.setText(property[5]);
             xp.setText(property[6]);
             levelrequiered.setText(property[7]);
+            attacktype.setText(property[8]);
         }
 
         @Override

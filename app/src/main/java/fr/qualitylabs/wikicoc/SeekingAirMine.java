@@ -8,6 +8,9 @@ public class SeekingAirMine extends Building {
     public SeekingAirMine(){
         name = "Mine chercheuse";
         nameCode = "seeking_air_mine";
+        prefferedTarget = "Aucune";
+        targetType = "Aériennes";
+        attackType = "Cible unique";
         data.put(1, seekingairmine1);
         data.put(2, seekingairmine2);
         data.put(3, seekingairmine3);
@@ -18,6 +21,18 @@ public class SeekingAirMine extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

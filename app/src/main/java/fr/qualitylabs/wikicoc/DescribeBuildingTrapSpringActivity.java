@@ -22,6 +22,9 @@ public class DescribeBuildingTrapSpringActivity extends AppCompatActivity {
     ImageView image;
     //    {lvl, rearmCost}
     TextView name;
+    TextView prefferedtarget;
+    TextView targettype;
+    TextView attacktype;
     TextView cost;
     TextView rearmCost;
 
@@ -43,6 +46,9 @@ public class DescribeBuildingTrapSpringActivity extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
+        prefferedtarget = (TextView) findViewById(R.id.preffered_target);
+        targettype = (TextView) findViewById(R.id.target_type);
+        attacktype = (TextView) findViewById(R.id.attack_type);
         cost = (TextView) findViewById(R.id.build_cost);
         rearmCost = (TextView) findViewById(R.id.rearm_cost);
 
@@ -54,6 +60,9 @@ public class DescribeBuildingTrapSpringActivity extends AppCompatActivity {
 
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
+        prefferedtarget.setText(building.getPrefferedTarget());
+        targettype.setText(building.getTargetType());
+        attacktype.setText(building.getAttackType());
         cost.setText(property[1] + " or");
         rearmCost.setText(property[2] + " or");
     }

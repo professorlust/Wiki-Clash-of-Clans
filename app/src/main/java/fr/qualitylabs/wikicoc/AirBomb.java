@@ -9,6 +9,9 @@ public class AirBomb extends Building {
     public AirBomb(){
         name = "Bombe aérienne";
         nameCode = "air_bomb";
+        prefferedTarget = "Aucune";
+        targetType = "Aériennes";
+        attackType = "Zone étendue (3 cases)";
         data.put(1, airbomb1);
         data.put(2, airbomb2);
         data.put(3, airbomb3);
@@ -20,6 +23,18 @@ public class AirBomb extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

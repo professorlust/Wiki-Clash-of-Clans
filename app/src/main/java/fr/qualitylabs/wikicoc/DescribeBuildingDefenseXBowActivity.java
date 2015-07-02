@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -19,6 +21,8 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
     String[] property;
 
     SeekBar seekBar;
+
+    Switch altswitch;
 
     ImageView image;
     //    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
@@ -52,6 +56,7 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
 
 //        Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
+        altswitch = (Switch) findViewById(R.id.alt_switch);
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         shotcolor = (TextView) findViewById(R.id.shot_color);
@@ -94,6 +99,7 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
         seekBar.setMax(building.getLevelMax() - 1);
 //        Attribution des Listeners
         seekBar.setOnSeekBarChangeListener(seekBarListener);
+        altswitch.setOnCheckedChangeListener(altswitchListener);
     }
 
     @Override
@@ -113,6 +119,7 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.reset) {
             seekBar.setProgress(0);
+            altswitch.setChecked(false);
         }
 
         return super.onOptionsItemSelected(item);
@@ -123,7 +130,12 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = building.getProperty(progress+1);
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
+            if (altswitch.isChecked()){
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1)+"alt",null,getPackageName())));
+            }
+            else {
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
+            }
             level.setText(property[0]);
             damagepersec.setText(property[1]);
             damagepershot.setText(property[2]);
@@ -144,6 +156,18 @@ public class DescribeBuildingDefenseXBowActivity extends AppCompatActivity {
         @Override
         public void onStopTrackingTouch(SeekBar seekBar) {
 
+        }
+    };
+
+    private CompoundButton.OnCheckedChangeListener altswitchListener = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if(isChecked){
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(property[0])+"alt",null,getPackageName())));
+            }
+            else{
+                image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(property[0]),null,getPackageName())));
+            }
         }
     };
 }

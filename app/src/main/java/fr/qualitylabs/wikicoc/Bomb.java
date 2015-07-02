@@ -11,6 +11,9 @@ public class Bomb extends Building {
     public Bomb(){
         name = "Bombe";
         nameCode = "bomb";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres";
+        attackType = "Zone étendue (3 cases)";
         data.put(1, bomb1);
         data.put(2, bomb2);
         data.put(3, bomb3);
@@ -24,6 +27,18 @@ public class Bomb extends Building {
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {

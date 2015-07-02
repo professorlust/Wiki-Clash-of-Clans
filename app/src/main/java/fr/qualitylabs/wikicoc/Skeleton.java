@@ -8,6 +8,9 @@ public class Skeleton extends Building{
     public Skeleton(){
         name = "Piège squelettique";
         nameCode = "skeleton";
+        prefferedTarget = "Aucune";
+        targetType = "Terrestres ou Aériennes";
+        attackType = "Cible unique";
         data.put(1, skeleton1);
         data.put(2, skeleton2);
         data.put(3, skeleton3);
@@ -18,6 +21,18 @@ public class Skeleton extends Building{
 
     public String getName(){
         return name;
+    }
+
+    public String getPrefferedTarget() {
+        return prefferedTarget;
+    }
+
+    public String getTargetType() {
+        return targetType;
+    }
+
+    public String getAttackType() {
+        return attackType;
     }
 
     public int getLevelMax() {
