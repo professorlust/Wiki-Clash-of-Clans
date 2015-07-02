@@ -9,19 +9,19 @@ import android.view.Menu;
 import android.view.View;
 
 
-public class ChooseResourceElixirActivity extends AppCompatActivity {
+public class ChooseResourceDarkElixirActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
     Building building = new Building();
 
-    CardView elixircollector;
-    CardView elixirstorage;
+    CardView darkelixirdrill;
+    CardView darkelixirstorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose_resource_elixir);
+        setContentView(R.layout.activity_choose_resource_dark_elixir);
 
         // On redéfinit la ToolBar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -31,35 +31,35 @@ public class ChooseResourceElixirActivity extends AppCompatActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        elixircollector = (CardView) findViewById(R.id.elixircollector);
-        elixirstorage = (CardView) findViewById(R.id.elixirstorage);
+        darkelixirdrill = (CardView) findViewById(R.id.darkelixirdrill);
+        darkelixirstorage = (CardView) findViewById(R.id.darkelixirstorage);
 
-        elixircollector.setOnClickListener(elixircollectorListener);
-        elixirstorage.setOnClickListener(elixirstorageListener);
+        darkelixirdrill.setOnClickListener(darkelixirdrillListener);
+        darkelixirstorage.setOnClickListener(darkelixirstorageListener);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_resource_elixir, menu);
+        getMenuInflater().inflate(R.menu.menu_choose_resource_dark_elixir, menu);
         return true;
     }
 
-    private View.OnClickListener elixircollectorListener = new View.OnClickListener() {
+    private View.OnClickListener darkelixirdrillListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeResourceMineActivity.class);
-            building = new ElixirCollector();
+            building = new DarkElixirDrill();
             intent.putExtra("building", building);
             startActivity(intent);
         }
     };
 
-    private View.OnClickListener elixirstorageListener = new View.OnClickListener() {
+    private View.OnClickListener darkelixirstorageListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getApplicationContext(), DescribeResourceStorageActivity.class);
-            building = new ElixirStorage();
+            building = new DarkElixirStorage();
             intent.putExtra("building", building);
             startActivity(intent);
         }

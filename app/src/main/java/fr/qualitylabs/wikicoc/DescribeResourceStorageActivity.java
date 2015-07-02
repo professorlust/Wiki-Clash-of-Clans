@@ -10,7 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 
-public class DescribeResourceMineActivity extends AppCompatActivity {
+public class DescribeResourceStorageActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
@@ -18,64 +18,58 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
 
     String[] property;
 
-    String[] currency = {"null","null"};
+    String[] currency = {"null", "null"};
 
     SeekBar seekBar;
 
     ImageView image;
 
-    // {lvl, buildCost, buildTime, xp, boost, capacity, prodRate, hp, fillTime, lvlRequired}
+    // {lvl, capacity, hp, buildCost, buildTime, xp, lvlRequired}
     TextView name;
     TextView level;
+    TextView capacity;
+    TextView health;
     TextView buildcost;
     TextView buildtime;
     TextView xp;
-    TextView boost;
-    TextView capacity;
-    TextView prodrate;
-    TextView health;
-    TextView filltime;
-    TextView levelrequired;
+    TextView lvlrequired;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_describe_resource_mine);
+        setContentView(R.layout.activity_describe_resource_storage);
 
-//        On redéfinit la Tool Bar avec la nôtre
+        //On redéfinit la ToolBar avec la nôtre
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-//        Active et rend visible le bouton Home (de la Action Bar)
+        //Active et rend visible le bouton Home (de la ActionBar)
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Récuperation des vues
+        //Récupération des vues
         seekBar = (SeekBar) findViewById(R.id.level_seekbar);
         image = (ImageView) findViewById(R.id.image);
         name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
+        capacity = (TextView) findViewById(R.id.capacity);
+        health = (TextView) findViewById(R.id.health);
         buildcost = (TextView) findViewById(R.id.build_cost);
         buildtime = (TextView) findViewById(R.id.build_time);
         xp = (TextView) findViewById(R.id.experience);
-        boost = (TextView) findViewById(R.id.boost);
-        capacity = (TextView) findViewById(R.id.capacity);
-        prodrate = (TextView) findViewById(R.id.prodrate);
-        health = (TextView) findViewById(R.id.health);
-        filltime = (TextView) findViewById(R.id.filltime);
-        levelrequired = (TextView) findViewById(R.id.level_requiered);
+        lvlrequired = (TextView) findViewById(R.id.level_requiered);
 
         //Récupère les extras
         building = (Building) getIntent().getSerializableExtra("building");
 
-//        Définit la monnaie
-        if(building.getClass()==GoldMine.class){
+        //Définit la monnaie
+        if(building.getClass()==GoldStorage.class){
             currency = new String[]{" elixir", " or"};
         }
-        if(building.getClass()==ElixirCollector.class){
+        if(building.getClass()==ElixirStorage.class){
             currency = new String[]{" or", " elixir"};
         }
-        if(building.getClass()==DarkElixirDrill.class){
+        if(building.getClass()==DarkElixirStorage.class){
             currency = new String[]{" elixir", " elixir noir"};
         }
 
@@ -85,26 +79,24 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
         name.setText(building.getName());
         image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + 1, null, getPackageName())));
         level.setText(property[0]);
-        buildcost.setText(property[1] + currency[0]);
-        buildtime.setText(property[2]);
-        xp.setText(property[3]);
-        boost.setText(property[4] + " gemmes");
-        capacity.setText(property[5] + currency[1]);
-        prodrate.setText(property[6] + currency[1]);
-        health.setText(property[7]);
-        filltime.setText(property[8]);
-        levelrequired.setText(property[9]);
+        capacity.setText(property[1] + currency[1]);
+        health.setText(property[2]);
+        buildcost.setText(property[3] + currency[0]);
+        buildtime.setText(property[4]);
+        xp.setText(property[5]);
+        lvlrequired.setText(property[6]);
 
         //Définition du niveau maximum d'un batiment avec une valeur générique de niveau
         seekBar.setMax(building.getLevelMax() - 1);
         //Attribution du Listener
         seekBar.setOnSeekBarChangeListener(seekBarListener);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_describe_resource_mine, menu);
+        getMenuInflater().inflate(R.menu.menu_describe_resource_storage, menu);
         return true;
     }
 
@@ -123,23 +115,20 @@ public class DescribeResourceMineActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener(){
+    private SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
-        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
-            property = building.getProperty(progress+1);
+            property = building.getProperty(progress + 1);
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress+1), null, getPackageName())));
+            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/" + building.getNameCode() + (progress + 1), null, getPackageName())));
             level.setText(property[0]);
-            buildcost.setText(property[1] + currency[0]);
-            buildtime.setText(property[2]);
-            xp.setText(property[3]);
-            boost.setText(property[4] + " gemmes");
-            capacity.setText(property[5] + currency[1]);
-            prodrate.setText(property[6] + currency[1]);
-            health.setText(property[7]);
-            filltime.setText(property[8]);
-            levelrequired.setText(property[9]);
+            capacity.setText(property[1] + currency[1]);
+            health.setText(property[2]);
+            buildcost.setText(property[3] + currency[0]);
+            buildtime.setText(property[4]);
+            xp.setText(property[5]);
+            lvlrequired.setText(property[6]);
         }
 
         @Override

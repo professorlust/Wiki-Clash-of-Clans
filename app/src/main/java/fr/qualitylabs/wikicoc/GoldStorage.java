@@ -32,6 +32,7 @@ public class GoldStorage extends Building{
         data.put(9, goldstorage9);
         data.put(10, goldstorage10);
         data.put(11, goldstorage11);
+        levelMax = data.size();
     }
 
     public String getNameCode(){
