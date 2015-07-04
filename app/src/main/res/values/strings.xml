@@ -4,6 +4,13 @@
     <string name="action_settings">Paramètres</string>
     <string name="description">Descritpion</string>
     <string name="reset">Réinitialiser</string>
+    <string name="about">À Propos</string>
+    <string name="buildings">Bâtiments</string>
+    <string name="troops">Troupes</string>
+    <string name="gold">Or</string>
+    <string name="elixir">Elixir</string>
+    <string name="dark_elixir">Elixir noir</string>
+    <string name="spells">Sorts</string>
 
     <!-- Balises du Drawer NE PAS TOUCHER-->
     <string name="drawer_open">Open</string>
@@ -25,7 +32,201 @@
     <string name="title_activity_choose_troop_dark">Choisir une troupe noire</string>
     <string name="title_activity_choose_building_trap">Choisir un piège</string>
     <string name="title_activity_choose_troop_hero">Choisir un héros</string>
-
+    <string name="title_activity_choose_building_army">Choisir un bâtiment</string>
 
     <string name="home_text">Ouvrez le drawer et sélectionnez une catégorie.\n\nPensez aussi à visiter la section \"À propos\" pour en savoir plus sur cette application.\n\nNote: les sections grisées seront débloquées dans les prochaines mises à jour!</string>
+
+    <string name="hello_world">Hello world!</string>
+
+
+    <!--Troupes blanches-->
+    <string name="white_troops">Troupes blanches</string>
+
+    <string name="barbarian">Barbare</string>
+    <string name="archer">Archer</string>
+    <string name="goblin">Gobelin</string>
+    <string name="giant">Géant</string>
+    <string name="wall_breaker">Sapeur</string>
+    <string name="balloon">Ballon</string>
+    <string name="wizard">Sorcier</string>
+    <string name="healer">Guérisseuse</string>
+    <string name="dragon">Dragon</string>
+    <string name="pekka">P.E.K.K.A.</string>
+
+
+    <!--Troupes noires-->
+    <string name="dark_troops">Troupes noires</string>
+
+    <string name="minion">Gargouille</string>
+    <string name="hog_rider">Chevaucheur de cochon</string>
+    <string name="valkyrie">Valkyrie</string>
+    <string name="golem">Golem</string>
+    <string name="witch">Sorcière</string>
+    <string name="lava_hound">Molosse de lave</string>
+
+
+    <!--Héros-->
+    <string name="heroes">Héros</string>
+
+    <string name="barbarian_king">Roi des barbares</string>
+    <string name="archer_queen">Reine des archers</string>
+
+
+    <!--Sorts Blancs-->
+    <string name="white_spells">Sorts blancs</string>
+
+    <string name="lightning_spell">Sort de foudre</string>
+    <string name="healing_spell">Sort de guérison</string>
+    <string name="rage_spell">Sort de rage</string>
+    <string name="jump_spell">Sort de saut</string>
+    <string name="freeze_spell">Sort de gel</string>
+
+
+    <!--Sorts noirs-->
+    <string name="dark_spells">Sorts noirs</string>
+
+    <string name="poison_spell">Sort d\'empoisonnement</string>
+    <string name="earthquake_spell">Sort sismique</string>
+    <string name="haste_spell">Sort de précipitation</string>
+
+
+    <!--Défenses-->
+    <string name="defenses">Défenses</string>
+
+    <string name="wall">Mur</string>
+    <string name="cannon">Canon</string>
+    <string name="archer_tower">Tour d\'archer</string>
+    <string name="mortar">Mortier</string>
+    <string name="air_defense">Défense antiaérienne</string>
+    <string name="wizard_tower">Tour de sorcier</string>
+    <string name="hidden_tesla">Tesla camouflé</string>
+    <string name="x_bow">Arc X</string>
+    <string name="air_sweeper">Propulseur d\'air</string>
+    <string name="inferno_tower">Tour de l\'enfer</string>
+
+
+    <!--Pièges-->
+    <string name="traps">Pièges</string>
+
+    <string name="bomb">Bombe</string>
+    <string name="spring">Piège à ressort</string>
+    <string name="air_bomb">Bombe aérienne</string>
+    <string name="seeking_mine">Mine chercheuse</string>
+    <string name="giant_bomb">Bombe géante</string>
+    <string name="skeleton_trap">Piège squelettique</string>
+
+
+    <!--Ressources-->
+    <string name="resources">Ressources</string>
+
+    <string name="gold_mine">Mine d\'or</string>
+    <string name="gold_storage">Réservoir d\'or</string>
+    <string name="elixir_collector">Extracteur d\'elixir</string>
+    <string name="elixir_storage">Réservoir d\'elixir</string>
+    <string name="dark_elixir_drill">Foreuse d\'elixir noir</string>
+    <string name="dark_elixir_storage">Réservoir d\'elixir noir</string>
+
+
+    <!--Armée-->
+    <string name="army">Armée</string>
+
+    <string name="army_camp">Camp militaire</string>
+    <string name="barracks">Caserne</string>
+    <string name="dark_barracks">Caserne noire</string>
+    <string name="laboratory">Laboratoire</string>
+    <string name="spell_factory">Usine de sort</string>
+    <string name="barabarian_king_altar">Roi des barbares (autel)</string>
+    <string name="archer_queen_altar">Reine des archers (autel)</string>
+    <string name="dark_spell_factory">Usine de sorts noirs</string>
+
+
+    <!--Autres-->
+    <string name="other">Autres</string>
+
+    <string name="town_hall">Hôtel de ville</string>
+    <string name="clan_castle">Château de clan</string>
+    <string name="decorations">Décorations</string>
+    <string name="obstacles">Obstacles</string>
+
+
+    <!--DescribeActivities-->
+    <string name="level">Niveau:&#160;</string>
+    <string name="Level">Niveau</string>
+    <string name="level_required">Niveau requis:&#160;</string>
+    <string name="health">Vie:&#160;</string>
+    <string name="health_up">Vie +:&#160;</string>
+    <string name="defense">Défense</string>
+    <string name="cost">Coût:&#160;</string>
+    <string name="build">Construction</string>
+    <string name="build_cost">Coût:&#160;</string>
+    <string name="build_time">Temps de construction:&#160;</string>
+    <string name="xp">XP gagnée:&#160;</string>
+    <string name="resistance">Résistance</string>
+    <string name="formation">Formation</string>
+    <string name="target">Cibles</string>
+    <string name="preferred_target">Cibles préférées:&#160;</string>
+    <string name="target_type">Type de cibles:&#160;</string>
+    <string name="attack_type">Type de dégats:&#160;</string>
+    <string name="fight">Combat</string>
+    <string name="damages">Dommages:&#160;</string>
+    <string name="dps">Dommages (/s):&#160;</string>
+    <string name="dpshot">Dommages (/tir):&#160;</string>
+    <string name="damages_hit">Dommages (/coup):&#160;</string>
+    <string name="air_power">Souffle (cases):&#160;</string>
+    <string name="special">Spécial</string>
+    <string name="single_target">Mono-cible</string>
+    <string name="multi_target">Multi-cibles</string>
+    <string name="recharge_cost">Coût de rechargement:&#160;</string>
+    <string name="damages_2s">Dommages après 2s:&#160;</string>
+    <string name="damages_5s">Dommages après 5s:&#160;</string>
+    <string name="target_dps">DPS par cible (multi-cibles):&#160;</string>
+    <string name="cost_gold">Coût (or):&#160;</string>
+    <string name="cumulative_cost_gold">Coût cumulé (or):&#160;</string>
+    <string name="cost_elixir">Coût (elixir):&#160;</string>
+    <string name="cumulative_cost_elixir">Coût cumulé (elixir):&#160;</string>
+    <string name="terrestrial">Terrestre</string>
+    <string name="aerial">Aérien</string>
+    <string name="terrestrial_aerial">Terrestre et Aérien</string>
+    <string name="shot_color">Couleur du tir:&#160;</string>
+    <string name="rearming_cost">Coût de réarmement:&#160;</string>
+    <string name="radius">Rayon:&#160;</string>
+    <string name="random_radius">Rayon aléatoire:&#160;</string>
+    <string name="units_number">Nombre d\'unités:&#160;</string>
+    <string name="production">Production</string>
+    <string name="prod_rate">Production par heure:&#160;</string>
+    <string name="capacity">Capacité</string>
+    <string name="total_capacity">Capacité totale:&#160;</string>
+    <string name="fill_time">Temps de remplissage:&#160;</string>
+    <string name="boost">Accélérer (coût):&#160;</string>
+    <string name="percent_damages">Dommages (% vie ennemi):&#160;</string>
+    <string name="effect">Effet</string>
+    <string name="length">Durée:&#160;</string>
+    <string name="white_spells_factory_level">Niveau usine de sorts blancs:&#160;</string>
+    <string name="dark_spells_factory_level">Niveau usine de sorts noirs:&#160;</string>
+    <string name="laboratory_level">Niveau du laboratoire:&#160;</string>
+    <string name="researches">Recherches</string>
+    <string name="research_cost">Coût de recherche:&#160;</string>
+    <string name="research_time">Temps de recherche:&#160;</string>
+    <string name="speed">Vitesse:&#160;</string>
+    <string name="speed_up">Vitesse +:&#160;</string>
+    <string name="speed_down">Vitesse -:&#160;</string>
+    <string name="heal">Guérison:&#160;</string>
+    <string name="damages_up">Dommages +:&#160;</string>
+    <string name="ability">Abilité</string>
+    <string name="royal_cloak">Voile Royal</string>
+    <string name="royal_cloak_level">Niveau Voile Royal:&#160;</string>
+    <string name="created_archer">Archers crées:&#160;</string>
+    <string name="regen_time">Temps de regénération:&#160;</string>
+    <string name="iron_fist">Poigne de fer</string>
+    <string name="iron_fist_level">Niveau Poigne de fer:&#160;</string>
+    <string name="created_barbarian">Barbares crées:&#160;</string>
+    <string name="housing_space">Espace occupé:&#160;</string>
+    <string name="unlocked_unit">Troupes débloquée:&#160;</string>
+    <string name="max_queue">Taille de la file d\'attente:&#160;</string>
+    <string name="fabrication">Fabrication</string>
+    <string name="prod_cost">Coût de production:&#160;</string>
+    <string name="prod_time">Temps de production:&#160;</string>
+    <string name="formation_time">Temps de formation:&#160;</string>
+    <string name="formation_cost">Cout de formation:&#160;</string>
+
 </resources>

@@ -16,7 +16,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Niveau: " />
+                    android:text="@string/level" />
 
                 <TextView
                     android:id="@+id/level"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Cibles"
+                    android:text="@string/target"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Cibles préférées: " />
+                    android:text="@string/preferred_target" />
 
                 <TextView
                     android:id="@+id/preffered_target"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Type de cibles: " />
+                    android:text="@string/target_type" />
 
                 <TextView
                     android:id="@+id/target_type"
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Effet"
+                    android:text="@string/effect"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -163,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Rayon: " />
+                    android:text="@string/radius" />
 
                 <TextView
                     android:id="@+id/radius"
@@ -180,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Guérison: " />
+                    android:text="@string/heal" />
 
                 <TextView
                     android:id="@+id/heal"
@@ -197,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Durée: " />
+                    android:text="@string/length" />
 
                 <TextView
                     android:id="@+id/length"
@@ -214,7 +214,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Fabrication"
+                    android:text="@string/fabrication"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -235,7 +235,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Niveau de l'usine de sorts: " />
+                    android:text="@string/white_spells_factory_level" />
 
                 <TextView
                     android:id="@+id/spell_factory_level"
@@ -252,7 +252,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Coût de production: " />
+                    android:text="@string/prod_cost" />
 
                 <TextView
                     android:id="@+id/build_cost"
@@ -269,7 +269,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Temps de production: " />
+                    android:text="@string/prod_time" />
 
                 <TextView
                     android:id="@+id/build_time"
@@ -286,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Recherches"
+                    android:text="@string/researches"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -307,7 +307,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Niveau du laboratoire: " />
+                    android:text="@string/laboratory_level" />
 
                 <TextView
                     android:id="@+id/lab_level_requiered"
@@ -324,7 +324,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Coût de recherche: " />
+                    android:text="@string/research_cost" />
 
                 <TextView
                     android:id="@+id/research_cost"
@@ -341,7 +341,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="Temps de recherche: " />
+                    android:text="@string/research_time" />
 
                 <TextView
                     android:id="@+id/research_time"

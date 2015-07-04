@@ -21,7 +21,7 @@ public class DescribeBuildingDefenseActivity extends AppCompatActivity {
     SeekBar seekBar;
 
     ImageView image;
-//    <!--{lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}-->
+//    {lvl, dammage/s, dammage/shot, hp, cost, build time, xp, th requiered}
     TextView name;
     TextView level;
     TextView prefferedtarget;

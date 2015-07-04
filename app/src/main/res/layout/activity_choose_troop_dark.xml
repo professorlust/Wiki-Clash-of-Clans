@@ -19,7 +19,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/minion"
@@ -49,7 +49,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Gargouille" />
+                        android:text="@string/minion" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -82,7 +82,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Chevaucheur de cochon" />
+                        android:text="@string/hog_rider" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -115,7 +115,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Valkyrie" />
+                        android:text="@string/valkyrie" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -148,7 +148,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Golème" />
+                        android:text="@string/golem" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -181,7 +181,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sorcière" />
+                        android:text="@string/witch" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -214,7 +214,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Molosse de lave" />
+                        android:text="@string/lava_hound" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

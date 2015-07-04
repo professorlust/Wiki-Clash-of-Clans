@@ -19,7 +19,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/poison"
@@ -49,7 +49,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sort d'empoisonnement" />
+                        android:text="@string/poison_spell" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -82,7 +82,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sort sismique" />
+                        android:text="@string/earthquake_spell" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -115,7 +115,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sort de précipitation" />
+                        android:text="@string/haste_spell" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

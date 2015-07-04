@@ -18,7 +18,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/bomb"
@@ -48,7 +48,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Bombe" />
+                        android:text="@string/bomb" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -81,7 +81,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Piège à ressort" />
+                        android:text="@string/spring" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -114,7 +114,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Bombe aérienne" />
+                        android:text="@string/air_bomb" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -147,7 +147,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Mine chercheuse" />
+                        android:text="@string/seeking_mine" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -180,7 +180,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Bombe géante" />
+                        android:text="@string/giant_bomb" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -213,7 +213,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Piège squelettique" />
+                        android:text="@string/skeleton_trap" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

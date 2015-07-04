@@ -19,7 +19,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/barbarian"
@@ -49,7 +49,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Barbare" />
+                        android:text="@string/barbarian" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -82,7 +82,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Archer" />
+                        android:text="@string/archer" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -115,7 +115,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Gobelin" />
+                        android:text="@string/goblin" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -148,7 +148,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Géant" />
+                        android:text="@string/giant" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -181,7 +181,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sapeur" />
+                        android:text="@string/wall_breaker" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -214,7 +214,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Ballon" />
+                        android:text="@string/balloon" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -247,7 +247,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sorcier" />
+                        android:text="@string/wizard" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -280,7 +280,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Guérisseuse" />
+                        android:text="@string/healer" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -313,7 +313,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Dragon" />
+                        android:text="@string/dragon" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -346,7 +346,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="P.E.K.K.A." />
+                        android:text="@string/pekka" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>
