@@ -18,7 +18,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/wall"
@@ -48,7 +48,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/wall" />
+                        android:text="Mur" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -81,7 +81,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/cannon" />
+                        android:text="Canon" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -114,7 +114,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/archer_tower" />
+                        android:text="Tour d'archer" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -147,7 +147,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/mortar" />
+                        android:text="Mortier" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -180,7 +180,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/air_defense" />
+                        android:text="Défense antiaérienne" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -213,7 +213,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/wizard_tower" />
+                        android:text="Tour de sorcier" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -246,7 +246,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/hidden_tesla" />
+                        android:text="Tesla camouflé" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -279,7 +279,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/x_bow" />
+                        android:text="Arc X" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -312,7 +312,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/air_sweeper" />
+                        android:text="Propulseur d'air" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -345,7 +345,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/inferno_tower" />
+                        android:text="Tour de l'enfer" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

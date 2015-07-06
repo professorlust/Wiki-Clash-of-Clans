@@ -16,7 +16,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/level" />
+                    android:text="Niveau: " />
 
                 <TextView
                     android:id="@+id/level"
@@ -91,7 +91,7 @@
                     android:layout_column="0"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/single_target" />
+                    android:text="Mono-cible" />
 
                 <Switch
                     android:id="@+id/alt_switch"
@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_column="2"
                     android:layout_weight="1"
-                    android:text="@string/multi_target" />
+                    android:text="Multi-cibles" />
             </TableRow>
 
             <TableRow android:paddingTop="10dp">
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/target"
+                    android:text="Cibles"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/preferred_target" />
+                    android:text="Cibles préférées: " />
 
                 <TextView
                     android:id="@+id/preffered_target"
@@ -153,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/target_type" />
+                    android:text="Type de cibles: " />
 
                 <TextView
                     android:id="@+id/target_type"
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/attack_type" />
+                    android:text="Type de dégats: " />
 
                 <TextView
                     android:id="@+id/attack_type"
@@ -187,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/fight"
+                    android:text="Combat"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -208,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/dps" />
+                    android:text="Dommages (/s): " />
 
                 <TextView
                     android:id="@+id/damage_per_second"
@@ -225,7 +225,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/health" />
+                    android:text="Vie: " />
 
                 <TextView
                     android:id="@+id/health"
@@ -242,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/special"
+                    android:text="Spécial"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -263,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/recharge_cost" />
+                    android:text="Coût de rechargement: " />
 
                 <TextView
                     android:id="@+id/cost_loading"
@@ -281,7 +281,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/damages_2s" />
+                    android:text="Dommages après 2s: " />
 
                 <TextView
                     android:id="@+id/damage_per_second_2"
@@ -299,7 +299,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/damages_5s" />
+                    android:text="Dommages après 5s: " />
 
                 <TextView
                     android:id="@+id/damage_per_second_5"
@@ -317,7 +317,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/target_dps" />
+                    android:text="DPS par cible (multi-cibles): " />
 
                 <TextView
                     android:id="@+id/damage_per_second_multitarget"
@@ -335,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/build"
+                    android:text="Construction"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -356,7 +356,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/cost" />
+                    android:text="Coût: " />
 
                 <TextView
                     android:id="@+id/build_cost"
@@ -373,7 +373,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/build_time" />
+                    android:text="Temps de construction: " />
 
                 <TextView
                     android:id="@+id/build_time"
@@ -390,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/Level"
+                    android:text="Niveau"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -411,7 +411,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/level_required" />
+                    android:text="Niveau requis: " />
 
                 <TextView
                     android:id="@+id/level_requiered"
@@ -428,7 +428,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/xp" />
+                    android:text="XP gagnée: " />
 
                 <TextView
                     android:id="@+id/experience"

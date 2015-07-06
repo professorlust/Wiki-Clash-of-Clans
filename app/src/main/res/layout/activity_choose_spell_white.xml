@@ -19,7 +19,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/lightning"
@@ -49,7 +49,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/lightning_spell" />
+                        android:text="Sort de foudre" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -82,7 +82,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/healing_spell" />
+                        android:text="Sort de guérison" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -115,7 +115,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/rage_spell" />
+                        android:text="Sort de rage" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -148,7 +148,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/jump_spell" />
+                        android:text="Sort de saut" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -181,7 +181,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="@string/freeze_spell" />
+                        android:text="Sort de gel" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

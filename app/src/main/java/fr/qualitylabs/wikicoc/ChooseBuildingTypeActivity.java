@@ -78,7 +78,7 @@ public class ChooseBuildingTypeActivity extends AppCompatActivity {
     private View.OnClickListener armyListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getApplicationContext(), ChooseBuildingArmyActivity.class));
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
         }
     };
 

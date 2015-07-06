@@ -25,7 +25,7 @@
         android:layout_below="@id/about_image"
         android:layout_margin="5dp"
         android:gravity="center"
-        android:text="version #"
+        android:text="version ?"
         android:textSize="12sp"
         android:textStyle="italic" />
 

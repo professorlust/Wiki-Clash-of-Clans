@@ -16,7 +16,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/target"
+                    android:text="Cibles"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/preferred_target" />
+                    android:text="Cibles préférées: " />
 
                 <TextView
                     android:id="@+id/preffered_target"
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/target_type" />
+                    android:text="Type de cibles: " />
 
                 <TextView
                     android:id="@+id/target_type"
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/attack_type" />
+                    android:text="Type de dégats: " />
 
                 <TextView
                     android:id="@+id/attack_type"
@@ -127,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/build"
+                    android:text="Construction"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/cost" />
+                    android:text="Coût de construction: " />
 
                 <TextView
                     android:id="@+id/build_cost"
@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/rearming_cost" />
+                    android:text="Coût de réarmement: " />
 
                 <TextView
                     android:id="@+id/rearm_cost"
