@@ -334,6 +334,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
         </activity>
+        <activity
+            android:name=".DescribeBuildingAltarActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingArmyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingArmyCampActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingArmyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
+        </activity>
     </application>
 
 </manifest>

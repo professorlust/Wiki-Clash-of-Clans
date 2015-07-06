@@ -2,7 +2,7 @@
     <!-- Générique-->
     <string name="app_name">Wiki CoC</string>
     <string name="action_settings">Paramètres</string>
-    <string name="description">Descritpion</string>
+    <string name="description">Description</string>
     <string name="reset">Réinitialiser</string>
 
     <!-- Balises du Drawer NE PAS TOUCHER-->

@@ -7,6 +7,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class ChooseBuildingArmyActivity extends AppCompatActivity {
@@ -17,6 +18,12 @@ public class ChooseBuildingArmyActivity extends AppCompatActivity {
 
     CardView barracks;
     CardView darkbarracks;
+    CardView barbariankingaltar;
+    CardView archerqueenaltar;
+    CardView armycamp;
+    CardView laboratory;
+    CardView spellfactory;
+    CardView darkspellfactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +40,21 @@ public class ChooseBuildingArmyActivity extends AppCompatActivity {
 
         barracks = (CardView) findViewById(R.id.barracks);
         darkbarracks = (CardView) findViewById(R.id.darkbarracks);
+        barbariankingaltar = (CardView) findViewById(R.id.barbariankingaltar);
+        archerqueenaltar = (CardView) findViewById(R.id.archerqueenaltar);
+        armycamp = (CardView) findViewById(R.id.armycamp);
+        laboratory = (CardView) findViewById(R.id.laboratory);
+        spellfactory = (CardView) findViewById(R.id.spellfactory);
+        darkspellfactory = (CardView) findViewById(R.id.darkspellfactory);
 
         barracks.setOnClickListener(barracksListener);
         darkbarracks.setOnClickListener(darkbarracksListener);
+        barbariankingaltar.setOnClickListener(barbariankingaltarListener);
+        archerqueenaltar.setOnClickListener(archerqueenaltarListener);
+        armycamp.setOnClickListener(armycampListener);
+        laboratory.setOnClickListener(laboratoryListener);
+        spellfactory.setOnClickListener(spellfactoryListener);
+        darkspellfactory.setOnClickListener(darkspellfactoryListener);
 
     }
 
@@ -74,6 +93,57 @@ public class ChooseBuildingArmyActivity extends AppCompatActivity {
             building = new DarkBarracks();
             intent.putExtra("building", building);
             startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener barbariankingaltarListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingAltarActivity.class);
+            building = new BarbarianKingAltar();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener archerqueenaltarListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingAltarActivity.class);
+            building = new ArcherQueenAltar();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener armycampListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), DescribeBuildingArmyCampActivity.class);
+            building = new ArmyCamp();
+            intent.putExtra("building", building);
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener laboratoryListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
+        }
+    };
+
+    private View.OnClickListener spellfactoryListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
+        }
+    };
+
+    private View.OnClickListener darkspellfactoryListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
         }
     };
 }
