@@ -1,6 +1,5 @@
 package fr.qualitylabs.wikicoc;
 
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -12,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 
 public class AboutActivity extends AppCompatActivity {
@@ -23,8 +21,6 @@ public class AboutActivity extends AppCompatActivity {
     MediaPlayer surprise;
 
     WebView about_description;
-
-    TextView version;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +37,6 @@ public class AboutActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         about = (ImageButton) findViewById(R.id.about_image);
-        version = (TextView) findViewById(R.id.version);
 
         about.setOnClickListener(aboutListener);
         surprise = MediaPlayer.create(AboutActivity.this, R.raw.surprise);
@@ -56,13 +51,6 @@ public class AboutActivity extends AppCompatActivity {
                                                      }
                                                  }
         );
-
-        try {
-            version.setText("version " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-
         about_description.setLongClickable(false);
         about_description.setHapticFeedbackEnabled(false);
     }
