@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.qualitylabs.wikicoc" >
 
-    <!-- Google Analytics required permissions -->
-    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
-    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,8 +19,6 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
-
-            <!-- On indique à cette activité qu'elle a un parent qui est .HomeActivity, quand on cliquera sur le bouton Home (de la Action Bar) ça nous redirigera à ce parent -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.HomeActivity" />
@@ -188,47 +183,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseTroopHeroActivity" />
         </activity>
-
-        <!-- Google Analytics Parameters -->
-
-
-        <!-- Add the following meta-data for devices running Google Play service. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <!--
-             Optionally, register AnalyticsReceiver and AnalyticsService to support background
-             dispatching on non-Google Play devices
-        -->
-        <receiver
-            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
-            android:enabled="true" >
-            <intent-filter>
-                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.analytics.AnalyticsService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <!--
-             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
-             installation campaign reporting
-        -->
-        <receiver
-            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
-
-        <!-- ... -->
         <activity
             android:name=".ChooseSpellWhiteActivity"
             android:label="@string/title_activity_choose_spell_white"
@@ -363,6 +317,22 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseSpellDarkActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseBuildingArmyActivity"
+            android:label="@string/title_activity_choose_building_army"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingBarracksActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingArmyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
         </activity>
     </application>
 

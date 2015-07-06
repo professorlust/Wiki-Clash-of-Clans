@@ -25,7 +25,10 @@
     <string name="title_activity_choose_troop_dark">Choisir une troupe noire</string>
     <string name="title_activity_choose_building_trap">Choisir un piège</string>
     <string name="title_activity_choose_troop_hero">Choisir un héros</string>
-
+    <string name="title_activity_choose_building_army">Choisir un bâtiment</string>
 
     <string name="home_text">Ouvrez le drawer et sélectionnez une catégorie.\n\nPensez aussi à visiter la section \"À propos\" pour en savoir plus sur cette application.\n\nNote: les sections grisées seront débloquées dans les prochaines mises à jour!</string>
+
+
+    <string name="hello_world">Hello world!</string>
 </resources>
