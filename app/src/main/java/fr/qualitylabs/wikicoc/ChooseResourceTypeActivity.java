@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 
 
@@ -38,12 +37,6 @@ public class ChooseResourceTypeActivity extends ActionBarActivity {
         gold.setOnClickListener(goldListener);
         elixir.setOnClickListener(elixirListener);
         darkelixir.setOnClickListener(darkelixirListener);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_choose_resource_type, menu);
-        return true;
     }
 
     private View.OnClickListener goldListener = new View.OnClickListener() {

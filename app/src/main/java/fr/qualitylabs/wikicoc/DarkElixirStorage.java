@@ -1,8 +1,4 @@
 package fr.qualitylabs.wikicoc;
-
-/**
- * Created by Alex on 02/07/2015.
- */
 public class DarkElixirStorage extends Building{
 
     // {lvl, capacity, hp, buildCost, buildTime, xp, lvlRequired}

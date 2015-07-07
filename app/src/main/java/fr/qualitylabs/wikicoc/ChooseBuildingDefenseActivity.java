@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 
 
@@ -61,22 +60,6 @@ public class ChooseBuildingDefenseActivity extends AppCompatActivity {
         airSweeper.setOnClickListener(airSweeperListener);
         infernoTower.setOnClickListener(infernoTowerListener);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_building_defense, menu);
-        return true;
-    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//        return super.onOptionsItemSelected(item);
-//    }
 
     //    Ouverture de l'activité DescribeBuildingDefenseWallActivity pour décrire le mur
     private View.OnClickListener wallListener = new View.OnClickListener() {

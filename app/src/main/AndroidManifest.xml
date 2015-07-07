@@ -186,7 +186,7 @@
         <activity
             android:name=".ChooseSpellWhiteActivity"
             android:label="@string/title_activity_choose_spell_white"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName=".ChooseSpellTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseSpellTypeActivity" />
@@ -357,6 +357,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingOtherTownHallActivity"
+            android:label="@string/title_activity_describe_building_other_town_hall"
+            android:parentActivityName=".ChooseBuildingOtherActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity" />
         </activity>
     </application>
 

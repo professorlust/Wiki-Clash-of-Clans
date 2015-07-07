@@ -1,8 +1,4 @@
 package fr.qualitylabs.wikicoc;
-
-/**
- * Created by Alex on 02/07/2015.
- */
 public class DarkElixirDrill extends Building{
 
     //                   {lvl, buildCost, buildTime, xp, boost, capacity, prodRate, hp, fillTime, lvlRequired}

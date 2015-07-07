@@ -148,7 +148,7 @@
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Golème" />
+                        android:text="Golem" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
