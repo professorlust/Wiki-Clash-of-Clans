@@ -1,32 +1,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_light"
-    tools:context="fr.qualitylabs.wikicoc.NavigationDrawerFragment">
+    tools:context="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity">
 
-    <ImageView
-        android:id="@+id/drawer_header"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/drawer_header" />
+    <!-- On inclu la App Bar en appelant son layout, l'id servira à l'appeler en Java-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/drawer_header">
+        android:layout_below="@id/app_bar">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/troop"
+                android:id="@+id/town_hall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
@@ -37,27 +38,29 @@
                     android:layout_height="match_parent"
                     android:padding="5dp">
 
-
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/pekka" />
+                        android:src="@drawable/town_hall" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Troupes" />
+                        android:text="Hôtel de ville" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/buildings"
+                android:id="@+id/clan_castle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/troop"
-                android:layout_margin="4dp"
+                android:layout_below="@id/town_hall"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
@@ -71,23 +74,26 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/town_hall" />
+                        android:background="@drawable/clan_castle" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Bâtiments" />
+                        android:text="Château de clan" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/resources"
+                android:id="@+id/decoration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/buildings"
-                android:layout_margin="4dp"
+                android:layout_below="@id/clan_castle"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
@@ -101,23 +107,26 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/gold_mine" />
+                        android:background="@drawable/decoration" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Ressources" />
+                        android:text="Décorations" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/spells"
+                android:id="@+id/obstacle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/resources"
-                android:layout_margin="4dp"
+                android:layout_below="@id/decoration"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 card_view:cardCornerRadius="4dp"
@@ -131,14 +140,14 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/lightning_spell" />
+                        android:src="@drawable/obstacle" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
                         android:layout_marginLeft="88dp"
                         android:gravity="center"
-                        android:text="Sorts" />
+                        android:text="Obstacles" />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
         </RelativeLayout>

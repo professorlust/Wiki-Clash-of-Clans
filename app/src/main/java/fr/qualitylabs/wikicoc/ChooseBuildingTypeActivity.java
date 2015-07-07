@@ -7,7 +7,6 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class ChooseBuildingTypeActivity extends AppCompatActivity {
@@ -85,7 +84,7 @@ public class ChooseBuildingTypeActivity extends AppCompatActivity {
     private View.OnClickListener otherListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "Section bientôt disponible", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), ChooseBuildingOtherActivity.class));
         }
     };
 }

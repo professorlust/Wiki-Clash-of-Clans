@@ -350,6 +350,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
         </activity>
+        <activity
+            android:name=".ChooseBuildingOtherActivity"
+            android:label="@string/title_activity_choose_building_other"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
+        </activity>
     </application>
 
 </manifest>

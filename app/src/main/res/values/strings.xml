@@ -31,4 +31,5 @@
 
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_choose_building_other">Choisir un bâtiment</string>
 </resources>
