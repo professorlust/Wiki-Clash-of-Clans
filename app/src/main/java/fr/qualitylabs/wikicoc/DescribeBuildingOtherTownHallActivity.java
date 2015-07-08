@@ -1,6 +1,7 @@
 package fr.qualitylabs.wikicoc;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -16,6 +17,7 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ImageView image;
+    TextView name;
     TextView level;
     TextView hp;
     TextView buildCost;
@@ -30,9 +32,16 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
     TextView numberDarkSpellFactory;
     TextView numberBarbarianKingAltar;
     TextView numberArcherQueenAltar;
+    TextView numberGoldMine;
+    TextView numberElixirCollector;
+    TextView numberDarkElixirDrill;
+    TextView numberGoldStorage;
+    TextView numberElixirStorage;
+    TextView numberDarkElixirStorage;
 
     String[] property;
     String[] maxNumberArmy;
+    String[] maxNumberResource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +53,14 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        building = new TownHall();
+
+        property = building.getProperty(1);
+        maxNumberArmy = building.getNumberOfArmyBuildings(1);
+        maxNumberResource = building.getnumberOfResourceBuildings(1);
+
         image = (ImageView) findViewById(R.id.image);
+        name = (TextView) findViewById(R.id.name);
         level = (TextView) findViewById(R.id.level);
         hp = (TextView) findViewById(R.id.health);
         buildCost = (TextView) findViewById(R.id.build_cost);
@@ -59,18 +75,20 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
         numberDarkSpellFactory = (TextView) findViewById(R.id.max_number_dark_spell_factory);
         numberBarbarianKingAltar = (TextView) findViewById(R.id.max_number_barbarian_king_altar);
         numberArcherQueenAltar = (TextView) findViewById(R.id.max_number_archer_queen_altar);
+        numberGoldMine = (TextView) findViewById(R.id.max_number_gold_mine);
+        numberElixirCollector = (TextView) findViewById(R.id.max_number_elixir_collector);
+        numberDarkElixirDrill = (TextView) findViewById(R.id.max_number_dark_elixir_drill);
+        numberGoldStorage = (TextView) findViewById(R.id.max_number_gold_storage);
+        numberElixirStorage = (TextView) findViewById(R.id.max_number_elixir_storage);
+        numberDarkElixirStorage = (TextView) findViewById(R.id.max_number_dark_elixir_storage);
 
         seekBar.setOnSeekBarChangeListener(seekBarListener);
 
-        building = new TownHall();
-
         seekBar.setMax(building.getLevelMax() - 1);
 
-        property = building.getProperty(1);
-        maxNumberArmy = building.getNumberOfArmyBuildings(1);
-
         //{lvl, hp, buildCost, buildTime, xp, maxBuildingsNumber}
-        image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+1,null,getPackageName())));
+        image.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), getResources().getIdentifier("@drawable/"+building.getNameCode()+1,null,getPackageName())));
+        name.setText(building.getName());
         level.setText(property[0]);
         hp.setText(property[1]);
         buildCost.setText(property[2]);
@@ -84,6 +102,12 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
         numberDarkSpellFactory.setText(maxNumberArmy[5]);
         numberBarbarianKingAltar.setText(maxNumberArmy[6]);
         numberArcherQueenAltar.setText(maxNumberArmy[7]);
+        numberGoldMine.setText(maxNumberResource[0]);
+        numberElixirCollector.setText(maxNumberResource[1]);
+        numberDarkElixirDrill.setText(maxNumberResource[2]);
+        numberGoldStorage.setText(maxNumberResource[3]);
+        numberElixirStorage.setText(maxNumberResource[4]);
+        numberDarkElixirStorage.setText(maxNumberResource[5]);
     }
 
     @Override
@@ -112,8 +136,10 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             property = building.getProperty(progress+1);
+            maxNumberArmy = building.getNumberOfArmyBuildings(progress+1);
+            maxNumberResource = building.getnumberOfResourceBuildings(progress+1);
 
-            image.setImageDrawable(getResources().getDrawable(getResources().getIdentifier("@drawable/"+building.getNameCode()+(progress+1),null,getPackageName())));
+            image.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), getResources().getIdentifier("@drawable/" + building.getNameCode()+(progress+1), null, getPackageName())));
             level.setText(property[0]);
             hp.setText(property[1]);
             buildCost.setText(property[2]);
@@ -127,6 +153,12 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
             numberDarkSpellFactory.setText(maxNumberArmy[5]);
             numberBarbarianKingAltar.setText(maxNumberArmy[6]);
             numberArcherQueenAltar.setText(maxNumberArmy[7]);
+            numberGoldMine.setText(maxNumberResource[0]);
+            numberElixirCollector.setText(maxNumberResource[1]);
+            numberDarkElixirDrill.setText(maxNumberResource[2]);
+            numberGoldStorage.setText(maxNumberResource[3]);
+            numberElixirStorage.setText(maxNumberResource[4]);
+            numberDarkElixirStorage.setText(maxNumberResource[5]);
         }
 
         @Override
