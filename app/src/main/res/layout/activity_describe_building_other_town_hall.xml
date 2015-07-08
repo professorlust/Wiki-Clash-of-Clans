@@ -93,7 +93,9 @@
                     android:textStyle="bold" />
             </TableRow>
 
-            <TableRow android:paddingBottom="10dp">
+            <TableRow
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
 
                 <View
                     android:layout_width="fill_parent"
@@ -102,7 +104,7 @@
                     android:background="@android:color/darker_gray" />
             </TableRow>
 
-            <TableRow>
+            <TableRow android:layout_width="match_parent">
 
                 <TextView
                     android:layout_width="0dp"
@@ -119,7 +121,9 @@
                     android:text="vie" />
             </TableRow>
 
-            <TableRow android:paddingTop="10dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:paddingTop="10dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -234,7 +238,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Nombre max de bâtiments (Armée)"
+                    android:text="Nombre/Niveau max des bâtiments (Armée)"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -263,30 +267,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/dark_barracks" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Caserne noire" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/barracks" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_dark_barrack"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Caserne" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_barrack"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_barrack"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -297,30 +323,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/barracks" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Caserne" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/dark_barracks" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_barrack"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Caserne noire" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_dark_barrack"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_dark_barrack"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -331,30 +379,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/army_camp" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Camp militaire" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/army_camp" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_army_camp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Camp militaire" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_army_camp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_army_camp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -365,30 +435,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/laboratory" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Laboratoire" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/laboratory" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_lab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Laboratoire" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_lab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_lab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -399,30 +491,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/spell_factory" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Usine de sorts" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/spell_factory" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_spell_factory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Usine de sorts" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_spell_factory"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_spell_factory"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -433,30 +547,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/dark_spell_factory" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Usine de sorts noirs" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/dark_spell_factory" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_dark_spell_factory"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Usine de sorts noirs" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_dark_spell_factory"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_dark_spell_factory"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -467,30 +603,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/barbarian_king_altar" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Autel du Roi des barbares" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/barbarian_king_altar" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_barbarian_king_altar"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Autel du Roi des barbares" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_barbarian_king_altar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_barbarian_king_altar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -501,30 +659,108 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/archer_queen_altar" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Autel de la Reine des archers" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/archer_queen_altar" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_archer_queen_altar"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Autel de la Reine des archers" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_archer_queen_altar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_archer_queen_altar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/clan_castle" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Château de clan" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_clan_castle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_clan_castle"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
@@ -536,7 +772,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Nombre max de bâtiments (Ressources)"
+                    android:text="Nombre/Niveau max des bâtiments (Ressources)"
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -565,30 +801,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/gold_mine" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Mine d'or" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/gold_mine" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_gold_mine"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Mine d'or" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_gold_mine"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_gold_mine"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -599,30 +857,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/elixir_collector" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Extracteur d'elixir" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/elixir_collector" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_elixir_collector"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Extracteur d'elixir" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_elixir_collector"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_elixir_collector"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -633,30 +913,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/dark_elixir_drill" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Foreuse d'elixir noir" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/dark_elixir_drill" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_dark_elixir_drill"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Extracteur d'elixir noir" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_dark_elixir_drill"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_dark_elixir_drill"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -667,30 +969,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/gold_storage" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Réservoir d'or" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/gold_storage" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_gold_storage"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Réservoir d'or" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_gold_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_gold_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -701,30 +1025,52 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/elixir_storage" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Réservoir d'elixir" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/elixir_storage" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_elixir_storage"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Réservoir d'elixir" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_elixir_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_elixir_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
@@ -735,30 +1081,978 @@
                         card_view:cardCornerRadius="4dp"
                         card_view:cardElevation="3dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
 
-                            <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:src="@drawable/dark_elixir_storage" />
+                            <TableRow android:gravity="center">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Réservoir d'elixir noir" />
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/dark_elixir_storage" />
+                            </TableRow>
 
-                            <TextView
-                                android:id="@+id/max_number_dark_elixir_storage"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
-                                android:text="#" />
-                        </LinearLayout>
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Réservoir d'elixir noir" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_dark_elixir_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_dark_elixir_storage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TableRow android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Nombre/Niveau max des bâtiments (Défenses)"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:paddingBottom="10dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray" />
+            </TableRow>
+
+            <HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/cannon" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Canon" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_cannon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_cannon"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/archer_tower" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Tour d'archer" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_archer_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_archer_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/wall" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Rempart" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_wall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_wall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/mortar" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Mortier" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_mortar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_mortar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/bomb" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Bombe" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/air_defense" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Défense anti-aérienne" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_air_defense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_air_defense"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/air_sweeper" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Propulseur d'air" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_air_sweeper"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_air_sweeper"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/spring" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Piège à ressort" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_spring"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_spring"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/wizard_tower" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Tour de sorcier" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_wizard_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_wizard_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/giant_bomb" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Bombe géante" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_giant_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_giant_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/air_bomb" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Bombe aérienne" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_air_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_air_bomb"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/seeking_air_mine" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Mine chercheuse" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_seeking_air_mine"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_seeking_air_mine"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/skeleton" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Piège squelettique" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_skeleton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_skeleton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/hidden_tesla" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Tesla camouflée" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_hidden_tesla"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_hidden_tesla"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/x_bow" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Arc-X" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_x_bow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_x_bow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="3dp">
+
+                        <TableLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <TableRow android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/inferno_tower" />
+                            </TableRow>
+
+                            <TableRow android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Tour de l'enfer" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_weight="1"
+                                android:gravity="bottom">
+
+                                <TextView
+                                    android:id="@+id/max_number_inferno_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="0"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="#" />
+
+                                <TextView
+                                    android:id="@+id/max_level_inferno_tower"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="lvl" />
+                            </TableRow>
+                        </TableLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>

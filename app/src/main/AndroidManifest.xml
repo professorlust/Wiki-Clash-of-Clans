@@ -360,7 +360,7 @@
         </activity>
         <activity
             android:name=".DescribeBuildingOtherTownHallActivity"
-            android:label="@string/title_activity_describe_building_other_town_hall"
+            android:label="@string/description"
             android:parentActivityName=".ChooseBuildingOtherActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
