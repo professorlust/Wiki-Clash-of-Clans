@@ -366,6 +366,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity" />
         </activity>
+        <activity
+            android:name=".DescribeBuildingOtherClanCastleActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingOtherActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -32,7 +32,7 @@ public class ChooseBuildingOtherActivity extends AppCompatActivity {
         obstacle = (CardView) findViewById(R.id.obstacle);
 
         townHall.setOnClickListener(townHallListener);
-//        clanCastle.setOnClickListener(clanCastleListener);
+        clanCastle.setOnClickListener(clanCastleListener);
 //        decoration.setOnClickListener(decorationListener);
 //        obstacle.setOnClickListener(obstacleListener);
     }
@@ -41,6 +41,13 @@ public class ChooseBuildingOtherActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(getApplicationContext(), DescribeBuildingOtherTownHallActivity.class));
+        }
+    };
+
+    private View.OnClickListener clanCastleListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(getApplicationContext(), DescribeBuildingOtherClanCastleActivity.class));
         }
     };
 }
