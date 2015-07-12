@@ -20,17 +20,28 @@
 
             <ImageButton
                 android:id="@+id/about_image"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="10dp"
-                android:background="@drawable/about"
-                android:layout_width="150dp" />
+                android:background="@drawable/about" />
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_image"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="version ?"
+                android:textSize="12sp"
+                android:textStyle="italic" />
 
             <WebView
                 android:id="@+id/about_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/about_image" />
+                android:layout_below="@id/version" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

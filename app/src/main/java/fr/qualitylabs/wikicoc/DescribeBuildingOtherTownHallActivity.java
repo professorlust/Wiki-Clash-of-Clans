@@ -201,7 +201,7 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
         name.setText(building.getName());
         level.setText(property[0]);
         hp.setText(property[1]);
-        buildCost.setText(property[2]);
+        buildCost.setText(property[2] + " or");
         buildTime.setText(property[3]);
         xp.setText(property[4]);
 //        ------
@@ -307,7 +307,7 @@ public class DescribeBuildingOtherTownHallActivity extends AppCompatActivity {
             image.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), getResources().getIdentifier("@drawable/" + building.getNameCode()+(progress+1), null, getPackageName())));
             level.setText(property[0]);
             hp.setText(property[1]);
-            buildCost.setText(property[2]);
+            buildCost.setText(property[2] + " or");
             buildTime.setText(property[3]);
             xp.setText(property[4]);
 //            ------

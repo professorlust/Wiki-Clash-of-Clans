@@ -95,7 +95,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:foreground="#40000000"
                 card_view:cardCornerRadius="4dp"
                 card_view:cardElevation="3dp">
 
@@ -128,7 +128,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="4dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:foreground="#40000000"
                 card_view:cardCornerRadius="4dp"
                 card_view:cardElevation="3dp">
 
