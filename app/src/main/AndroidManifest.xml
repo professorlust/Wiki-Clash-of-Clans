@@ -186,7 +186,7 @@
         <activity
             android:name=".ChooseSpellWhiteActivity"
             android:label="@string/title_activity_choose_spell_white"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName=".ChooseSpellTypeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseSpellTypeActivity" />
@@ -333,6 +333,46 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingAltarActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingArmyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingArmyCampActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingArmyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingArmyActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseBuildingOtherActivity"
+            android:label="@string/title_activity_choose_building_other"
+            android:parentActivityName=".ChooseBuildingTypeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingTypeActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingOtherTownHallActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingOtherActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity" />
+        </activity>
+        <activity
+            android:name=".DescribeBuildingOtherClanCastleActivity"
+            android:label="@string/description"
+            android:parentActivityName=".ChooseBuildingOtherActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.qualitylabs.wikicoc.ChooseBuildingOtherActivity" />
         </activity>
     </application>
 

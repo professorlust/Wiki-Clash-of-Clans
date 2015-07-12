@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 
 
@@ -36,13 +35,6 @@ public class ChooseResourceDarkElixirActivity extends AppCompatActivity {
 
         darkelixirdrill.setOnClickListener(darkelixirdrillListener);
         darkelixirstorage.setOnClickListener(darkelixirstorageListener);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_choose_resource_dark_elixir, menu);
-        return true;
     }
 
     private View.OnClickListener darkelixirdrillListener = new View.OnClickListener() {

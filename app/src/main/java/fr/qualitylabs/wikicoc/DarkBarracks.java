@@ -1,8 +1,4 @@
 package fr.qualitylabs.wikicoc;
-
-/**
- * Created by Alex on 04/07/2015.
- */
 public class DarkBarracks extends Building{
 
     //  {lvl, buildCost, buildTime, xp, boost, hp, maxQueue, lvlRequired, unlockedUnit}

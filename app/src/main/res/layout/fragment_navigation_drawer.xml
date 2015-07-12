@@ -71,7 +71,7 @@
                     <ImageView
                         android:layout_width="72dp"
                         android:layout_height="72dp"
-                        android:background="@drawable/buildings" />
+                        android:background="@drawable/town_hall" />
 
                     <TextView
                         android:layout_width="wrap_content"
